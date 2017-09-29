@@ -1,0 +1,210 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>添加商品</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <link href="/Public/Admin/css/mine.css" type="text/css" rel="stylesheet">
+        <link href="/Public/Css/completer.css" type="text/css" rel="stylesheet">
+    </head>
+    <style>
+        label.error{
+            color:red;
+            margin-left: 5px;
+        }
+    </style>
+    <body>
+
+        <div class="div_head">
+            <span>
+                <span style="float:left">当前位置是：商品管理-》添加商品信息</span>
+                <span style="float:right;margin-right: 8px;font-weight: bold">
+                    <a style="text-decoration: none" href="/index.php/Admin/Goods/lst">【返回】</a>
+                </span>
+            </span>
+        </div>
+        <div></div>
+
+        <div style="font-size: 13px;margin: 10px 5px">
+            <form action="/index.php/Admin/Goods/add" method="post" enctype="multipart/form-data" name="myform">
+            <table border="1" width="100%" class="table_a">
+                <tr>
+                    <td>商品名称</td>
+                    <td><input type="text" name="goods_name" placeholder="goods_name..." /></td>
+                </tr>
+                <tr>
+                    <td>商品分类</td>
+                    <td>
+                        <select name="cate_id">
+                            <option value="0">请选择</option>
+
+                            <?php if(is_array($cateInfo)): foreach($cateInfo as $key=>$info): ?><option value="<?php echo ($info['cate_id']); ?>">
+                                    <?php echo str_repeat( '　　',count(explode("-",$info['path']) ) ).$info['cate_name'];?>
+                                </option><?php endforeach; endif; ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>商品类型</td>
+                    <td>
+                        <select name="type_id" id="sel">
+                            <option value="0">请选择</option>
+
+                            <?php if(is_array($typeInfo)): foreach($typeInfo as $key=>$info): ?><option value="<?php echo ($info['type_id']); ?>">
+                                    <?php echo ($info['type_name']); ?>
+                                </option><?php endforeach; endif; ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr >
+                    <td style="display: none" id="dis">属性框</td>
+                    <td id="attr">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>商品价格</td>
+                    <td><input type="text" name="goods_price" placeholder="goods_price..." /></td>
+                </tr>
+                <tr>
+                    <td>商品库存</td>
+                    <td><input type="text" name="goods_num" placeholder="goods_num..." /></td>
+                </tr>
+                <tr>
+                    <td>商品货号</td>
+                    <td><input type="text" name="goods_sn" placeholder="留空系统自动生成货号" /></td>
+                </tr>
+                <tr>
+                    <td>是否上架</td>
+                    <td>
+                        是<input type="radio" name="is_sale" value="1" checked="checked">
+                        否<input type="radio" name="is_sale" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td>是否新品</td>
+                    <td>
+                        是<input type="radio" name="is_new" value="1" checked="checked">
+                        否<input type="radio" name="is_new" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td>是否精品</td>
+                    <td>
+                        是<input type="radio" name="is_best" value="1" checked="checked">
+                        否<input type="radio" name="is_best" value="0">
+                    </td>
+                </tr>
+                <tr>
+
+                  <td>是否热销</td>
+                    <td>
+                        是<input type="radio" name="is_hot" value="1" checked="checked">
+                        否<input type="radio" name="is_hot" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td>商品图片</td>
+                    <td>
+                        <input type="file" name="goods_img" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>商品时间</td>
+                    <td>
+                        <input type="text" name="add_time"  placeholder="留空系统自动生成时间" id="add_time">
+                    </td>
+                </tr>
+                <tr>
+                    <td>商品描述</td>
+                    <td><textarea name='goods_descp' rows="5" cols="40" id="content"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="添加">
+                    </td>
+                </tr>  
+            </table>
+            </form>
+        </div>
+    </body>
+<script src="/Public/Js/jquery.min.js"></script>
+<script src="/Public/Js/jquery.validate.min.js"></script>
+<script src="/Public/Js/validate_zh_cn.js"></script>
+<script src="/Public/Js/completer.min.js"></script>
+<script src="/Public/laydate/laydate.js"></script>
+<script src="/Public/ueditor/ueditor.config.js"></script>
+<script src="/Public/ueditor/ueditor.all.min.js"></script>
+<script src="/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script>
+        UE. getEditor('content',{
+            initialFrameWidth:800,  //初始化编辑器宽度,默认1000
+            initialFrameHeight:300  //初始化编辑器高度,默认320
+        })
+    </script>
+<script>
+    laydate({
+        elem:'#add_time',
+        istime:true,
+        format:'YYYY-MM-DD hh:mm'
+    })
+</script>
+<script>
+   $('#sel').change(function(){
+       var _type_id=$(this).val();
+       $.ajax({
+           type:'get',
+           url:"/index.php/Admin/Goods/getAttr",
+           data:{'_type_id':_type_id},
+           dataType:'json',
+           success:function(json){
+
+              if(json.error==0){
+                  var _data=json.data;
+                  var _html='<ul>';
+                  $.each(_data,function(k,v){
+                      _html+='<li>';
+                        if(v.attr_type==0){
+                            _html+="<a href='javascript:;' onclick='copy_row(this)'>[+]</a>";
+                        }
+                      _html+=v.attr_name+'：';
+                      if(v.attr_input_type==1) {
+                          var _attr_vals=v.attr_values.split(',');
+                          _html += "<select name='goodsAttr["+v.attr_id+"][]'>";
+                          $.each(_attr_vals, function (key, val) {
+
+                              _html += '<option value=' + val + '>' + val + '</option>';
+
+                          })
+                          _html+='</select>';
+                      }else{
+                          _html+="<input type='text' name='goodsAttr["+v.attr_id+"]' value="+v.attr_values+">"
+                      }
+                          _html+='</li>';
+                  });
+
+                  _html+='</ul>';
+
+                  $('#attr').html(_html).prev().show();
+              }else{
+                alert(json.data);
+              }
+           }
+       })
+   })
+
+</script>
+<script>
+    function copy_row(obj){
+        var _li=$(obj).parent();//获取a标签的父元素对象
+            //如果父元素里面的a标签有+
+        if(_li.find('a').html()=='[+]'){
+            var new_li=_li.clone(true);//克隆一行
+            new_li.find('a').html('[-]');//a标签的内容变成-
+            _li.after(new_li);//把克隆的li 放在旧li后面
+        }else{
+            _li.remove();
+        }
+    }
+</script>
+
+</html>

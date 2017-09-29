@@ -1,0 +1,24 @@
+ <script>
+     var username=$('input[name=username]').val();
+     var time1=$('input[name=time1]').val();
+     var time2=$('input[name=time2]').val();
+
+     $.ajax({
+         url:'__CONTROLLER__/test',
+         type:'get',
+         data:{'username':username,'time1':time1,'time2':time2},
+         dataType:'json',
+         success:function(json){
+             var _html='';
+             $.each(json,function(k,v){
+                _html+='<tr>';
+                _html+='<td>'+v['order_code']+'</td>';
+                _html+='<td>'+v['username']+'</td>';
+                _html+='<td>'+v['goods_name']+'</td>';
+                _html+='<td>'+v['order_count']+'</td>';
+                _html+='</tr>';
+             })
+             $('tbody').html(_html);
+         }
+     })
+ </script>

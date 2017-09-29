@@ -1,0 +1,37 @@
+<div style="font-size: 13px; margin: 10px 5px;">
+    <table class="table_a" border="1" width="100%" id="event_tb">
+        <tbody>
+        <tr style="font-weight: bold;">
+            <td>序号</td>
+            <td>权限名称</td>
+            <td>权限控制器</td>
+            <td>权限方法</td>
+
+            <td align="center">操作</td>
+        </tr>
+        <?php foreach($data as $k => $v): ?>
+        <tr id="product1">
+            <td><?php echo ++$k?></td>
+            <td><?php echo str_repeat('　',$v['level']).$v['auth_name']?></td>
+            <td><?php echo $v['auth_c']?></td>
+            <td><?php echo $v['auth_a']?></td>
+
+
+            <td><?php if($v['auth_id']!=1):?>
+                <a href="__CONTROLLER__/upd/auth_id/<?php echo $v['auth_id']?>">
+
+                <button>修改</button></a>
+                <button class="del" auth_id="<?php echo $v['auth_id']?>" >删除</button>
+                <?php endif?>
+            </td>
+
+        </tr>
+        <?php endforeach?>
+
+        </tbody>
+    </table>
+    <div class="pagination" align="center">
+        {$page}
+
+    </div>
+</div>

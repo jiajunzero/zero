@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+        <title>权限列表</title>
+
+        <link href="__PUBLIC__/Admin/css/mine.css" type="text/css" rel="stylesheet" />
+        <link href="__PUBLIC__/Css/page.css" type="text/css" rel="stylesheet"/>
+        <link href="__PUBLIC__/Swal/sweetalert.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <style>
+            .tr_color{background-color: #9F88FF}
+        </style>
+        <div class="div_head">
+            <span>
+                <span style="float: left;">当前位置是：权限管理-》权限列表</span>
+                <span style="float: right; margin-right: 8px; font-weight: bold;">
+                    <a style="text-decoration: none;" href="__CONTROLLER__/add">【添加权限】</a>
+                </span>
+            </span>
+        </div>
+        <div></div>
+        <div class="div_search">
+            <span>
+                <form action="#" method="get">
+                    品牌<select name="s_product_mark" style="width: 100px;">
+                        <option selected="selected" value="0">请选择</option>
+                        <option value="1">苹果apple</option>
+                    </select>
+                    <input value="查询" type="submit" />
+                </form>
+            </span>
+        </div>
+       <include file="data"/>
+    </body>
+<script src="__PUBLIC__/Js/jquery.min.js"></script>
+<script src="__PUBLIC__/Swal/sweetalert.min.js"></script>
+<script>
+    //利用ajax技术实现委托无刷新删除
+    $('#event_tb').click(function(event){
+
+       var _target=$(event.target);
+
+       var _class=_target.attr('class');
+       console.log(_class);
+       if(_class=='del'){
+
+           var auth_id=_target.attr('auth_id');
+           $.ajax({
+               url:"__CONTROLLER__/del",
+               type:'get',
+               data:{'auth_id':auth_id},
+               dataType:'json',
+               success:function(json){
+                   if(json.error==0){
+                       $(_target).parent().parent().remove();
+//                       swal({
+//                               title: "确定删除吗？",
+//                               text: "你将无法恢复该信息！",
+//                               type: "warning",
+//                               showCancelButton: true,
+//                               confirmButtonColor: "#DD6B55",
+//                               confirmButtonText: "确定删除！",
+//                               closeOnConfirm: false
+//                           },
+//                           function(){
+                       swal('已删除', "", "success");
+
+//                           });
+
+                   }else{
+                       swal(json.info,'','error');
+                   }
+
+               }
+           })
+       }
+
+    })
+</script>
+
+</html>

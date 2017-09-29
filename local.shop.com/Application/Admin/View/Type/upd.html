@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>编辑用户</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <link href="__PUBLIC__/Admin/css/mine.css" type="text/css" rel="stylesheet">
+
+
+    </head>
+    <style>
+        label.error{
+            color:red;
+            margin-left: 5px;
+        }
+    </style>
+    <body>
+
+        <div class="div_head">
+            <span>
+                <span style="float:left">当前位置是：用户管理-》编辑用户信息</span>
+                <span style="float:right;margin-right: 8px;font-weight: bold">
+                    <a style="text-decoration: none" href="__CONTROLLER__/lst">【返回】</a>
+                </span>
+            </span>
+        </div>
+        <div></div>
+
+        <div style="font-size: 13px;margin: 10px 5px">
+            <form action="__SELF__" method="post" enctype="multipart/form-data" name="myform">
+                <input type="hidden" name="id" value="{$row['id']}">
+            <table border="1" width="100%" class="table_a">
+                <tr>
+                    <td>用户名称</td>
+                    <td><input type="text" name="username" value="{$row['username']}" /></td>
+                </tr>
+                <tr>
+                    <td>用户角色</td>
+                    <td>
+                        <select name="role_id">
+                            <option value="0">请选择</option>
+
+                            <foreach name="roleInfo" item="info">
+                            <option value="{$info['role_id']}">{$info['role_name']}</option>
+                            </foreach>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>密码</td>
+                    <td><input type="password" name="password" id="password" placeholder="密码留空表示不修改" /></td>
+                </tr>
+                <tr>
+                    <td>确认密码</td>
+                    <td><input type="password" name="repwd" placeholder="repwd..." /></td>
+                </tr>
+                <tr>
+                    <td>邮箱</td>
+                    <td><input type="text" name="email" value="{$row['email']}" /></td>
+                </tr>
+                <tr>
+                    <td>用户详细描述</td>
+                    <td>
+                        <textarea name="mark_up" cols="40" rows="5" placeholder="mark_up..." >{$row['mark_up']}</textarea>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="编辑">
+                    </td>
+                </tr>  
+            </table>
+            </form>
+        </div>
+    </body>
+    <script src="__PUBLIC__/Js/jquery.min.js"></script>
+    <script src="__PUBLIC__/Js/jquery.validate.min.js"></script>
+    <script src="__PUBLIC__/Js/validate_zh_cn.js"></script>
+<script>
+    $("form[name=myform]").validate({
+        rules:{
+            username:{
+                required:true,
+                rangelength:[2,10]
+            },
+            password:{
+                rangelength:[5,15]
+            },
+            repwd:{
+                equalTo:"#password"
+            },
+            email:{
+                required:true,
+                email:true
+            }
+        }
+    })
+</script>
+</html>

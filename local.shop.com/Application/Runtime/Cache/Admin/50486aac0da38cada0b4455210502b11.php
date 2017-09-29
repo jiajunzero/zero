@@ -1,0 +1,138 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+        <title>商品属性</title>
+
+        <link href="/Public/Admin/css/mine.css" type="text/css" rel="stylesheet" />
+        <link href="/Public/Css/page.css" type="text/css" rel="stylesheet"/>
+        <link href="/Public/Swal/sweetalert.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <style>
+            .tr_color{background-color: #9F88FF}
+        </style>
+        <div class="div_head">
+            <span>
+                <span style="float: left;">当前位置是：商品属性管理-》商品属性列表</span>
+                <span style="float: right; margin-right: 8px; font-weight: bold;">
+                    <a style="text-decoration: none;" href="/index.php/Admin/Attr/add">【添加商品属性】</a>
+                </span>
+            </span>
+        </div>
+        <div></div>
+        <div class="div_search">
+            <span>
+                <form action="#" method="get">
+                    商品类型<select name="s_product_mark" style="width: 100px;" id="sel">
+                        <option selected="selected" value="0">所有类型</option>
+                        <?php if(is_array($typeInfo)): foreach($typeInfo as $key=>$info): ?><option value="<?php echo ($info[type_id]); ?>"><?php echo ($info['type_name']); ?></option><?php endforeach; endif; ?>
+                    </select>
+                    <input value="查询" type="submit" />
+                </form>
+            </span>
+        </div>
+        <div style="font-size: 13px; margin: 10px 5px;">
+            <table class="table_a" border="1" width="100%">
+                <thead>
+                <tr style="font-weight: bold;">
+                    <td>序号</td>
+                    <td>属性名称</td>
+                    <td>属性类型</td>
+                    <td>属性录入方式</td>
+                    <td>属性可选值</td>
+                    <td align="center">操作</td>
+                </tr>
+               </thead>
+                <tbody id="div">
+            <?php foreach($lsts as $k => $lst): ?>
+
+                <tr id="product1">
+                    <td><?php echo ++$k?></td>
+                    <td><?php echo $lst['attr_name']?></td>
+                    <td><?php echo $lst['attr_type']==0?'单选':'唯一'?></td>
+                    <td><?php echo $lst['attr_input_type']==0?'手工':'列表'?></td>
+                    <td><?php echo $lst['attr_values']?></td>
+                    <td><a href="/index.php/Admin/Attr/upd/attr_id/<?php echo $lst['attr_id']?>">
+
+                        <button>修改</button></a>
+                        <button class="del" attr_id="<?php echo $lst['attr_id']?>" >删除</button>
+                    </td>
+                </tr>
+
+                <?php endforeach?>
+
+                </tbody>
+            </table>
+            <div class="pagination" align="center">
+                <?php echo ($page); ?>
+            </div>
+        </div>
+    </body>
+<script src="/Public/Js/jquery.min.js"></script>
+<script src="/Public/Swal/sweetalert.min.js"></script>
+<script>
+    $('#div').click(function(event){
+        var _target=$(event.target);
+        var _class=_target.attr('class');
+        if(_class=='del'){
+            var attr_id=_target.attr('attr_id');
+            $.ajax({
+                type:'get',
+                url:"/index.php/Admin/Attr/del",
+                data:{'attr_id':attr_id},
+                dataType:'json',
+                success:function(json){
+                    if(json.error==0){
+                        $(_target).parent().parent().remove();
+                        //重新排序
+                        //重新排序
+                        $('tbody tr').each(function(k,v){
+                            $(this).find('td').eq(0).html(k+1);
+                        });
+                        swal(json.info,'','success');
+                    }else{
+                        swal(json.info,'','error');
+
+                    }
+                }
+            })
+        }
+    })
+</script>
+
+<script>
+    $('#sel').change(function(){
+        var type_id=$(this).val();
+        //发送ajax请求
+        $.ajax({
+            type:'get',
+            url:"/index.php/Admin/Attr/AjaxAttr",
+            data:{'type_id':type_id},
+            dataType:'json',
+            success:function(json){
+                if(json.error==0){
+                    var _html='';
+                    $.each(json.data,function(k,lst){
+                        _html+=`<tr id="product1">
+                            <td>${k+1}</td>
+                            <td>${lst['attr_name']}</td>
+                            <td>${lst['attr_type']==0?'单选':'唯一'}</td>
+                            <td>${lst['attr_input_type']==0?'手工':'列表'}</td>
+                            <td>${lst['attr_values']}</td>
+                              <td>
+                                <a href="/index.php/Admin/Attr/upd/attr_id/${lst['attr_id']}">
+                                  <button>修改</button>
+                                </a>
+                                <button class="del" attr_id="${lst['attr_id']}" >删除</button>
+                             </td>
+                        <tr>`
+                    })
+                      $('#div').html(_html);
+                }
+            },
+        })
+    })
+</script>
+</html>

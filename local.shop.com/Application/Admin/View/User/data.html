@@ -1,0 +1,39 @@
+<div style="font-size: 13px; margin: 10px 5px;">
+    <table class="table_a" border="1" width="100%">
+        <tbody>
+        <tr style="font-weight: bold;">
+            <td>序号</td>
+            <td>用户名称</td>
+            <td>邮箱</td>
+            <td>角色</td>
+            <td>登录时间</td>
+            <td>登录IP</td>
+            <td>添加时间</td>
+            <td align="center">操作</td>
+        </tr>
+        <?php foreach($lsts as $k => $lst): ?>
+        <tr id="product1">
+            <td><?php echo ++$k?></td>
+            <td><?php echo $lst['username']?></td>
+            <td><?php echo $lst['email']?></td>
+            <td><?php echo $lst['role_name']?></td>
+            <td><?php echo date('Y-m-d H:s',$lst['login_time'])?></td>
+            <td><?php echo long2ip($lst['login_ip'])?></td>
+            <td><?php echo date('Y-m-d H:s',$lst['add_time'])?></td>
+            <?php if($lst['rloe_id']!=1):?>
+            <td><a href="__CONTROLLER__/upd/id/<?php echo $lst['id']?>">
+
+                <button>修改</button></a>
+                <button class="del" user_id="<?php echo $lst['id']?>" >删除</button>
+            </td>
+            <?php endif?>
+        </tr>
+        <?php endforeach?>
+
+        </tbody>
+    </table>
+    <div class="pagination" align="center">
+        {$page}
+
+    </div>
+</div>

@@ -1,0 +1,182 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>编辑商品</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <link href="/Public/Admin/css/mine.css" type="text/css" rel="stylesheet">
+        <link href="/Public/Css/completer.css" type="text/css" rel="stylesheet">
+    </head>
+    <style>
+        label.error{
+            color:red;
+            margin-left: 5px;
+        }
+    </style>
+    <body>
+
+        <div class="div_head">
+            <span>
+                <span style="float:left">当前位置是：商品管理-》编辑商品信息</span>
+                <span style="float:right;margin-right: 8px;font-weight: bold">
+                    <a style="text-decoration: none" href="/index.php/Admin/Goods/lst">【返回】</a>
+                </span>
+            </span>
+        </div>
+        <div></div>
+
+        <div style="font-size: 13px;margin: 10px 5px">
+            <form action="/index.php/Admin/Goods/upd/goods_id/15" method="post" enctype="multipart/form-data" name="myform">
+                <input type="hidden" name="goods_id" value="<?php echo ($data['goods_id']); ?>"/>
+            <table border="1" width="100%" class="table_a">
+                <tr>
+                    <td>商品名称</td>
+                    <td><input type="text" name="goods_name" value="<?php echo ($data['goods_name']); ?>"  /></td>
+                </tr>
+                <tr>
+                    <td>商品分类</td>
+                    <td>
+                        <select name="cate_id">
+                            <option value="0">请选择</option>
+
+
+                                <?php foreach($cateData as $info){ if($info['cate_id']==$data['cate_id'] ){ $selected="selected='selected'"; }else{ $selected=''; } ?>
+
+                                <option value="<?php echo $info['cate_id']?>" <?php echo $selected?>>
+                                    <?php echo str_repeat( '　　',count(explode("-",$info['path']) ) ).$info['cate_name']?>
+                                </option>
+
+                            <?php }?>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>商品类型</td>
+                    <td>
+                        <select name="type_id">
+                            <option value="0">请选择</option>
+
+
+                                <?php foreach($typeData as $info){ if($info['type_id']==$data['type_id'] ){ $selected="selected='selected'"; }else{ $selected=''; } ?>
+                                <option value="<?php echo ($info['type_id']); ?>" <?php echo $selected?>>
+                                    <?php echo ($info['type_name']); ?>
+                                </option>
+                           <?php }?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>商品价格</td>
+                    <td><input type="text" name="goods_price" value="<?php echo ($data['goods_price']); ?>"  /></td>
+                </tr>
+                <tr>
+                    <td>商品库存</td>
+                    <td><input type="text" name="goods_num" value="<?php echo ($data['goods_num']); ?>" /></td>
+                </tr>
+                <tr>
+                    <td>商品货号</td>
+                    <td><input type="text" name="goods_sn" value="<?php echo ($data['goods_sn']); ?>" /></td>
+                </tr>
+                <tr>
+                    <td>是否上架</td>
+                    <td>
+                        是<input type="radio" name="is_sale" value="1" <?php echo $data['is_sale']==1?"checked='checked'":''?>>
+                        否<input type="radio" name="is_sale" value="0" <?php echo $data['is_sale']==0?"checked='checked'":''?>>
+                    </td>
+                </tr>
+                <tr>
+                    <td>是否新品</td>
+                    <td>
+                        是<input type="radio" name="is_new" value="1" <?php echo $data['is_new']==1?"checked='checked'":''?>>
+                        否<input type="radio" name="is_new" value="0" <?php echo $data['is_new']==0?"checked='checked'":''?>>
+                    </td>
+                </tr>
+                <tr>
+                    <td>是否精品</td>
+                    <td>
+                        是<input type="radio" name="is_best" value="1" <?php echo $data['is_best']==1?"checked='checked'":''?>>
+                        否<input type="radio" name="is_best" value="0" <?php echo $data['is_best']==0?"checked='checked'":''?>>
+                    </td>
+                </tr>
+                <tr>
+
+                  <td>是否热销</td>
+                    <td>
+                        是<input type="radio" name="is_hot" value="1" <?php echo $data['is_hot']==1?"checked='checked'":''?> >
+                        否<input type="radio" name="is_hot" value="0" <?php echo $data['is_hot']==0?"checked='checked'":''?>>
+                    </td>
+                </tr>
+                <tr>
+                    <td>商品图片</td>
+                    <td>
+                        <input type="file" name="goods_img" value=""><BR>
+                        <img src="<?php echo C('VIEW_IMG_PATH').$data['goods_thumb'];?>" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>商品时间</td>
+                    <td>
+                        <input type="text" name="add_time"  value="<?php echo date('Y-m-d H:i',$data['add_time']);?>" id="add_time">
+                    </td>
+                </tr>
+                <tr>
+                    <td>商品描述</td>
+                    <td><textarea name='goods_descp' rows="5" cols="40" id="content"><?php echo ($data['goods_descp']); ?></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="编辑">
+                    </td>
+                </tr>  
+            </table>
+            </form>
+        </div>
+    </body>
+<script src="/Public/Js/jquery.min.js"></script>
+<script src="/Public/Js/jquery.validate.min.js"></script>
+<script src="/Public/Js/validate_zh_cn.js"></script>
+<script src="/Public/Js/completer.min.js"></script>
+<script src="/Public/laydate/laydate.js"></script>
+<script src="/Public/ueditor/ueditor.config.js"></script>
+<script src="/Public/ueditor/ueditor.all.min.js"></script>
+<script src="/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script>
+        UE. getEditor('content',{
+            initialFrameWidth:800,  //初始化编辑器宽度,默认1000
+            initialFrameHeight:300  //初始化编辑器高度,默认320
+        })
+    </script>
+<script>
+    laydate({
+        elem:'#add_time',
+        istime:true,
+        format:'YYYY-MM-DD hh:mm'
+    })
+</script>
+<script>
+    $("form[name=myform]").validate({
+        rules:{
+            username:{
+                required:true,
+                rangelength:[2,10]
+            },
+            password:{
+                required:true,
+                rangelength:[5,15]
+            },
+            repwd:{
+                required:true,
+                equalTo:"#password"
+            },
+            email:{
+                required:true,
+                email:true
+            }
+        }
+    })
+</script>
+
+<script>
+
+</script>
+</html>
