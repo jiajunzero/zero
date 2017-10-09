@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>memcached</title>
+	<style type="text/css">
+		div{
+			font-size: 20px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<pre>
+<div>
+<h3>Memcache是存内存存储的数据库<h3>，memcache没有能力把数据保存到硬盘中进行持久化保存，
+单个key只能保存1M的数据，默认最大的内存存储量是64M，使用当中，memcache可以直接设置超时时间 
+Memcache具有分布式的算法功能。
+
+memcached：这个表示memcache的rpm软件包，用于实现memcache服务器安装
+telnet:这个表示telnet客户端的rpm软件包，这个包的安装用于实现客户端连接memcache服务器
+telnet-server:这个表示telnet的服务器端rpm软件包，这个包的安装用于实现telnet客户端的启动
+
+安装memcache:
+  yum -y install memcached telnet telnet-server
+
+ #启动memcache服务器
+service memcached start 
+#重启memcache服务器
+service memcached restart 
+#停止memcache服务器
+service memcached stop 
+#查看守护进程的状态
+service memceched status
+#把memcached加入开机脚本
+chkconfig memcached on
+
+
+#启动telnet服务器
+service xinetd start 
+#重启telnet服务器
+service xinetd restart 
+#停止telnet服务器
+service xinetd stop 
+#查看守护进程的状态 
+service xinetd status 
+#把xinetd加入开机脚本
+chkconfig xinetd on
+
+---------------------------------------------------------------------
+telnet localhost 11211 //连接memcache
+set name 1 0 3 // 设置、修改   set  键名 标识符 过期时间 字节的大小
+jay  //值
+// 标识符:一般只会填入1，也可以填写2，也可以999，也可以填写888，随便乱填但不可以是负数和0，
+也不可以是中文和特殊字符，只能是正整数
+// 过期时间:0代表永远不过期，其余请求就是以秒作为单位，如:设为30，代表30秒后过期。
+// 最大秒数可以设置为30*86400=30天
+// 字节大小:就是打算添加的数据有多大，如:设为3，代表输入3个字节
+
+get name //获取 name
+delete name //删除 name
+flush_all  //清除所有key
+// memcache默认的最大存储内存空间为64M,而memcache对单个键名的存储的空间最大为1M（命中率）
+-----------------------------------------------------------------------
+
+
+php 扩展安装：memcache memcached
+yum install -y --enablerepo=remi --enablerepo=remi-php56 libmemcached php-pecl-memcache php-pecl-memcached
+//安装完成重启Apache  service httpd restart
+
+$memd=new Memcached();//实例化memcached类
+$memd->addServer('localhost',11211); //连接memcached
+$memd->set('name','zero',60); //设置或修改键值  过期时间 不写代表永久
+$memd->get('name'); //根据键名获取值
+$memd->delete('name');//删除name
+//在Linux中设置的值标识符要为0 PHP端才可以获取到
+
+------------------------------------------------------------
+#存储对象：
+class mem{
+	private $name;
+	private $age;
+	public function __construct($name,$age){
+		$this->name=$name;
+		$this->age=$age;
+	}
+
+	public function say(){
+		echo 'name：'.$this->name,'<br>age:'.$this->age;
+	}
+}
+
+$obj=new mem('jay',39);
+$mem=new Memcached();
+$mem->addServer('localhost',11211);
+$mem->set('obj',$obj);
+
+//获取到的是一个对象
+$obj=$mem->get('obj');
+//可以调用类中的方法
+$obj -> say();
+
+-----------------------------------------------------------
+#特殊类型：序列化 反序列化
+$mem=new Memcached();
+
+$mem->addServer('localhost',11211);
+
+$arr=array(
+	'a'=>'aaa',
+	'b'=>'bbb',
+	'info'=>array(
+		'name'=>'xiaobai',
+		'age'=>20
+	)
+);
+
+$mem->set('xulie',serialize($arr));
+
+//接收的时候反序列化
+$arr=$mem->get('xulie');
+ var_dump(unserialize($arr));
+
+-------------------------------------------------------------
+ //设置前缀索引
+ create table tab(
+ 	id int ,
+ 	name varchar(20),
+ 	KEY name (name(9)),//加上长度
+)
+-------------------------------------------------------------
+登录优化：
+。判断memcache中是否存在用户的登录信息 存在就获取
+。不存在就在数据库中查找  设置memcache
+-----------------------------------------------------------
+#在PHP中修改session存储到memcache
+// session.save_handler是代表sesession默认存储方式为files，
+而存储的文件路径记录在session.save_path当中，放置在linux服务器中/var/lib/php/session
+
+ini_set('session.save_handler','memcache');
+ini_set('session.save_path','tcp://localhost:11211');
+//再开启session
+session_start();
+$_SESSION['name']='jay';//设置值
+$memkey=session_id();//session的ID就是memcache的键
+
+
+------------------------------------------------------------
+#php使用分布式服务 //可以获取得到任意服务器的memcache 的值
+$mem=new Memcached();
+
+$server=array(
+	array('host'=>'localhost','port'=>11211),
+	array('host'=>'192.168.84.94','port'=>11211),
+);
+
+foreach ($server as $key => $v) {
+	$mem->addServer($v['host'],$v['port']);
+}
+
+var_dump($mem->get('name1'));
+echo '<br>';
+var_dump($mem->get('name2'));
+
+------------------------------------------------------
+#在tp3.2中使用memcache
+在config中配置：
+'memcache'=>array(
+	'type'=>'memcache',
+	'host'=>'localhost',
+	'port'=>11211
+);
+
+模块中使用：
+S(C('memcache'));//连接
+S('name','jay');//设置
+S('name');//获取
+S('name',null);//清除
+---------------------------------------------------------
+</div>
+</body>
+</html>

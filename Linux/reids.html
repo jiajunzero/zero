@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>redis</title>
+	<style type="text/css">
+		div{
+			font-size: 20px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<pre>
+	<div>
+<h2>Redis 数据库</h2>
+redis 支持数据持久化和内存存储两种方式,软件运行比memcache大一点,设置超时的key，
+需要使用另外的函数，redis集群是一个主从模式的，主服务器可用来读写，从服务器只能用来读。
+redis没有内置的分布式算法功能。Redis单个key可以存储最大空间为1G,而总存储容量可以视硬盘的大小而定。
+
+
+持久化   单个key 最大1g   总存储无限
+安装：yum -y install redis
+查看redis所有：rpm -ql redis
+
+php扩展安装：
+yum install -y --enablerepo=remi --enablerepo=remi-php56 php-pecl-redis
+打开配置文件：/etc/redis.conf
+屏蔽本地安全机制：#bind 127.0.0.1
+
+启动：service redis start
+加入开机启动脚本：chkconfig redis on
+查看端口： netstat -tunlp | grep redis
+
+redis命令操作界面 客户端：redis-cli  
+6379端口
+
+string类型：
+set name xiaoqian //设置或修改
+get name //获取
+
+哈希表：只有2列
+一个用户就一个表
+表名： user:jay
+字段   值
+name  周杰伦
+age   38
+
+操作：
+hset user:jay name zhoujielun //设置姓名
+hset user:jay age 38  //设置年龄
+hget user:jay name //获取name
+hget user:jay age //获取age
+设置多个字段值：hmset
+hmset Foods:Fruit foods1 apple foods2 pear
+获取所有数据： 
+hgetall Foods:Fruit 
+
+List类型：
+栈：从头部进栈 头部出栈 后进先出 
+压入元素： 栈名 值
+lpush list1 one
+lpush list1 two 
+lpush list1 three  
+获取：链表名 开始位置 结束位置 -1代表所有
+lrange list1 0 -1;
+
+队列：尾部入列 头部出列  先进先出
+压入数据 ： 队列名 值
+rpush list2 xiaobai
+rpush list2 xiaohei
+获取 ：队列名 开始位置 结束位置
+lrange list2 0 -1 
+
+弹出：lpop 链表名
+lpop list1  //栈：弹出后面压入的
+lpop list2 //队列：弹出前面压入的
+弹出保留指定范围 ： ltrim
+ltrim list1 1 3 //保留1-3位置的值
+
+集合类型 无序集合非set：
+创建集合：集合名称 值
+sadd zsFriends jay 
+sadd zsFriends tom
+sadd zsFriends join
+
+sadd lsFriends jay
+sadd lsFriends xioabai
+sadd lsFriends tom
+
+获取：
+smembers zsFriends //获取一个集合的所有值
+求差集：
+以前面的集合作为标准
+sdiff zsFriends lsFriends //返回join
+sdiff lsFriends zsFriends //返回xiaobai
+
+交集：共同拥有的元素
+sinter zsFriends lsFriends //返回jay tom
+
+并集：合并两个集合 去重相同的元素
+sunion zsFriends lsFriends //返回jay tom join xioabai
+
+统计个数 ：scard
+scard zsFriends //返回3  因为zs 只有3个元素
+
+有序集合 zset类型：
+创建有序集合：集合名称 顺序号 元素
+zadd starts 1 jay 
+zadd starts 2 jolin
+zadd starts 3 xiaobai
+
+获取：zrange
+zrange start 0 -1 //集合名称 开始位置 -1代表所有
+改变序号：
+zadd start 10 xiaobai
+降序:zrevrange starts 0 -1 //获取的数据从大到小排列
+
+
+
+获取redis所有的key  keys * 
+判断一个key是否存在 exists key名   存在返回1 
+
+删除key  del
+del name //删除name
+设置有效期：键名 有效期
+expire name 30   
+ttl name //查看有效期剩余时间
+
+查看数据类型：type  key
+type  list1 ;
+type user:jay
+
+打开安全认证 设置密码  /etc/redis.conf
+
+进入客服端需验证：reids-cli -a 密码  
+aof模式：
+开启 配置文件  ：appendonly yes 
+                            appendonly.aof
+重启redis 启动之后快照失效
+退出redis后同步到硬盘中
+
+php操作redis:
+
+header('Content-type:text/html;charset=utf8');
+//实例化redis类
+$redis= new Redis();
+//连接redis服务器  地址 端口
+$redis->connect('localhost',6397);
+//设置密码通过安全认证 必须是字符串
+$redis->auth('1243456');
+//设置一个string类型的数据
+//设置中文需设置字符编码为utf8
+$redis->set('name','jolin');
+//获取一个string类型的key
+$str=$redis->get('name');
+
+哈希类型：----------------------------
+//设置hash数据
+$redis->hmset('Stars:Angela',array(
+	'name'=>'杨颖',
+	'age' =>28,
+	'born'=>'香港',
+));
+//获取数据  返回一个数组
+$data=$redis->hgetall('Stars:Angela');
+------------------------------------------
+集合 类型 ：
+//创建集合zs
+$zs=array('杨过','柯南','周星星','索隆');
+$ls=array('杨过','柯南','路飞','冬雨');
+foreach ($zs as $friend) {
+	$redis->sAdd('zsFriends',$firend);
+}
+foreach ($ls as $friend) {
+	$redis->sAdd('lsFriends',$firend);
+}
+//获取数据
+$zsf=$redis->sMembers('zsFriends');
+$lsf=$redis->sMembers('lsFriends');
+//差集 不同好友
+$zs_ls=$redis->sDiff('zsFriends','lsFriends');
+$ls_zs=$redis->sDiff('lsFriends','zsFriends');
+//交集 共同好友
+$zsandls=$redis->sInter('zsFriends','lsFriends');
+//并集 共享所有好友
+$all=$redis->sUnion('zsFriends','lsFriends');
+//计算总个数
+$countzs=$redis->sCard('zsFriends');
+$countls=$redis->sCard('lsFriends');
+------------------------------------------------
+有序结合：
+$pdo=new PDO('mysql:host=localhost;dbname=test;charset=utf8','root','123456');
+$sql='select * from test ';
+$re=$pdo->query($sql);
+$data=$re->fetchAll(PDO::FETCH_ASSOC);
+
+foreach ($data as $v) {
+	$title='<a href="get.php?id='.$v['id'].'">'.$v['title'].'</a>';
+	$redis->zAdd('news',$v['id'],$title);
+}
+
+//获取数据
+$data=$redis->zRange('news',0,-1);
+foreach ($data as $key => $val) {
+	echo $val;
+}
+-------------------------------------------------
+消息队列 list
+//创建队列
+$sickers=array(
+	'张三请就诊',
+	'李四请就诊',
+	'王五请就诊',
+	'赵六请就诊',
+)；
+
+foreach ($sickers as $k=>$v) {
+	$redis->rpush('sickers',$v);
+}
+
+//弹出 先进先出
+$str=$redis->lPop('sickers');
+if($str){
+	echo $str;
+}else{
+	echo '没了';
+}
+
+-----------------------------------------
+切换redis数据库 有16个数据库  默认是id=0 0-15
+select 1;//切换到第2个数据库
+
+// 清除当前数据库的所有key：
+flushdb
+
+//php选择数据库
+$redis->select(2);
+
+//设置有效期
+$redis->setTimeout('zsFriends',30);//30秒
+---------------------------------------------
+tp3.2.3操作redis 字符串数据
+#框架本身存在bug需要加上redis密码的配置项
+//tp\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php
+if(C('REDIS_AUTH')){
+	$this->handler->auth(C('REDIS.AUTH'));
+}
+
+#配置文件config.php
+return array(
+	'REDIS_AUTH'=>'密码';
+	'REIDS_CONN'=>array(
+		'type'=>'redis',
+		'host'=>'localhost',
+		'port'=>'6379'
+	),
+);
+
+#控制器操作redis
+public function reids(){
+	//连接redis
+	S(C('REIDS_CONN'));
+	//设置key value
+	S('name','jay');
+	//获取key
+	S('name');
+	//删除
+	S('name',null);
+}		
+	</div>
+</body>
+</html>

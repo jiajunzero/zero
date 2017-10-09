@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>linux</title>
+	<style type="text/css">
+		div{
+			font-size: 20px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<pre>
+<div>
+su root //切换到超级管理员 需要密码
+su  lisi//超级管理员切换到普通管理员lisi 不需要密码
+
+shutdownoff, halt  //关机
+shutdown -h  10 //10分钟后关机
+
+cd ~ =/root //超级管理员root
+cd ~ =/home/lisi //普通用户lisi
+
+cd..或cd../  //回到上级目录
+cd. 或 cd./  //当前目录
+cd./lisi //当前目录下的lisi 
+
+ls(list) 命令：列出目录当中的内容（目录、文件）
+ls -l //目录或文件的详细信息
+ls -lh //目录或文件的详细信息  可阅读性强
+-a(all):表示显示全部文件  包括隐藏文件
+ls -lha  //列出全部文件
+
+ll = ls -l//简写
+
+reboot //重启 一般是修改了配置文件时候需重启
+
+mkdir //建立一个目录
+mkdir test //建立一个目录test
+touch index.php// 创建一个index.php文件
+touch 1.php 2.php 3.php //同时创建多个php文件
+
+clear （ctrl+l）//清除屏幕
+
+--help //帮助
+ls --help  //ls命令的帮助 属性
+man //强大的帮助
+man cd//求助cd 的帮助
+
+history //当前用户的历史操作记录
+
+:q //退出
+
+
+vim //检查vim编辑器是否存在
+vi  //检查vi是否存在
+
+vim index.php//打开index.php文件 可以是不存在的新文件
+
+i //在光标之前插入内容
+a //在光标之后插入内容
+o //在光标的下一行插入内容
+I //让光标回到行首前
+A //让光标回到行末
+O //在光标的上一行另起一行
+
+esc //退出编辑模式
+
+: //进入末行模式
+:w //保存文件
+:wq 或 :x //保存并退出
+:q! //强制退出  用于不保存修改
+:w! //强制写入
+:wq! //强制写入并退出
+:/a  //搜索所有a关键字 高亮显示
+:/nohls  //取消高亮显示
+:set nu //设置行号
+:set nonu //取消行号
+:24  //定位到24行
+
+gg //回到首行
+G  //去到末行
+dd //删除一行
+ndd //删除多行
+u //撤销 
+yy //复制
+p  //粘贴
+r //替换
+x //删除光标定位的字符
+
+vim 1.php 2.php 3.php  //利用vim编辑多个文件
+:next //切换下一个文件  需先保存当前文件
+:prev  //回到上一个文件
+
+df-h //磁盘管理命令
+ls | grep finger  //定位到finger软件包
+
+rpm -ivh[完整的rpm安装包名]
+   i：install 安装
+   v: view 显示安装视图 
+   h；h 人性化的方式显示安装的视图过程
+
+ls|grep  软件包的关键字
+ls|grep finger  //查找到finger软件包
+rpm -ivh finger-0.17-39.el6.  //安装finger
+
+finger root //安装成功可以看到root的详细信息
+
+rpm -qa |grep vim  //定位到vim所安装的软件包
+	-q //表示 query 代表查询已经安装过的软件
+	-a // 查询所有已经安装过的软件
+
+rpm -e vim-minimal //卸载minimal
+rpm -e vim-minimal --nodeps //强制删除
+
+
+
+
+passwd root //修改或设置root用户的密码
+
+/etc/grub.conf  //用户装载密码文件
+grub-md5-crypt  //生成md5 装载密码
+
+/etc/inittab  //操作界面文件 3代表字符操作界面 5 图形界面
+
+/etc/selinux/config  //子安全系统selinux 配置文件
+SELINUX = disable  //关闭selinux ；
+
+/etc/group  //用户组文件
+groupadd php25 //添加用户组 php25
+groupadd -g 600 itheima  //添加用户组itheima并自定义id为600  
+grep  //搜索关键字
+grep 600 /etc/group  //搜索id为600的用户组
+grep itheima /etc/group //搜索组名为itheima的用户组
+groupmod -n heima itheima  //修改itheima的组名为heima
+groupmod -g 505 heima  //修改用户组heima的id为505 
+groupdel heima  //删除hiema用户组
+
+
+/etc/passwd  //用户文件
+用户文件第7列：/bin/bash  //表示该用户可以登录操作系统
+              /sbin/nologin  //表示该用户不能登录操作系统
+/etc/shadown  //用户密码文件
+id zero  //显示zero用户的信息
+groups zero  //以键值对的形式 用户名：组名  显示用户信息
+useradd xiaobai  //添加一个用户小白 组名与用户名一致
+useradd -g itcast jay //添加jay用户放到itcast组下面
+useradd -d /home/php25 cidy //添加用户cidy 设置其宿主目录为php25
+usermod -l join jay //把jay用户名修改为join
+userdel join  //删除join用户
+userdel -r join //删除join 同时删除宿主目录
+chfn zero //给zero用户添加备注信息
+touch /etc/nologin   //禁止所有普通用户登录
+
+
+rm index.php  //删除index.php文件 
+rm 1.php 2.php //删除多个文件
+rm -f index.php  //强制删除 不会有提示
+rm -rf test//删除test目录包括文件
+rm -rf * //强制删除当前所有的目录和文件
+rm -r * //只删除所有的文件 不删除目录
+
+
+cp 1.php ../test  //复制当前1.php文件到test目录
+cp -r test test2 //复制test整个目录到test2目录中 
+cp 1.php  ../test/a.php  //复制1.php文件到test目录并改名为a.php
+mv 1.php ../test //移动1.php文件到test目录
+mv test test2 //移动test目录到test2目录中
+mv 1.php a.php  //把1.php 改名为a.php  
+
+tail -n 10 /etc/group  //查看最后10条用户组的信息 tail 默认10条
+gpasswd -a jay php  //把jay用户移动到php用户组  附属组 
+cat ./test/a.txt  //打印test文件夹下的a.txt文件内容
+chmod 644 ./test  //修改test目录下的权限为644 
+
+
+
+
+docs 命令  :ping ip地址  //检查一个IP是否可用
+
+网卡配置文件:/etc/sysconfig/network-scripts/ifcfg-eth0
+
+网卡配置文件需要加两行：IPADDR= 192.168.128.123//ping出来的可用静态ip
+                        NETMASK=255.255.255.0  //网关地址
+service network restart  //重启网卡服务
+
+ssh root@192.168.128.123 //Xshell连接服务器地址
+
+ifconfig  //查看网络配置信息
+
+sevice sshd start/stop/restart/status  //开启、关闭ssh协议
+
+权限分类：r 可读  权重4 ；   w 可写 2；    x 可执行 1  ;灭有权限用 - 表示   0
+          rwx=7    765=rwxrw-r-w
+
+   文件类型：       
+目录 d ； 文件-；  软连接 l；  接口设备 如硬盘 b ;  端口设备 如键盘鼠标 c  ；sock 文件 s
+
+chmod -R 777 a.php  //修改a.php权限为777  拥有者7、所属组7、其他人7
+chmod -R 755/root 或者 chomd -R 755~  //修改root目录下所有的权限
+
+chgrp  -R jay a.php  //修改a.php所属组 
+
+chown -R jay a.php   //修改a.php的拥有者  
+
+chown -R ye.ye b.php  //同时修改所属组和拥有者 组名.用户名
+
+df -h //镜像文件
+
+sevice vsftpd srart  //开启ftp服务 端口21   stop/restart/status
+
+防火墙命令：sevice iptables srart/stop/restart/status; 
+
+chkconfig //启动关闭脚本
+chkconfig iptables off //关闭防火墙开机自启
+
+yum -y install [不完整的包名]  //在线安装
+
+yum -y remove  包名 //卸载 
+
+yum check-update  //更新yum下载源
+
+yum -y install lrzsz //安装lrzsz  上传下载插件 
+
+安装apache 默认2.0-2.4
+yum -y install httpd httpd-manual mod_ssl mod_perl mod_auth_mysql
+
+安装mysql 5.1.73
+yum -y install mysql mysql-server mysql-devel
+
+安装 php 5.6-----------------------------------------php
+yum配置：
+rpm -Uvh http://ftp.iij.ad.jp/pub/linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
+
+rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+
+yum seach php //验证php
+
+安装：
+yum -y install --enablerepo=remi --enablerepo=remi-php56 php php-opcache php-devel 
+php-mbstring php-mcrypt php-mysqlnd php-pecl-xdebug php-pecl-xhprof php-gd* php-curl
+
+-------------------------------------------------------------
+
+apache的服务名称:httpd
+apache默认占据的端口:80
+apache服务的相关命令:service httpd [start | restart | stop | status]
+把apache加入开启机脚本的命令: chkconfig httpd on
+apache默认的配置文件在/etc/httpd/conf/httpd.conf当中
+apache默认站点目录在/var/www/html下
+
+mysql数据库的服务名称: mysqld
+mysql数据库的服务命令: service mysqld [start|restart|stop|status]
+mysql数据库的配置文件: /etc/my.cnf
+mysql数据库的核心数据目录:/var/lib/mysql
+
+
+mysql设置root用户和登录密码123456,执行命令如下:
+mysqladmin -uroot password 123456
+
+mysql -uroot -p123456 //进入/var/lib/mysql 登录
+
+查看字符集：
+show variables like '%char%'
+使用命令: show variables like '%collation%' 
+
+把中文乱码的补丁包上传到/usr/local/src目录当中,会发觉这个目录没有上传的权限,
+所以我们需要修改这个目录为777,然后才能使用ftp工具进行上传操作
+
+
+测试php的安装版本
+第1种测试如下,执行命令:php -v
+使用vim创建一个名为phpinfo.php的文件在/var/www/html下  编写文件 phpinfo();
+</div>
+</body>
+</html>

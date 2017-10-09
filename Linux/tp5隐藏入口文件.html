@@ -1,0 +1,38 @@
+
+<pre>
+
+
+需要开启Apache的rewrite模块
+同时修改虚拟主机的  AllowOverride All
+同时存放到public目录
+
+隐藏index.php
+TP官方默认的 .htaccess文件
+
+&lt;IfModule mod_rewrite.c&gt;
+	 Options +FollowSymlinks -Multiviews
+	 RewriteEngine On
+	 RewriteCond %{REQUEST_FILENAME} !-d
+	 RewriteCond %{REQUEST_FILENAME} !-f
+	 RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+&lt;/IfModule&gt;
+
+如果用的phpstudy，规则如下:
+
+&lt;IfModule mod_rewrite.c&gt;
+	Options +FollowSymlinks -Multiviews
+	RewriteEngine on
+	RewriteCond %{REQUEST_FILENAME} !-d 
+	RewriteCond %{REQUEST_FILENAME} !-f 
+	RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1] 
+&lt;/IfModule&gt;
+
+如果你使用的apache版本使用上面的方式无法正常隐藏index.php，可以尝试使用下面的方式配置.htaccess文件
+
+&lt;IfModule mod_rewrite.c&gt;
+	Options +FollowSymlinks -Multiviews
+	RewriteEngine on
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]
+&lt;/IfModule&gt;

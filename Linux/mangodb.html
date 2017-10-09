@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mongodb</title>
+	<style>
+		body{
+			font-size: 20px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<pre>
+
+NoSQL ,（Not Only SQL），泛指非关系型数据库, 它是由一次叫“反Sql运动”的社区讨论而诞生的体系。
+NoSql的共同特点和优势:
+NoSQL 通常是以key-value形式存储的（如:Memcache） 
+不支持SQL语句， 
+没有表结构
+配置简单 
+灵活、高效的操作与数据模型 
+低廉的学习成本
+能很好地作为MySql的中间层
+MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的，
+但是mongdb做不到关系型数据的连表，外键等操作，它的存储数据方式有点类似于Json格式，
+Mogodb叫做这种格式叫为Bson（big json），Mongodb是一个面向集合的，模式自由的文档型数据库。
+MongoDB能很好地支持PHP
+MongoDB安全性是所有NOSql最好的.
+MongoDB安装的文件比较大,占据了一定的硬盘空间
+
+缺点:不支持连表查询，不支持sql语句，不支持事务存储过程等，所以不适合存储数据间关系比较复杂的数据，一般主要是当做一个数据仓库来使用。
+适用于：日志系统，股票数据等。
+不使用于：电子商务系统等需要连多表查询的功能。
+国内职场中应用mongodb最广泛的网站(PHP+Mongodb)：
+youku(优酷)
+tudou(土豆)
+
+
+MongoDB
+
+yum search mongodb //查看mongodb所有的包
+安装服务端   客服端
+yum -y install mongodb mongodb-server  
+yum -y remove mongodb //卸载
+启动：service mongod satrt
+进入mongodb  命令:mongo
+
+use php  //创建或切换数据库
+show dbs  //查看所有数据库 
+db  //正在使用的数据库 
+db.stats();  //查看数据库信息
+创建集合：db.class1.insert({'name':'jay,'age':20});
+show tables //查看所有集合
+db.集合名.find() //查找指定的数据
+db.class.findOne() //查找第一条记录 
+db.class.drop() //删除集合
+删库：db.dropDatabase();
+帮助命令：  db.help()
+集合帮助：db.集合名称.help();
+集合的字节大小：  db.stu.dataSize();
+自己定义主键_id:
+db.stu.insert({_id:20,name:'ls'};) 
+批量增加：
+for(var i=1;i<=20;i++){
+	db.stu.insert({_id:i,name:'stu'+i});
+}	
+计算总记录：db.stu.count();
+删除文档：
+db.stu.remove(); //删除所有数据
+db.stu.remove({_id:5}); //删除id为5的文档
+db.str.remove({_id:('$lt':3)});//删除小于3
+db.str.remove({_id:('$gte':3)});//删除大于并等于3
+编辑 修改文档：$set 修改器  添加或修改
+db.stu.update({_id:10},{'$set':{name:'lin'}});//条件、内容
+
+$inc  增加数值        负值为减
+db.stu.update({_id:10,{'$inc':{age:3}}});//age +3
+
+批量修改： false=关闭默认1条   true=开启批量
+db.stu.update({_id:{'$lte':10}},{'$set':{name:'one'}},false,true);//修改id小于等于10的name为one
+
+获取指定条数记录：
+db.stu.find().limit(2);//前面2两条记录
+获取指定文档：
+db.stu.find({_id:10});
+db.stu.find({_id:{'$gte':6}});//查询id大于或等于6
+显示指定字段： 自动加入主键_id
+db.stu.find({name:'jay'},{name:1,lesson:1});
+
+倒序：sort() ; 1位升序  -1 为倒序
+db.stu.find().sort({_id:-1});
+
+查询最后插入的文档：db.stu.find().sort({_id:-1}).limit(1)
+
+db.stu.find().skip().count();
+
+$or 操作符    //id=11  或者  name=jay
+db.stu.find({'$or':[{id:11},{name:'jay'}]},);
+
+$and 
+db.stu.find({'and':[{'_id':19},{'num':10}]);
+
+$in
+db.stu.find({_id:{'$in':[1,2,3,5]}});
+
+添加用户：
+use admin  //切换到此数据库
+创建或更新用户：db.addUser('用户名','密码');
+pkill mongod 强制终止
+开启安全认证：
+vim /etc/mongodb.conf   
+打开 auth=true
+重启mongodb 
+进入mongo:
+ mongo -u用户  -p密码 localhost:27017/admin
+ 
+建立索引：
+db.stu.ensureIndex({name:1});
+查看索引：
+db.stu.getIndexes();
+删除索引：
+db.stu.dropIndex({name:1});
+
+建立唯一索引：
+1、db.stu.ensureIndex({name:1})
+2、db.stu.ensureIndex({name:1},{unique:true});
+
+
+php使用mongodb
+安装：yum install -y --enablerepo=remi --enablerepo=remi-php56 php-pecl-mongo
+ 重启apache
+
+
+分片：
+vim /etc/mongod.sharding
+mongodb://root:123456@localhost:27017//admin('Size:80M，'DbName':'php','Sec':2)
+
+
+
+
+//连接mongodb
+$mongo=new MongoClient('mongodb://root:123456@localhost:27017/admin');
+//选择数据库
+$db=$mongo->SelectDb('php');
+//获取文档  返回对象
+$data=$db->stu->find();
+
+//插入数据
+$db->stu->insert(array(
+		'name'=>'itcast',
+		'age'=>30,
+	));
+
+//删除文档     age <33
+$db->stu->remove(array(
+		'age'=>array(
+				'$lt'=>33
+			),
+	));
+
+//db.stu.remove({'age':{'$in':[33,25]}});
+
+$db->stu->remove(array(
+	'age'=>array(
+			'$in'=>array(33,25),
+		)
+	));
+
+//修改数据
+$db->stu->update(['name'=>'itcast'],['name'=>'独孤求败']);
+//批量修改
+$db->stu->update(
+	['_id'=>['$lt'=>13]],
+	['$set'=>['lesson'=>'laraver']],
+	['multiple'=>true]);
+
+//迭代器转换为数组
+$data=$db->stu->find();
+iterator_to_array($data);
+
+foreach ($data as $key => $v) {
+	echo $v['name'];
+}
+
+// num>=5的 name lesson 文档 
+$db->stu->find(
+	array('num'=>array('$get'=>5)),
+	array('name'=>1,'lesson'=>1)
+)->limit(4);
+
+//$or
+$data=$db->stu->find(
+	array('$or'=>array(
+		['_id'=>7],['num'=>8],['name'=>'jay']
+	)));
+
+$re=iterator_to_array($data);
+
+
+// $and
+$db->stu->find(
+	array('$and'=>array(
+		array('id'=>8),
+		array('lesson'=>'laraver')
+		))
+	);
+
+
+
+//分片
+$pdo=new PDO('mysql:host=localhost;dbname=;charset=utf8','root','123456');
+
+$res=$pdo->query('select * from test');
+$data=$res->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+
+db.class.update({_id:7},{'$set':{name:'jay'}});
+db.class.update({_id:7},{'$inc':{age:3}});
+db.class.update({_id:{'$gt':3}},{'$set':{'name':'chou'}},false,true);
+db.class.find({'_id':{'$gte':6}});
+
+for(var i=11;i<21;i++){
+	db.two.insert({_id:i,name:'stu'+i,class:'java'})
+}
+
+db.class.find({class:'java'},{name:1,class:1});
+db.two.find({},{name:1}).sort({_id:-1}).limit(5);
+db.two.find().skip(3).limit(3);
+db.two.find().skip(3).count(true);
+db.two.find({'$or':[{_id:11},{name:'stu12'}]});
+db.two.find({'$or':[{_id:13},{name:'stu7'},{class:'php'}]},{name:1});
+
+db.two.find({'$and':[{_id:13},{name:'stu13'}]},{name:1});
+db.two.find({_id:{'$in':[1,2,3,4,5]}});
+
+db.two.ensureIndex({name:1});
+db.two.getIndexes();
+db.two.ensureIndex({name:1},{unique:true});
+db.two.insert({_id:100,name:'stu12'});
+db.two.find({name:'stu10'}).explain();
+</body>
+</html>
