@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="jquery.js"></script>
+        <script src="PinYin.js"></script>
+    </head>
+    <body>
+    中文：<input type="text" id="zh" />
+    <input type="checkbox" id="box" />
+    <br />
+    <br />
+    拼音：<input type="text" id="cn" />
+    </body>
+    <script>
+    	var fal = false;
+    	$("#box").bind('click', function(){
+    		if(fal == false){
+				//alert($("#box").val());
+    			$("#cn").val(codefans_net_CC2PY($("#zh").val()));
+				fal = true;
+    		}else{
+
+    			$("#cn").val('');
+    			fal = false;
+    		}
+
+    	});
+    </script>
+</html>

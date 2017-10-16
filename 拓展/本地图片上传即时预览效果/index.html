@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> New Document </title>
+  <style>
+	form{position:relative;}
+	.upload{background:#000;color:#fff;width:100px;height:30px;line-height:30px;text-align:center;cursor:pointer;}
+	input{position:absolute;top:0;left:0;height:30px;width:100px;opacity:0;filter:alpha(opacity=0);cursor:pointer;}
+  </style>
+ </head>
+
+ <body>
+	<form enctype="multipart/form-data" name="form1">
+		<input id="f" type="file" name="f" onchange="change()" />
+		<div class="upload"> 上传图片</div>
+		<p>预览:</p>
+		<p>
+			<img id="preview" alt=""  name="pic" />
+		</p>
+	</form>
+
+    <script src="placeImage.js"></script>
+ </body>
+</html>

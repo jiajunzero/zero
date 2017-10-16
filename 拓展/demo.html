@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <select name="" id="sel">
+    	<option value="0">请选择...</option>
+    	<option value="1">不知道1</option>
+    	<option value="2">不知道2</option>
+    	<option value="3">不知道3</option>
+    </select>
+    <hr />
+    <input type="radio" name="na" id="" value="1" />篮球　
+    <input type="radio" name="na" id="" value="2" />足球　
+    <input type="radio" name="na" id="" value="3" />羽毛球
+    <hr />
+    <input type="checkbox" name="che[]" id="" value="1" />你猜　
+    <input type="checkbox" name="che[]" id="" value="2" />我不猜　
+    <input type="checkbox" name="che[]" id="" value="3" />你猜不到
+    </body>
+</html>
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script>
+	//设置下拉菜单
+    $('#sel').val(2);
+    //单选
+    $('[name="na"]').val( [2] );
+    //多选
+    $('[name="che[]"]').val( [1,2,3] ); //1,2,3
+</script>

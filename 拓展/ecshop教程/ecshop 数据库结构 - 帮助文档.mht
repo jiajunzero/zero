@@ -1,0 +1,3685 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA5ILGjtOY=?=
+Subject: =?gb2312?B?ZWNzaG9wIMr9vt2/4r3hubkgLSCw79b6zsS1tQ==?=
+Date: Fri, 17 Jun 2011 12:09:19 +0800
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blog.b999.net/post/29/
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16807
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- =C9=FA=B3=C9=CA=B1=BC=E4 : 2009-9-15 1:57:09 =
+--><HTML><HEAD><TITLE>ecshop =CA=FD=BE=DD=BF=E2=BD=E1=B9=B9 - =
+=B0=EF=D6=FA=CE=C4=B5=B5</TITLE><!-- =
+=BD=ABcss=BA=CDjavascript=B6=BC=B4=D3txt=CE=C4=BC=FE=B6=C1=C8=A1, =
+=B7=BD=B1=E3=D0=DE=B8=C4 -->
+<META content=3D"text/html; charset=3Dgb2312" http-equiv=3DContent-Type>
+<STYLE type=3Dtext/css>BODY {
+	FONT-SIZE: 14px
+}
+UL {
+	PADDING-LEFT: 0px; MARGIN-LEFT: 3.2em
+}
+LI {
+	LIST-STYLE-TYPE: decimal
+}
+.datetime {
+	COLOR: #f0f
+}
+.note {
+	COLOR: green
+}
+.note A {
+	COLOR: green
+}
+.type {
+	COLOR: #c60
+}
+#table_list .table_name .value {
+	COLOR: #30f; FONT-SIZE: 1.1em; FONT-WEIGHT: bold
+}
+#table_list .table_name:hover {
+	BACKGROUND-COLOR: gray
+}
+#table_list .table_name {
+	CURSOR: pointer
+}
+.db_name {
+	LINE-HEIGHT: 1em
+}
+.datetime {
+	FONT-SIZE: 12px
+}
+#table_list LI LI SPAN {
+	WIDTH: 10em; DISPLAY: inline-block
+}
+#table_list .table_name .value {
+	WIDTH: 15.3em
+}
+#table_list .field_list .note {
+	WIDTH: 30em
+}
+</STYLE>
+
+<SCRIPT type=3Dtext/javascript>=0A=
+// =D5=B9=BF=AA=BB=F2=CA=D5=CB=F5=B7=BD=CA=BD=0A=
+var mode =3D "exchange";=0A=
+=0A=
+// =C7=D0=BB=BB=C4=B3=B8=F6=C7=F8=D3=F2=B5=C4=CF=D4=CA=BE=0A=
+function swith_display(panel)=0A=
+{=0A=
+    =0A=
+    if ((mode =3D=3D "exchange" && panel.style.display !=3D "none") || =
+mode =3D=3D "unextend")=0A=
+    {=0A=
+        panel.style.display =3D "none";=0A=
+    }=0A=
+    else=0A=
+    {=0A=
+        panel.style.display =3D "";=0A=
+    }=0A=
+}=0A=
+=0A=
+function onload() =0A=
+{=0A=
+    // =CA=D5=C6=F0=D7=D6=B6=CE=CF=D4=CA=BE=0A=
+    swith_child_display("table_list", "div", "detail");=0A=
+    =0A=
+    // =B5=E3=BB=F7=D5=B9=BF=AA=0A=
+    onclick("table_list", "div", "table_name", "div", "detail");=0A=
+}=0A=
+=0A=
+// =B5=E3=BB=F7=D5=B9=BF=AA=0A=
+// panelid =B8=B8=C8=DD=C6=F7id=0A=
+// tarname =C4=BF=B1=EA=B1=EA=C7=A9=0A=
+// classname =C4=BF=B1=EA=C0=E0=0A=
+// target_tarname =D5=B9=BF=AA=B5=C4=B1=EA=C7=A9=0A=
+// target_classname =D5=B9=BF=AA=B5=C4=C0=E0=0A=
+function onclick(panelid, tarname, classname, target_tarname, =
+target_classname)=0A=
+{=0A=
+    var name_list =3D =
+document.getElementById(panelid).getElementsByTagName(tarname);=0A=
+    for (var name_index =3D 0; name_index < name_list.length; name_index =
+++)=0A=
+    {=0A=
+        var name =3D name_list[name_index];=0A=
+        if (name.className =3D=3D classname)=0A=
+        {=0A=
+            name.onclick =3D function()=0A=
+            {=0A=
+                swith_child_display_byobj(this.parentNode, =
+target_tarname, target_classname);=0A=
+			    this.name =3D (this.name =3D=3D "Down") ? "" : "Down";=0A=
+			    this.style.backgroundColor =3D (this.name =3D=3D "Down") ? "#4ff" =
+: "#dff";=0A=
+            }=0A=
+            name.onmouseover =3D function()=0A=
+            {=0A=
+			    if (this.name !=3D "Down")=0A=
+			    {=0A=
+            	    this.style.backgroundColor =3D "#dff";=0A=
+			    }=0A=
+            }=0A=
+            name.onmouseout =3D function()=0A=
+            {=0A=
+			    if (this.name !=3D "Down")=0A=
+			    {=0A=
+            	    this.style.backgroundColor =3D "";=0A=
+			    }=0A=
+            }=0A=
+        }=0A=
+    }=0A=
+}=0A=
+=0A=
+// =CA=D5=C6=F0=C8=AB=B2=BF, panel=B8=B8=C8=DD=C6=F7, =
+tarname=D7=D3=B1=EA=C7=A9=C3=FB, classname=C4=BF=B1=EA=C0=E0=C3=FB=0A=
+function swith_child_display(panelid, tarname, classname)=0A=
+{=0A=
+    swith_child_display_byobj(document.getElementById(panelid), tarname, =
+classname);=0A=
+}=0A=
+function swith_child_display_byobj(panel, tarname, classname)=0A=
+{=0A=
+    var table_list =3D panel.getElementsByTagName(tarname);=0A=
+    for (var table_index =3D 0; table_index < table_list.length; =
+table_index ++)=0A=
+    {=0A=
+        var table =3D table_list[table_index];=0A=
+        if (table.className =3D=3D classname)=0A=
+        {=0A=
+            swith_display(table);=0A=
+        }=0A=
+    }=0A=
+}=0A=
+=0A=
+</SCRIPT>
+
+<META name=3DGENERATOR content=3D"MSHTML 9.00.8112.16430"></HEAD>
+<BODY onload=3Donload()>
+<H1 class=3Ddb_name>ecshop =CA=FD=BE=DD=BF=E2</H1><BR><A =
+href=3D"http://blog.b999.net/">=B7=B5=BB=D8=CA=D7=D2=B3</A>=20
+<SPAN class=3Ddatetime>From: zwc1986</SPAN><BR><SPAN =
+class=3Ddatetime>2009-9-15=20
+1:57:09</SPAN>=20
+<DIV id=3Dbuttons><A onclick=3D"document.body.style.fontSize =3D =
+'14px';"=20
+href=3D"http://blog.b999.net/post/29/#">14=BA=C5=D7=D6=CC=E5</A> <A=20
+onclick=3D"document.body.style.fontSize =3D '16px';"=20
+href=3D"http://blog.b999.net/post/29/#">16=BA=C5=D7=D6=CC=E5</A> <A=20
+onclick=3D"document.body.style.fontSize =3D '18px';"=20
+href=3D"http://blog.b999.net/post/29/#">18=BA=C5=D7=D6=CC=E5</A> <A=20
+onclick=3D"document.body.style.fontSize =3D '20px';"=20
+href=3D"http://blog.b999.net/post/29/#">20=BA=C5=D7=D6=CC=E5</A> <A=20
+onclick=3D"document.body.style.fontSize =3D '22px';"=20
+href=3D"http://blog.b999.net/post/29/#">22=BA=C5=D7=D6=CC=E5</A> <A=20
+onclick=3D"document.body.style.fontSize =3D '24px';"=20
+href=3D"http://blog.b999.net/post/29/#">24=BA=C5=D7=D6=CC=E5</A> <A=20
+onclick=3D"document.body.style.fontSize =3D '26px';"=20
+href=3D"http://blog.b999.net/post/29/#">26=BA=C5=D7=D6=CC=E5</A> =
+&nbsp;&nbsp; <A=20
+onclick=3D'mode =3D "extend";swith_child_display("table_list", "div", =
+"detail"); mode =3D "exchange";'=20
+href=3D"http://blog.b999.net/post/29/#">=D5=B9=BF=AA=C8=AB=B2=BF</A> <A=20
+onclick=3D'mode =3D "unextend";swith_child_display("table_list", "div", =
+"detail"); mode =3D "exchange";'=20
+href=3D"http://blog.b999.net/post/29/#">=CA=D5=C6=F0=C8=AB=B2=BF</A> =
+</DIV><SPAN=20
+class=3Ddatetime>=B5=E3=BB=F7=CF=C2=C3=E6=D5=B9=BF=AA</SPAN> <!-- =
+=CD=EA=D5=FB=B5=C4=B1=ED=BD=E1=B9=B9 =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+<UL id=3Dtable_list>
+  <LI id=3Decs_account_log>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_account_log</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=D3=C3=BB=A7=D5=CA=BA=C5=C7=E9=BF=F6=BC=C7=C2=BC=B1=ED=A3=AC=
+=B0=FC=C0=A8=D7=CA=BD=F0=BA=CD=BB=FD=B7=D6=B5=C8</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>log_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=C3=BB=A7=B5=C7=C2=BC=BA=F3=B1=A3=B4=E6=D4=DAsession=D6=D0=
+=B5=C4id=BA=C5=A3=AC=B8=FAusers=B1=ED=D6=D0=B5=C4user_id=B6=D4=D3=A6</SPA=
+N>=20
+    <LI><SPAN class=3Dvalue>user_money</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=D3=C3=BB=A7=B8=C3=B1=CA=BC=C7=C2=BC=B5=C4=D3=E0=B6=EE</SPAN=
+>=20
+    <LI><SPAN class=3Dvalue>frozen_money</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=B1=BB=B6=B3=BD=E1=B5=C4=D7=CA=BD=F0</SPAN>=20
+    <LI><SPAN class=3Dvalue>rank_points</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B5=C8=BC=B6=BB=FD=B7=D6=A3=AC=B8=FA=CF=FB=B7=D1=BB=FD=B7=D6=
+=CA=C7=B7=D6=BF=AA=B5=C4</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_points</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CF=FB=B7=D1=BB=FD=B7=D6=A3=AC=B8=FA=B5=C8=BC=B6=BB=FD=B7=D6=
+=CA=C7=B7=D6=BF=AA=B5=C4</SPAN>=20
+    <LI><SPAN class=3Dvalue>change_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=B1=CA=B2=D9=D7=F7=B7=A2=C9=FA=B5=C4=CA=B1=BC=E4</SPAN=
+>=20
+    <LI><SPAN class=3Dvalue>change_desc</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=B1=CA=B2=D9=D7=F7=B5=C4=B1=B8=D7=A2=A3=AC=D2=BB=B0=E3=
+=CA=C7=A3=AC=B3=E4=D6=B5=BB=F2=D5=DF=CC=E1=CF=D6=A1=A3=D2=B2=BF=C9=CA=C7=CA=
+=C7=B9=DC=C0=ED=D4=B1=BA=F3=CC=A8=D0=B4=B5=C4=C8=CE=BA=CE=D4=DA=B1=B8=D7=A2=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>change_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B2=D9=D7=F7=C0=E0=D0=CD=A3=AC0=CE=AA=B3=E4=D6=B5=A3=AC1=CE=AA=
+=CC=E1=CF=D6=A3=AC2=CE=AA=B9=DC=C0=ED=D4=B1=B5=F7=BD=DA=A3=AC99=CE=AA=C6=E4=
+=CB=FB=C0=E0=D0=CD</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_ad>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_ad</SPAN> <SPAN=20
+  =
+class=3Dnote>=B9=E3=B8=E6=C1=D0=B1=ED=C5=E4=D6=C3=B1=ED=A3=AC=B0=FC=C0=A8=
+=D5=BE=C4=DA=D5=BE=CD=E2=B5=C4=CD=BC=C6=AC=A3=AC=CE=C4=D7=D6=A3=ACflash=A3=
+=AC=B4=FA=C2=EB=B9=E3=B8=E6</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>ad_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>position_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN=20
+    =
+class=3Dnote>0,=D5=BE=CD=E2=B9=E3=B8=E6=A3=BB=B4=D31=BF=AA=CA=BC=B4=FA=B1=
+=ED=B5=C4=CA=C7=B8=C3=B9=E3=B8=E6=CB=F9=B4=A6=B5=C4=B9=E3=B8=E6=CE=BB=A3=AC=
+=CD=AC=B1=EDad_position=D6=D0=B5=C4=D7=D6=B6=CEposition_id=B5=C4=D6=B5</S=
+PAN>=20
+    <LI><SPAN class=3Dvalue>media_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B9=E3=B8=E6=C0=E0=D0=CD=A3=AC0=A3=AC=CD=BC=C6=AC=A3=BB1=A3=AC=
+flash;2, =B4=FA=C2=EB=A3=BB3=A3=AC=CE=C4=D7=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>ad_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=CC=F5=B9=E3=B8=E6=BC=C7=C2=BC=B5=C4=B9=E3=B8=E6=C3=FB=
+=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>ad_link</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B9=E3=B8=E6=C1=B4=BD=D3=B5=D8=D6=B7</SPAN>=20
+    <LI><SPAN class=3Dvalue>ad_code</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=E3=B8=E6=C1=B4=BD=D3=B5=C4=B1=ED=CF=D6=A3=AC=CE=C4=D7=D6=
+=B9=E3=B8=E6=BE=CD=CA=C7=CE=C4=D7=D6=BB=F2=CD=BC=C6=AC=BA=CDflash=BE=CD=CA=
+=C7=CB=FC=C3=C7=B5=C4=B5=D8=D6=B7=A3=AC=B4=FA=C2=EB=B9=E3=B8=E6=BE=CD=CA=C7=
+=B4=FA=C2=EB=C4=DA=C8=DD</SPAN>=20
+    <LI><SPAN class=3Dvalue>start_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B9=E3=B8=E6=BF=AA=CA=BC=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>end_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B9=E3=B8=E6=BD=E1=CA=F8=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>link_man</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B9=E3=B8=E6=C1=AA=CF=B5=C8=CB</SPAN>=20
+    <LI><SPAN class=3Dvalue>link_email</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B9=E3=B8=E6=C1=AA=CF=B5=C8=CB=B5=C4=D3=CA=CF=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>link_phone</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B9=E3=B8=E6=C1=AA=CF=B5=C8=CB=B5=C4=B5=E7=BB=B0</SPAN>=20
+    <LI><SPAN class=3Dvalue>click_count</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=B8=C3=B9=E3=B8=E6=B5=E3=BB=F7=CA=FD</SPAN>=20
+    <LI><SPAN class=3Dvalue>enabled</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=B9=E3=B8=E6=CA=C7=B7=F1=B9=D8=B1=D5=A3=AC1=A3=AC=BF=AA=
+=C6=F4=A3=BB0=A3=AC=B9=D8=B1=D5=A3=BB=B9=D8=B1=D5=BA=F3=B9=E3=B8=E6=BD=AB=
+=B2=BB=D4=D9=D3=D0=D0=A7=A3=AC=D6=B1=D6=C1=D6=D8=D0=C2=BF=AA=C6=F4</SPAN>=
+ </LI></UL></DIV>
+  <LI id=3Decs_ad_position>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_ad_position</SPAN> =
+<SPAN=20
+  class=3Dnote>=B9=E3=B8=E6=CE=BB=D6=C3=C5=E4=D6=C3=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>position_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN class=3Dnote>=B9=E3=B8=E6=CE=BB=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>position_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=B9=E3=B8=E6=CE=BB=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>ad_width</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=B9=E3=B8=E6=CE=BB=BF=ED=B6=C8</SPAN>=20
+    <LI><SPAN class=3Dvalue>ad_height</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN class=3Dnote>=B9=E3=B8=E6=CE=BB=B8=DF=B6=C8</SPAN>=20
+    <LI><SPAN class=3Dvalue>position_desc</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=B9=E3=B8=E6=CE=BB=C3=E8=CA=F6</SPAN>=20
+    <LI><SPAN class=3Dvalue>position_style</SPAN> <SPAN =
+class=3Dtype>text</SPAN>=20
+    <SPAN class=3Dnote>=B9=E3=B8=E6=CE=BB=C4=A3=B0=E5=B4=FA=C2=EB</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_admin_action>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_admin_action</SPAN> =
+<SPAN=20
+  class=3Dnote>=B9=DC=C0=ED=D4=B1=C8=A8=CF=DE=C1=D0=B1=ED=CA=F7</SPAN> =
+</DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>action_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>parent_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3id=CF=EE=B5=C4=B8=B8id=A3=AC=B6=D4=D3=A6=B1=BE=B1=ED=B5=
+=C4 action_id=D7=D6=B6=CE</SPAN>=20
+    <LI><SPAN class=3Dvalue>action_code</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B4=FA=B1=ED=C8=A8=CF=DE=B5=C4=D3=A2=CE=C4=D7=D6=B7=FB=B4=AE=
+=A3=AC=B6=D4=D3=A6=BA=BA=CE=C4=D4=DA=D3=EF=D1=D4=CE=C4=BC=FE=D6=D0=A3=AC=C8=
+=E7=B9=FB=B8=C3=D7=D6=B6=CE=D3=D0=C4=B3=B8=F6=D7=D6=B7=FB=B4=AE=A3=AC=BE=CD=
+=B1=ED=CA=BE=D3=D0=B8=C3=C8=A8=CF=DE</SPAN>=20
+  </LI></UL></DIV>
+  <LI id=3Decs_admin_log>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_admin_log</SPAN> <SPAN =
+
+  class=3Dnote>=B9=DC=C0=ED=D4=B1=B2=D9=D7=F7=C8=D5=D6=BE=B1=ED</SPAN> =
+</DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>log_id</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>log_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=D0=B4=C8=D5=D6=BE=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=C8=D5=D6=BE=CB=F9=BC=C7=C2=BC=B5=C4=B2=D9=D7=F7=D5=DF=
+id=A3=AC=CD=AC ecs_admin_user=B5=C4user_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>log_info</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B9=DC=C0=ED=B2=D9=D7=F7=C4=DA=C8=DD</SPAN>=20
+    <LI><SPAN class=3Dvalue>ip_address</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=B9=DC=C0=ED=D5=DF=B5=C7=C2=BCip</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_admin_message>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_admin_message</SPAN> =
+<SPAN=20
+  class=3Dnote>=B9=DC=C0=ED=D4=B1=C1=F4=D1=D4=BC=C7=C2=BC=B1=ED</SPAN> =
+</DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>message_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>sender_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B7=A2=CB=CD=B8=C3=C1=F4=D1=D4=B5=C4=B9=DC=C0=ED=D4=B1id=A3=AC=
+=CD=AC ecs_admin_user=B5=C4user_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>receiver_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=BD=D3=CA=D5=CF=FB=CF=A2=B5=C4=B9=DC=C0=ED=D4=B1id=A3=AC=CD=AC=
+=20
+    =
+ecs_admin_user=B5=C4user_id=A3=AC=C8=E7=B9=FB=CA=C7=B8=F8=B6=E0=B8=F6=B9=DC=
+=C0=ED=D4=B1=B7=A2=CB=CD=A3=AC=D4=F2=CD=AC=D2=BB=B8=F6=CF=FB=CF=A2=B8=F8=C3=
+=BF=B8=F6=B9=DC=C0=ED=D4=B1id=B7=A2=CB=CD=D2=BB=CC=F5</SPAN>=20
+    <LI><SPAN class=3Dvalue>sent_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=C1=F4=D1=D4=B7=A2=CB=CD=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>read_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=C1=F4=D1=D4=D4=C4=B6=C1=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>readed</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=C1=F4=D1=D4=CA=C7=B7=F1=D4=C4=B6=C1=A3=AC1=A3=AC=D2=D1=D4=C4=
+=B6=C1=A3=BB0=A3=AC=CE=B4=D4=C4=B6=C1 </SPAN>
+    <LI><SPAN class=3Dvalue>deleted</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=C1=F4=D1=D4=CA=C7=B7=F1=D2=D1=BE=AD=CA=C7=B7=F1=D2=D1=BE=AD=
+=B1=BB=C9=BE=B3=FD=A3=AC1=A3=AC=D2=D1=C9=BE=B3=FD=A3=BB0=A3=AC=CE=B4=C9=BE=
+=B3=FD</SPAN>=20
+    <LI><SPAN class=3Dvalue>title</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=C1=F4=D1=D4=B5=C4=D6=F7=CC=E2</SPAN>=20
+    <LI><SPAN class=3Dvalue>message</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    class=3Dnote>=C1=F4=D1=D4=B5=C4=C4=DA=C8=DD</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_admin_user>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_admin_user</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=B9=DC=C0=ED=D4=B1=D7=CA=C1=CF=C8=A8=CF=DE=C1=D0=B1=ED</SPAN=
+> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=D7=D4=D4=F6ID=BA=C5=A3=AC=B9=DC=C0=ED=D4=B1=B4=FA=BA=C5</SP=
+AN>=20
+    <LI><SPAN class=3Dvalue>user_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B9=DC=C0=ED=D4=B1=B5=C7=C2=BC=C3=FB</SPAN>=20
+    <LI><SPAN class=3Dvalue>email</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B9=DC=C0=ED=D4=B1=D3=CA=CF=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>password</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=DC=C0=ED=D4=B1=B5=C7=C2=BC=C3=D8=C3=DC=BC=D3=C3=DC=B4=AE=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>add_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B9=DC=C0=ED=D4=B1=CC=ED=BC=D3=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>last_login</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=DC=C0=ED=D4=B1=D7=EE=BA=F3=D2=BB=B4=CE=B5=C7=C2=BC=CA=B1=
+=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>last_ip</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=DC=C0=ED=D4=B1=D7=EE=BA=F3=D2=BB=B4=CE=B5=C7=C2=BCip</SP=
+AN>=20
+    <LI><SPAN class=3Dvalue>action_list</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=DC=C0=ED=D4=B1=B9=DC=C0=ED=C8=A8=CF=DE=C1=D0=B1=ED</SPAN=
+>=20
+    <LI><SPAN class=3Dvalue>nav_list</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=DC=C0=ED=D4=B1=B5=BC=BA=BD=C0=B8=C5=E4=D6=C3=CF=EE</SPAN=
+>=20
+    <LI><SPAN class=3Dvalue>lang_type</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>agency_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=B9=DC=C0=ED=D4=B1=B8=BA=D4=F0=B5=C4=B0=EC=CA=C2=B4=A6=
+=B5=C4id=A3=AC=CD=ACecs_agency=B5=C4=20
+    =
+agency_id=D7=D6=B6=CE=A1=A3=C8=E7=B9=FB=B9=DC=C0=ED=D4=B1=C3=BB=B8=BA=D4=F0=
+=B0=EC=CA=C2=B4=A6=A3=AC=D4=F2=B4=CB=B4=A6=CE=AA0</SPAN>=20
+    <LI><SPAN class=3Dvalue>todolist</SPAN> <SPAN =
+class=3Dtype>longtext</SPAN> <SPAN=20
+    class=3Dnote>=BC=C7=CA=C2=B1=BE=BC=C7=C2=BC=B5=C4=CA=FD=BE=DD</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_adsense>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_adsense</SPAN> <SPAN=20
+  class=3Dnote>=B9=E3=B8=E6=B5=E3=BB=F7=C2=CA=CD=B3=BC=C6=B1=ED</SPAN> =
+</DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>from_ad</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=E3=B8=E6=B4=FA=BA=C5=A3=AC-1=CA=C7=D5=BE=CD=E2=B9=E3=B8=E6=
+=A3=AC=C8=E7=B9=FB=CA=C7=D5=BE=C4=DA=B9=E3=B8=E6=D4=F2=CE=AAecs_ad=B5=C4a=
+d_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>referer</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=D2=B3=C3=E6=C0=B4=D4=B4</SPAN>=20
+    <LI><SPAN class=3Dvalue>clicks</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    class=3Dnote>=B5=E3=BB=F7=C2=CA</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_affiliate_log>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_affiliate_log</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=B7=D6=B3=C9=CF=E0=B9=D8=B5=C4=B1=ED=A3=AC=BB=B9=C3=BB=D1=D0=
+=BE=BF=CD=B8</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>log_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>order_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>time</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>user_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>money</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>point</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>separate_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN class=3Dnote></SPAN></LI></UL></DIV>
+  <LI id=3Decs_agency>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_agency</SPAN> <SPAN=20
+  class=3Dnote>=B0=EC=CA=C2=B4=A6=D0=C5=CF=A2</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>agency_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN class=3Dnote>=B0=EC=CA=C2=B4=A6ID</SPAN>=20
+    <LI><SPAN class=3Dvalue>agency_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=B0=EC=CA=C2=B4=A6=C3=FB=D7=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>agency_desc</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    class=3Dnote>=B0=EC=CA=C2=B4=A6=C3=E8=CA=F6</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_area_region>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_area_region</SPAN> =
+<SPAN=20
+  class=3Dnote>=BC=C7=C2=BC=B1=EDecs_shipping_area=D6=D0=B5=C4 =
+shipping_area_name=B5=C4=B5=D8=C7=F8=C3=FB=B0=FC=C0=A8ec</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>shipping_area_id</SPAN> <SPAN=20
+    class=3Dtype>smallint</SPAN> <SPAN =
+class=3Dnote>=C5=E4=CB=CD=C7=F8=D3=F2=B5=C4id=BA=C5=A3=AC=B5=C8=CD=AC=D3=DA=
+=20
+    ecs_shipping_area=B5=C4shipping_area_id=B5=C4=D6=B5</SPAN>=20
+    <LI><SPAN class=3Dvalue>region_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B5=D8=C7=F8=C1=D0=B1=ED=A3=AC=B5=C8=CD=AC=D3=DAecs_region=B5=
+=C4 region_id</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_article>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_article</SPAN> <SPAN=20
+  class=3Dnote>=CE=C4=D5=C2=C4=DA=C8=DD=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>article_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>cat_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=CE=C4=D5=C2=B5=C4=B7=D6=C0=E0=A3=AC=CD=ACecs_article_=
+cat=B5=C4cat_id,=C8=E7=B9=FB=B2=BB=D4=DA=A3=AC=BD=AB=D7=D4=B6=AF=B3=C9=CE=
+=AA=B1=A3=C1=F4=C0=E0=D0=CD=B6=F8=B2=BB=C4=DC=C9=BE=B3=FD</SPAN>=20
+    <LI><SPAN class=3Dvalue>title</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=CE=C4=D5=C2=CC=E2=C4=BF</SPAN>=20
+    <LI><SPAN class=3Dvalue>content</SPAN> <SPAN =
+class=3Dtype>longtext</SPAN> <SPAN=20
+    class=3Dnote>=CE=C4=D5=C2=C4=DA=C8=DD</SPAN>=20
+    <LI><SPAN class=3Dvalue>author</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=CE=C4=D5=C2=D7=F7=D5=DF</SPAN>=20
+    <LI><SPAN class=3Dvalue>author_email</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=CE=C4=D5=C2=D7=F7=D5=DF=B5=C4email</SPAN>=20
+    <LI><SPAN class=3Dvalue>keywords</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=CE=C4=D5=C2=B5=C4=B9=D8=BC=FC=D7=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>article_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CE=C4=D5=C2=C0=E0=D0=CD=A3=AC0=A3=AC=C6=D5=CD=A8=A3=BB1=A3=AC=
+=D6=C3=B6=A5=A3=BB =
+2=BA=CD=B4=F3=D3=DA2=B5=C4=A3=AC=CE=AA=B1=A3=C1=F4=CE=C4=D5=C2=A3=AC=B1=A3=
+=C1=F4=CE=C4=D5=C2=B2=BB=C4=DC=C9=BE=B3=FD</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_open</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=CF=D4=CA=BE=A1=A31=A3=AC=CF=D4=CA=BE=A3=BB0=A3=AC=
+=B2=BB=CF=D4=CA=BE</SPAN>=20
+    <LI><SPAN class=3Dvalue>add_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=CE=C4=D5=C2=CC=ED=BC=D3=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>file_url</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C9=CF=B4=AB=CE=C4=BC=FE=BB=F2=D5=DF=CD=E2=B2=BF=CE=C4=BC=FE=
+=B5=C4url</SPAN>=20
+    <LI><SPAN class=3Dvalue>open_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>0,=D5=FD=B3=A3=A3=BB=B5=B1=B8=C3=D7=D6=B6=CE=CE=AA1=BB=F2=D5=
+=DF2=CA=B1=A3=AC=BB=E1=D4=DA=CE=C4=D5=C2=D7=EE=BA=F3=CC=ED=BC=D3=D2=BB=B8=
+=F6=C1=B4=BD=D3=A1=B0=CF=E0=B9=D8=CF=C2=D4=D8=A1=B1=A3=AC=C1=AC=BD=D3=B5=D8=
+=D6=B7=B5=C8=D3=DAfile_url=B5=C4=D6=B5=A3=BB=B5=AB=B3=CC=D0=F2=D4=DA=B4=CB=
+=B4=A6=D3=D0bug</SPAN>=20
+
+    <LI><SPAN class=3Dvalue>link</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=CE=C4=D5=C2=B1=EA=CC=E2=CB=F9=D2=FD=D3=C3=B5=C4=C1=AC=
+=BD=D3=A3=AC=C8=E7=B9=FB=B8=C3=CF=EE=D3=D0=D6=B5=BD=AB=B2=BB=C4=DC=CF=D4=CA=
+=BE=CE=C4=D5=C2=C4=DA=C8=DD=A3=AC=BC=B4=B8=C3=B1=ED=D6=D0content=B5=C4=D6=
+=B5</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_article_cat>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_article_cat</SPAN> =
+<SPAN=20
+  class=3Dnote>=CE=C4=D5=C2=B7=D6=C0=E0=D0=C5=CF=A2=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>cat_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>cat_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B7=D6=C0=E0=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>cat_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B7=D6=C0=E0=C0=E0=D0=CD=A3=BB1=A3=AC=C6=D5=CD=A8=B7=D6=C0=E0=
+=A3=BB2=A3=AC=CF=B5=CD=B3=B7=D6=C0=E0=A3=BB3=A3=AC=CD=F8=B5=EA=D0=C5=CF=A2=
+=A3=BB4=A3=AC=B0=EF=D6=FA=B7=D6=C0=E0=A3=BB5=A3=AC=CD=F8=B5=EA=B0=EF=D6=FA=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>keywords</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B7=D6=C0=E0=B9=D8=BC=FC=D7=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>cat_desc</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B7=D6=C0=E0=CB=B5=C3=F7=CE=C4=D7=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>sort_order</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN class=3Dnote>=B7=D6=C0=E0=CF=D4=CA=BE=CB=B3=D0=F2</SPAN>=20
+    <LI><SPAN class=3Dvalue>show_in_nav</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=C7=B7=F1=D4=DA=B5=BC=BA=BD=C0=B8=CF=D4=CA=BE=A3=BB0=A3=AC=
+=B7=F1=A3=BB1=A3=AC=CA=C7</SPAN>=20
+    <LI><SPAN class=3Dvalue>parent_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=B8=BD=DA=B5=E3id=A3=AC=C8=A1=D6=B5=D3=DA=B8=C3=B1=EDcat_=
+id=D7=D6=B6=CE </SPAN></LI></UL></DIV>
+  <LI id=3Decs_attribute>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_attribute</SPAN> <SPAN =
+
+  =
+class=3Dnote>=C9=CC=C6=B7=C0=E0=D0=CD=CA=F4=D0=D4=B1=ED=A3=AC=B8=C3=B1=ED=
+=BC=C7=C2=BC=B5=C4=CA=C7=C3=BF=B8=F6=C9=CC=C6=B7=C0=E0=D0=CD=B5=C4=CB=F9=D3=
+=D0=CA=F4=D0=D4=B5=C4=C5=E4=D6=C3=C7=E9</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>attr_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>cat_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=C9=CC=C6=B7=C0=E0=D0=CD=A3=AC=CD=ACecs__type=B5=C4cat_id</S=
+PAN>=20
+    <LI><SPAN class=3Dvalue>attr_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=CA=F4=D0=D4=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>attr_input_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B5=B1=CC=ED=BC=D3=C9=CC=C6=B7=CA=B1=A3=AC=B8=C3=CA=F4=D0=D4=
+=B5=C4=CC=ED=BC=D3=C0=E0=B1=F0=A3=BB0=A3=AC=CE=AA=CA=D6=B9=A4=CA=E4=C8=EB=
+=A3=BB1=A3=AC=CE=AA=D1=A1=D4=F1=CA=E4=C8=EB=A3=BB2=A3=AC=CE=AA=B6=E0=D0=D0=
+=CE=C4=B1=BE=CA=E4=C8=EB</SPAN>=20
+    <LI><SPAN class=3Dvalue>attr_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=F4=D0=D4=CA=C7=B7=F1=B6=E0=D1=A1=A3=BB0=A3=AC=B7=F1=A3=BB=
+1=A3=AC=CA=C7=A3=BB=C8=E7=B9=FB=BF=C9=D2=D4=B6=E0=D1=A1=A3=AC=D4=F2=BF=C9=
+=D2=D4=D7=D4=B6=A8=D2=E5=CA=F4=D0=D4=A3=AC=B2=A2=C7=D2=BF=C9=D2=D4=B8=F9=BE=
+=DD=D6=B5=B5=C4=B2=BB=CD=AC=B6=A8=B2=BB=CD=AC=B5=C4=BC=DB</SPAN>=20
+    <LI><SPAN class=3Dvalue>attr_values</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    =
+class=3Dnote>=C8=E7=B9=FBattr_input_type=CE=AA1=A3=AC=BC=B4=D1=A1=D4=F1=CA=
+=E4=C8=EB=A3=AC=D4=F2attr_name=B6=D4=D3=A6=B5=C4=D6=B5=B5=C4=C8=A1=D6=B5=BE=
+=CD=CA=C7=B8=C3=D7=D6=B6=CE=B5=C4=D6=B5</SPAN>=20
+    <LI><SPAN class=3Dvalue>attr_index</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN=20
+    =
+class=3Dnote>=CA=F4=D0=D4=CA=C7=B7=F1=BF=C9=D2=D4=BC=EC=CB=F7=A3=BB0=A3=AC=
+=B2=BB=D0=E8=D2=AA=BC=EC=CB=F7=A3=BB1=A3=AC=B9=D8=BC=FC=D7=D6=BC=EC=CB=F7=
+=A3=BB2=A3=AC=B7=B6=CE=A7=BC=EC=CB=F7=A3=BB=B8=C3=CA=F4=D0=D4=D3=A6=B8=C3=
+=CA=C7=C8=E7=B9=FB=BC=EC=CB=F7=B5=C4=BB=B0=A3=AC=BF=C9=D2=D4=CD=A8=B9=FD=B8=
+=C3=CA=F4=D0=D4=D5=D2=B5=BD=D3=D0=B8=C3=CA=F4=D0=D4=B5=C4=C9=CC=C6=B7</SP=
+AN>=20
+
+    <LI><SPAN class=3Dvalue>sort_order</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=F4=D0=D4=CF=D4=CA=BE=B5=C4=CB=B3=D0=F2=A3=AC=CA=FD=D7=D6=
+=D4=BD=B4=F3=D4=BD=BF=BF=C7=B0=A3=AC=C8=E7=B9=FB=CA=FD=D7=D6=D2=BB=D1=F9=D4=
+=F2=B0=B4id=CB=B3=D0=F2</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_linked</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=B9=D8=C1=AA=A3=BB0=A3=AC=B2=BB=B9=D8=C1=AA=A3=BB=
+1=A3=AC=B9=D8=C1=AA=A3=BB=C8=E7=B9=FB=B9=D8=C1=AA=A3=AC=C4=C7=C3=B4=D3=C3=
+=BB=A7=D4=DA=B9=BA=C2=F2=B8=C3=C9=CC=C6=B7=CA=B1=A3=AC=BE=DF=D3=D0=D3=D0=B8=
+=C3=CA=F4=D0=D4=CF=E0=CD=AC=D6=B5=B5=C4=C9=CC=C6=B7=BD=AB=B1=BB=CD=C6=BC=F6=
+=B8=F8=D3=C3=BB=A7</SPAN>=20
+    <LI><SPAN class=3Dvalue>attr_group</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=F4=D0=D4=B7=D6=D7=E9=A3=AC=CF=E0=CD=AC=B5=C4=CE=AA=D2=BB=
+=B8=F6=CA=F4=D0=D4=D7=E9=A1=A3=B8=C3=D6=B5=D3=A6=B8=C3=C8=A1=D7=D4ecs_goo=
+ds_type=B5=C4attr_group=B5=C4=D6=B5=B5=C4=CB=B3=D0=F2</SPAN>=20
+    </LI></UL></DIV>
+  <LI id=3Decs_auction_log>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_auction_log</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=C5=C4=C2=F4=B3=F6=BC=DB=BC=C7=C2=BC=D0=C5=CF=A2=B1=ED</SPAN=
+> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>log_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>act_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=C5=C4=C2=F4=BB=EE=B6=AF=B5=C4id=A3=AC=C8=A1=D6=B5=D3=DAecs_=
+goods_activity=B5=C4 act_id=D7=D6=B6=CE</SPAN>=20
+    <LI><SPAN class=3Dvalue>bid_user</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B3=F6=BC=DB=B5=C4=D3=C3=BB=A7id=A3=AC=C8=A1=D6=B5=D3=DAecs_=
+users=B5=C4user_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>bid_price</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN> <SPAN=20
+    class=3Dnote>=B3=F6=BC=DB=BC=DB=B8=F1</SPAN>=20
+    <LI><SPAN class=3Dvalue>bid_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B3=F6=BC=DB=CA=B1=BC=E4</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_auto_manage>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_auto_manage</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=B4=A6=C0=ED=CE=C4=D5=C2=A3=AC=C9=CC=C6=B7=D7=D4=B6=AF=C9=CF=
+=CF=C2=CF=DF=B5=C4=BC=C6=BB=AE=C8=CE=CE=F1=C1=D0=B1=ED=A3=BB=D0=E8=D2=AA=B0=
+=B2=D7=B0=BC=C6=BB=AE=C8=CE=CE=F1=B2=E5</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>item_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=C8=E7=B9=FB=CA=C7=C9=CC=C6=B7=BE=CD=CA=C7ecs_goods=B5=C4goo=
+ds_id=A3=AC=C8=E7=B9=FB=CA=C7=CE=C4=D5=C2=BE=CD=CA=C7 =
+ecs_article=B5=C4article_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>type</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>goods=CA=C7=C9=CC=C6=B7=A3=ACarticle=CA=C7=CE=C4=D5=C2</SPAN=
+>=20
+    <LI><SPAN class=3Dvalue>starttime</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=C9=CF=CF=DF=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>endtime</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    class=3Dnote>=CF=C2=CF=DF=CA=B1=BC=E4</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_bonus_type>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_bonus_type</SPAN> =
+<SPAN=20
+  class=3Dnote>=BA=EC=B0=FC=C0=E0=D0=CD=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>type_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=BA=EC=B0=FC=C0=E0=D0=CD=C1=F7=CB=AE=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>type_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=BA=EC=B0=FC=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>type_money</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=BA=EC=B0=FC=CB=F9=D6=B5=B5=C4=BD=F0=B6=EE</SPAN> =
+
+    <LI><SPAN class=3Dvalue>send_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=BA=EC=B0=FC=B7=A2=CB=CD=C0=E0=D0=CD.0,=B0=B4=D3=C3=BB=A7=C8=
+=E7=BB=E1=D4=B1=B5=C8=BC=B6 =
+,=BB=E1=D4=B1=C3=FB=B3=C6=B7=A2=B7=C5;1,=B0=B4=C9=CC=C6=B7=C0=E0=B1=F0=B7=
+=A2=CB=CD;2,=B0=B4=B6=A9=B5=A5=BD=F0=B6=EE=CB=F9=B4=EF=B5=BD=B5=C4=B6=EE=B6=
+=C8=B7=A2=CB=CD;3,=CF=DF=CF=C2=B7=A2=CB=CD</SPAN>=20
+
+    <LI><SPAN class=3Dvalue>min_amount</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=C8=E7=B9=FB=CA=C7=B0=B4=BD=F0=B6=EE=B7=A2=CB=CD=BA=EC=B0=FC=
+,=B8=C3=CF=EE=CA=C7=D7=EE=D0=A1=BD=F0=B6=EE.=BC=B4=D6=BB=D2=AA=B9=BA=C2=F2=
+=B3=AC=B9=FD=B8=C3=BD=F0=B6=EE=B5=C4=C9=CC=C6=B7=B6=BC=BF=C9=D2=D4=C1=EC=B5=
+=BD=BA=EC=B0=FC</SPAN>=20
+    <LI><SPAN class=3Dvalue>max_amount</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>send_start_date</SPAN> <SPAN =
+class=3Dtype>int</SPAN>=20
+    <SPAN =
+class=3Dnote>=BA=EC=B0=FC=B7=A2=CB=CD=B5=C4=BF=AA=CA=BC=CA=B1=BC=E4</SPAN=
+>=20
+    <LI><SPAN class=3Dvalue>send_end_date</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=BA=EC=B0=FC=B7=A2=CB=CD=B5=C4=BD=E1=CA=F8=CA=B1=BC=E4</SPAN=
+>=20
+    <LI><SPAN class=3Dvalue>use_start_date</SPAN> <SPAN =
+class=3Dtype>int</SPAN>=20
+    <SPAN =
+class=3Dnote>=BA=EC=B0=FC=BF=C9=D2=D4=CA=B9=D3=C3=B5=C4=BF=AA=CA=BC=CA=B1=
+=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>use_end_date</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=BA=EC=B0=FC=BF=C9=D2=D4=CA=B9=D3=C3=B5=C4=BD=E1=CA=F8=CA=B1=
+=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>min_goods_amount</SPAN> <SPAN=20
+    class=3Dtype>decimal</SPAN> <SPAN=20
+    =
+class=3Dnote>=BF=C9=D2=D4=CA=B9=D3=C3=B8=C3=BA=EC=B0=FC=B5=C4=C9=CC=C6=B7=
+=B5=C4=D7=EE=B5=CD=BC=DB=B8=F1.=BC=B4=D6=BB=D2=AA=B4=EF=B5=BD=B8=C3=BC=DB=
+=B8=F1=B5=C4=C9=CC=C6=B7=B2=C5=BF=C9=D2=D4=CA=B9=D3=C3=BA=EC=B0=FC</SPAN>=
+ </LI></UL></DIV>
+  <LI id=3Decs_booking_goods>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_booking_goods</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=C8=B1=BB=F5=B5=C7=BC=C7=B5=C4=B6=A9=B9=BA=BA=CD=B4=A6=C0=ED=
+=BC=C7=C2=BC=B1=ED </SPAN></DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>rec_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B5=C7=BC=C7=B8=C3=C8=B1=BB=F5=BC=C7=C2=BC=B5=C4=D3=C3=BB=A7=
+=B5=C4id=A3=AC=C8=A1=D6=B5 ecs_users=B5=C4user_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>email</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=D2=B3=C3=E6=CC=EE=B5=C4=D3=C3=BB=A7=B5=C4email=A3=AC=C4=AC=C8=
+=CF=C8=A1=D6=B5=D3=DAecs_users=B5=C4email</SPAN>=20
+    <LI><SPAN class=3Dvalue>link_man</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=D2=B3=C3=E6=CC=EE=B5=C4=D3=C3=BB=A7=B5=C4=D0=D5=C3=FB=A3=AC=
+=C4=AC=C8=CF=C8=A1=D6=B5=D3=DAecs_users=B5=C4consignee </SPAN>
+    <LI><SPAN class=3Dvalue>tel</SPAN> <SPAN class=3Dtype>varchar</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=D2=B3=C3=E6=CC=EE=B5=C4=D3=C3=BB=A7=B5=C4=B5=E7=BB=B0=A3=AC=
+=C4=AC=C8=CF=C8=A1=D6=B5=D3=DAecs_users=B5=C4tel</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=C8=B1=BB=F5=B5=C7=BC=C7=B5=C4=C9=CC=C6=B7id=A3=AC=C8=A1=D6=B5=
+=D3=DA ecs_goods=B5=C4 goods_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_desc</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=C8=B1=BB=F5=B5=C7=BC=C7=CA=B1=C1=F4=B5=C4=B6=A9=B9=BA=C3=E8=
+=CA=F6</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_number</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN class=3Dnote>=B6=A9=B9=BA=CA=FD=C1=BF</SPAN>=20
+    <LI><SPAN class=3Dvalue>booking_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=C8=B1=BB=F5=B5=C7=BC=C7=B5=C4=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_dispose</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN class=3Dnote>=CA=C7=B7=F1=D2=D1=BE=AD=B1=BB=B4=A6=C0=ED</SPAN> =
+
+    <LI><SPAN class=3Dvalue>dispose_user</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B4=A6=C0=ED=B8=C3=C8=B1=BB=F5=B5=C7=BC=C7=B5=C4=B9=DC=C0=ED=
+=D4=B1=D3=C3=BB=A7=C3=FB=A3=AC=C8=A1=D6=B5=D3=DAsession,=B8=C3=20
+    session=C8=A1=D6=B5=D3=DAecs_admin_user=B5=C4user_name</SPAN>=20
+    <LI><SPAN class=3Dvalue>dispose_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B4=A6=C0=ED=B5=C4=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>dispose_note</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B4=A6=C0=ED=CA=B1=B9=DC=C0=ED=D4=B1=C1=F4=B5=C4=B1=B8=D7=A2=
+</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_brand>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_brand</SPAN> <SPAN=20
+  =
+class=3Dnote>=C9=CC=C6=B7=C6=B7=C5=C6=D0=C5=CF=A2=BC=C7=C2=BC=B1=ED</SPAN=
+> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>brand_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>brand_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=C6=B7=C5=C6=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>brand_logo</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CF=B4=AB=B5=C4=B8=C3=C6=B7=C5=C6=B9=AB=CB=BElogo=CD=BC=C6=
+=AC</SPAN>=20
+    <LI><SPAN class=3Dvalue>brand_desc</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    class=3Dnote>=C6=B7=C5=C6=C3=E8=CA=F6</SPAN>=20
+    <LI><SPAN class=3Dvalue>site_url</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=C6=B7=C5=C6=B5=C4=CD=F8=D6=B7</SPAN>=20
+    <LI><SPAN class=3Dvalue>sort_order</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=C6=B7=C5=C6=D4=DA=C7=B0=CC=A8=D2=B3=C3=E6=B5=C4=CF=D4=CA=BE=
+=CB=B3=D0=F2=A3=AC=CA=FD=D7=D6=D4=BD=B4=F3=D4=BD=BF=BF=BA=F3</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_show</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=C6=B7=C5=C6=CA=C7=B7=F1=CF=D4=CA=BE=A3=AC0=A3=AC=B7=F1=
+=A3=BB1=A3=AC=CF=D4=CA=BE</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_card>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_card</SPAN> <SPAN=20
+  class=3Dnote>=BA=D8=BF=A8=B5=C4=C5=E4=D6=C3=B5=C4=D0=C5=CF=A2</SPAN> =
+</DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>card_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>card_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=BA=D8=BF=A8=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>card_img</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=BA=D8=BF=A8=CD=BC=D6=BD=B5=C4=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>card_fee</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN> <SPAN=20
+    class=3Dnote>=BA=D8=BF=A8=CB=F9=D0=E8=B7=D1=D3=C3</SPAN>=20
+    <LI><SPAN class=3Dvalue>free_money</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=B6=A9=B5=A5=B4=EF=B5=BD=B8=C3=D7=D6=B6=CE=B5=C4=D6=B5=BA=F3=
+=CA=B9=D3=C3=B4=CB=BA=D8=BF=A8=C3=E2=B7=D1</SPAN>=20
+    <LI><SPAN class=3Dvalue>card_desc</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=BA=D8=BF=A8=B5=C4=C3=E8=CA=F6</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_cart>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_cart</SPAN> <SPAN=20
+  =
+class=3Dnote>=B9=BA=CE=EF=B3=B5=B9=BA=CE=EF=D0=C5=CF=A2=BC=C7=C2=BC=B1=ED=
+</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>rec_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=C3=BB=A7=B5=C7=C2=BCid=A3=AC=C8=A1=D7=D4session=A3=AC</S=
+PAN>=20
+    <LI><SPAN class=3Dvalue>session_id</SPAN> <SPAN =
+class=3Dtype>char</SPAN> <SPAN=20
+    =
+class=3Dnote>=B5=C7=C2=BC=B5=C4sessionid=A3=AC=C8=E7=B9=FB=B8=C3=D3=C3=BB=
+=A7=CD=CB=B3=F6=A3=AC=B8=C3sessionid=B6=D4=D3=A6=B5=C4=B9=BA=CE=EF=B3=B5=D6=
+=D0=B5=C4=CB=F9=D3=D0=BC=C7=C2=BC=B6=BC=BD=AB=B1=BB=C9=BE=B3=FD</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4id=A3=AC=C8=A1=D7=D4=B1=EDgoods=B5=C4 =
+goods_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_sn</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=BB=F5=BA=C5=A3=AC=C8=A1=D7=D4=B1=EDgoods=B5=
+=C4goods_sn</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=C3=FB=B3=C6=A3=AC=C8=A1=D7=D4=B1=EDgoods=B5=
+=C4goods_name</SPAN>=20
+    <LI><SPAN class=3Dvalue>market_price</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=CA=D0=B3=A1=BC=DB=A3=AC=C8=A1=D7=D4=B1=ED=
+ goods=B5=C4market_price</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_price</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=B1=BE=B5=EA=BC=DB=A3=AC=C8=A1=D7=D4=B1=ED=
+goods=B5=C4 shop_price</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_number</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=B9=BA=C2=F2=CA=FD=C1=BF=A3=AC=D4=DA=B9=BA=
+=CE=EF=B3=B5=CA=B1=A3=AC=CA=B5=BC=CA=BF=E2=B4=E6=B2=BB=BC=F5=C9=D9</SPAN>=
+=20
+    <LI><SPAN class=3Dvalue>goods_attr</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=CA=F4=D0=D4=A3=AC=D6=D0=C0=A8=BA=C5=C0=EF=
+=CA=C7=B8=C3=CA=F4=D0=D4=CC=D8=D3=D0=B5=C4=BC=DB=B8=F1</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_real</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote>=C8=A1=D7=D4ecs_goods=B5=C4is_real</SPAN>=20
+    <LI><SPAN class=3Dvalue>extension_code</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=C0=A9=D5=B9=CA=F4=D0=D4=A3=AC=C8=A1=D7=D4=
+ecs_goods=B5=C4 extension_code</SPAN>=20
+    <LI><SPAN class=3Dvalue>parent_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=C9=CC=C6=B7=B5=C4=B8=B8=C9=CC=C6=B7id=A3=AC=C3=BB=D3=D0=
+=B8=C3=D6=B5=CE=AA0 =
+=A3=AC=D3=D0=B5=C4=BB=B0=C4=C7=B8=C3=C9=CC=C6=B7=BE=CD=CA=C7=B8=C3id=B5=C4=
+=C5=E4=BC=FE</SPAN>=20
+    <LI><SPAN class=3Dvalue>rec_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=BA=CE=EF=B3=B5=C9=CC=C6=B7=C0=E0=D0=CD=A3=AC0=A3=AC=C6=D5=
+=CD=A8=A3=BB1=A3=AC=CD=C5=B9=BB=A3=BB2=A3=AC=C5=C4=C2=F4=A3=BB3=A3=AC=B6=E1=
+=B1=A6=C6=E6=B1=F8</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_gift</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=CA=C7=D4=F9=C6=B7=A3=AC0=A3=AC=B7=F1=A3=BB=C6=E4=
+=CB=FB=A3=AC=CA=C7=B2=CE=BC=D3=D3=C5=BB=DD=BB=EE=B6=AF=B5=C4id=A3=AC=C8=A1=
+=D6=B5=D3=DAecs_favourable_activity =B5=C4act_id</SPAN>=20
+
+    <LI><SPAN class=3Dvalue>can_handsel</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>goods_attr_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=C9=CC=C6=B7=B5=C4=CA=F4=D0=D4=B5=C4id=A3=AC=C8=A1=D7=D4=
+goods_attr=B5=C4=20
+    =
+goods_attr_id=A3=AC=C8=E7=B9=FB=D3=D0=B6=E0=B8=F6=A3=AC=D6=BB=BC=C7=C2=BC=
+=C1=CB=D7=EE=BA=F3=D2=BB=B8=F6=A3=AC=BF=C9=C4=DC=CA=C7=B8=F6bug</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_category>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_category</SPAN> <SPAN=20
+  =
+class=3Dnote>=C9=CC=C6=B7=B7=D6=C0=E0=B1=ED=A3=AC=BC=C7=C2=BC=C9=CC=C6=B7=
+=B7=D6=C0=E0=D0=C5=CF=A2</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>cat_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>cat_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B7=D6=C0=E0=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>keywords</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B7=D6=C0=E0=B5=C4=B9=D8=BC=FC=D7=D6=A3=AC=BF=C9=C4=DC=CA=C7=
+=CE=AA=C1=CB=CB=D1=CB=F7</SPAN>=20
+    <LI><SPAN class=3Dvalue>cat_desc</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B7=D6=C0=E0=C3=E8=CA=F6</SPAN>=20
+    <LI><SPAN class=3Dvalue>parent_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=B7=D6=C0=E0=B5=C4=B8=B8id=A3=AC=C8=A1=D6=B5=D3=DA=B8=C3=
+=B1=ED=B5=C4 cat_id=D7=D6=B6=CE</SPAN>=20
+    <LI><SPAN class=3Dvalue>sort_order</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=B7=D6=C0=E0=D4=DA=D2=B3=C3=E6=CF=D4=CA=BE=B5=C4=CB=B3=
+=D0=F2=A3=AC=CA=FD=D7=D6=D4=BD=B4=F3=CB=B3=D0=F2=D4=BD=BF=BF=BA=F3=A3=BB=CD=
+=AC=CA=FD=D7=D6=A3=ACid=D4=DA=C7=B0=B5=C4=CF=C8=CF=D4=CA=BE</SPAN>=20
+    <LI><SPAN class=3Dvalue>template_file</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B2=BB=C8=B7=B6=A8=D7=D6=B6=CE=A3=AC=B0=B4=C3=FB=D7=D6=BA=CD=
+=B1=ED=C9=E8=BC=C6=B2=C2=A3=AC=D3=A6=B8=C3=CA=C7=B8=C3=B7=D6=C0=E0=B5=C4=B5=
+=A5=B6=C0=C4=A3=B0=E5=CE=C4=BC=FE=B5=C4=C3=FB=D7=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>measure_unit</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=B7=D6=C0=E0=B5=C4=BC=C6=C1=BF=B5=A5=CE=BB</SPAN>=20
+    <LI><SPAN class=3Dvalue>show_in_nav</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=C7=B7=F1=CF=D4=CA=BE=D4=DA=B5=BC=BA=BD=C0=B8=A3=AC0=A3=AC=
+=B2=BB=A3=BB1=A3=AC=CF=D4=CA=BE=D4=DA=B5=BC=BA=BD=C0=B8</SPAN>=20
+    <LI><SPAN class=3Dvalue>style</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=B7=D6=C0=E0=B5=C4=B5=A5=B6=C0=B5=C4=D1=F9=CA=BD=B1=ED=
+=B5=C4=B0=FC=C0=A8=CE=C4=BC=FE=C3=FB=B2=BF=B7=D6=B5=C4=CE=C4=BC=FE=C2=B7=BE=
+=B6</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_show</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=D4=DA=C7=B0=CC=A8=D2=B3=C3=E6=CF=D4=CA=BE=A3=AC=
+1=A3=AC=CF=D4=CA=BE=A3=BB0=A3=AC=B2=BB=CF=D4=CA=BE</SPAN>=20
+    <LI><SPAN class=3Dvalue>grade</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=B7=D6=C0=E0=B5=C4=D7=EE=B8=DF=BA=CD=D7=EE=B5=CD=BC=DB=
+=D6=AE=BC=E4=B5=C4=BC=DB=B8=F1=B7=D6=BC=B6=A3=AC=B5=B1=B4=F3=D3=DA1=20
+    =
+=CA=B1=A3=AC=BB=E1=B8=F9=BE=DD=D7=EE=B4=F3=D7=EE=D0=A1=BC=DB=B8=F1=C7=F8=BC=
+=E4=B7=D6=B3=C9=C7=F8=BC=E4=A3=AC=BB=E1=D4=DA=D2=B3=C3=E6=CF=D4=CA=BE=BC=DB=
+=B8=F1=B7=B6=CE=A7=A3=AC=C8=E70-300,300-600,600-900=D5=E2=D6=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>filter_attr</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN=20
+    =
+class=3Dnote>=C8=E7=B9=FB=B8=C3=D7=D6=B6=CE=D3=D0=D6=B5=A3=AC=D4=F2=B8=C3=
+=B7=D6=C0=E0=BD=AB=BB=B9=BB=E1=B0=B4=D5=D5=B8=C3=D6=B5=B6=D4=D3=A6=D4=DA=B1=
+=EDgoods_attr=B5=C4goods_attr_id=CB=F9=B6=D4=D3=A6=B5=C4=CA=F4=D0=D4=C9=B8=
+=D1=A1=A3=AC=C8=E7=A3=AC=B7=E2=C3=E6=D1=D5=C9=AB=CF=C2=D3=D0=BA=EC=A3=AC=BA=
+=DA=B7=D6=C0=E0=C9=B8=D1=A1=20
+    </SPAN></LI></UL></DIV>
+  <LI id=3Decs_collect_goods>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_collect_goods</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=BB=E1=D4=B1=CA=D5=B2=D8=C9=CC=C6=B7=B5=C4=BC=C7=C2=BC=C1=D0=
+=B1=ED=A3=AC=D2=BB=CC=F5=BC=C7=C2=BC=D2=BB=B8=F6=CA=D5=B2=D8=C9=CC=C6=B7<=
+/SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>rec_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=CA=D5=B2=D8=BC=C7=C2=BC=B5=C4=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=CC=F5=CA=D5=B2=D8=BC=C7=C2=BC=B5=C4=BB=E1=D4=B1id=A3=AC=
+=C8=A1=D6=B5=D3=DA ecs_users=B5=C4user_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=D5=B2=D8=B5=C4=C9=CC=C6=B7id=A3=AC=C8=A1=D6=B5=D3=DAecs_=
+goods =B5=C4goods_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>add_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=CA=D5=B2=D8=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_attention</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=C7=B7=F1=B9=D8=D7=A2=B8=C3=CA=D5=B2=D8=C9=CC=C6=B7=A3=AC=
+1=A3=AC=CA=C7=A3=BB0=A3=AC=B7=F1</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_comment>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_comment</SPAN> <SPAN=20
+  =
+class=3Dnote>=D3=C3=BB=A7=B6=D4=CE=C4=D5=C2=BA=CD=B2=FA=C6=B7=B5=C4=C6=C0=
+=C2=DB=C1=D0=B1=ED </SPAN></DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>comment_id</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=D3=C3=BB=A7=C6=C0=C2=DB=B5=C4=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>comment_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=D3=C3=BB=A7=C6=C0=C2=DB=B5=C4=C0=E0=D0=CD=A3=BB0=A3=AC=C6=C0=
+=C2=DB=B5=C4=CA=C7=C9=CC=C6=B7=A3=BB1=A3=AC=C6=C0=C2=DB=B5=C4=CA=C7=CE=C4=
+=D5=C2</SPAN>=20
+    <LI><SPAN class=3Dvalue>id_value</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CE=C4=D5=C2=BB=F2=D5=DF=C9=CC=C6=B7=B5=C4id=A3=AC=CE=C4=D5=C2=
+=B6=D4=D3=A6=B5=C4=CA=C7 ecs_article=20
+    =
+=B5=C4article_id=A3=BB=C9=CC=C6=B7=B6=D4=D3=A6=B5=C4=CA=C7ecs_goods=B5=C4=
+goods_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>email</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C6=C0=C2=DB=CA=B1=CC=E1=BD=BB=B5=C4email=B5=D8=D6=B7=A3=AC=C4=
+=AC=C8=CF=C8=A1=B5=C4ecs_users=B5=C4email</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C6=C0=C2=DB=B8=C3=CE=C4=D5=C2=BB=F2=C9=CC=C6=B7=B5=C4=C8=CB=
+=B5=C4=C3=FB=B3=C6=A3=AC=C8=A1=D6=B5ecs_users=B5=C4 user_name</SPAN>=20
+    <LI><SPAN class=3Dvalue>content</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    class=3Dnote>=C6=C0=C2=DB=B5=C4=C4=DA=C8=DD</SPAN>=20
+    <LI><SPAN class=3Dvalue>comment_rank</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=CE=C4=D5=C2=BB=F2=D5=DF=C9=CC=C6=B7=B5=C4=D0=C7=BC=B6=
+=A3=BB=D6=BB=D3=D01 =
+=B5=BD5=D0=C7=A3=BB=D3=C9=CA=FD=D7=D6=B4=FA=CC=E6=A3=BB=C6=E4=D6=D05=CA=C7=
+=B4=FA=B1=ED5=D0=C7</SPAN>=20
+    <LI><SPAN class=3Dvalue>add_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=C6=C0=C2=DB=B5=C4=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>ip_address</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=C6=C0=C2=DB=CA=B1=B5=C4=D3=C3=BB=A7ip</SPAN>=20
+    <LI><SPAN class=3Dvalue>status</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=B1=BB=B9=DC=C0=ED=D4=B1=C5=FA=D7=BC=CF=D4=CA=BE=
+=A3=AC1=A3=AC=CA=C7=A3=BB0=A3=AC=CE=B4=C5=FA=D7=BC=CF=D4=CA=BE</SPAN>=20
+    <LI><SPAN class=3Dvalue>parent_id</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=C6=C0=C2=DB=B5=C4=B8=B8=BD=DA=B5=E3=A3=BB=C8=A1=D6=B5=B8=C3=
+=B1=ED=B5=C4comment_id=20
+    =
+=D7=D6=B6=CE=A3=BB=C8=E7=B9=FB=B8=C3=D7=D6=B6=CE=CE=AA0=A3=AC=D4=F2=CA=C7=
+=D2=BB=B8=F6=C6=D5=CD=A8=C6=C0=C2=DB=A3=AC=B7=F1=D4=F2=B8=C3=CC=F5=C6=C0=C2=
+=DB=BE=CD=CA=C7=B8=C3=D7=D6=B6=CE=B5=C4=D6=B5=CB=F9=B6=D4=D3=A6=B5=C4=C6=C0=
+=C2=DB=B5=C4=BB=D8=B8=B4</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=B7=A2=B1=ED=B8=C3=C6=C0=C2=DB=B5=C4=D3=C3=BB=A7=B5=C4=D3=C3=
+=BB=A7id=A3=AC=C8=A1=D6=B5=D3=DA ecs_users=B5=C4user_id</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_crons>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_crons</SPAN> <SPAN=20
+  =
+class=3Dnote>=BC=C6=BB=AE=C8=CE=CE=F1=B2=E5=BC=FE=B0=B2=D7=B0=C5=E4=D6=C3=
+=D0=C5=CF=A2</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>cron_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>cron_code</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=B2=E5=BC=FE=CE=C4=BC=FE=D4=DA=CF=E0=D3=A6=C2=B7=BE=B6=
+=CF=C2=B5=C4=B2=BB=B0=FC=C0=A8=A1=B1.php=A1=B1=B2=BF=B7=D6=B5=C4=CE=C4=BC=
+=FE=C3=FB=A3=AC=D4=CB=D0=D0=B8=C3=B2=E5=BC=FE=BD=AB=CD=A8=B9=FD=B8=C3=D7=D6=
+=B6=CE=B5=C4=D6=B5=D1=B0=D5=D2=BD=AB=D4=CB=D0=D0=B5=C4=CE=C4=BC=FE</SPAN>=
+=20
+    <LI><SPAN class=3Dvalue>cron_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=BC=C6=BB=AE=C8=CE=CE=F1=B5=C4=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>cron_desc</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    class=3Dnote>=BC=C6=BB=AE=C8=CB=CE=EF=B5=C4=C3=E8=CA=F6</SPAN>=20
+    <LI><SPAN class=3Dvalue>cron_order</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN=20
+    =
+class=3Dnote>=D3=A6=B8=C3=CA=C7=D3=C3=C1=CB=C9=E8=D6=C3=BC=C6=BB=AE=C8=CE=
+=CE=F1=D6=B4=D0=D0=B5=C4=CB=B3=D0=F2=B5=C4=A3=AC=BC=B4=B5=B1=CD=AC=CA=B1=B4=
+=A5=B7=A22=B8=F6=C8=CE=CE=F1=CA=B1=CF=C8=D6=B4=D0=D0=C4=C4=D2=BB=B8=F6=A3=
+=AC=C8=E7=B9=FB=D2=BB=D1=F9=D3=A6=B8=C3=CA=C7id=D4=DA=C7=B0=B5=C4=CF=C8=D6=
+=B4=D0=D0=D4=DD=B2=BB=C8=B7=B6=A8</SPAN>=20
+    <LI><SPAN class=3Dvalue>cron_config</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    =
+class=3Dnote>=B6=D4=C3=BF=B4=CE=B4=A6=C0=ED=B5=C4=CA=FD=BE=DD=B5=C4=CA=FD=
+=C1=BF=B5=C4=D6=B5=A3=AC=C0=E0=D0=CD=A3=AC=C3=FB=B3=C6=D0=F2=C1=D0=BB=AF=A3=
+=BB=B1=C8=C8=E7=C9=BE=BC=B8=CC=EC=B5=C4=C8=D5=D6=BE=A3=AC=C3=BF=B4=CE=D6=B4=
+=D0=D0=BC=B8=B8=F6=C9=CC=C6=B7=BB=F2=CE=C4=D5=C2=B5=C4=B4=A6=C0=ED</SPAN>=
+=20
+    <LI><SPAN class=3Dvalue>thistime</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=BC=C6=BB=AE=C8=CE=CE=F1=C9=CF=B4=CE=B1=BB=D6=B4=D0=D0=
+=B5=C4=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>nextime</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=B8=C3=BC=C6=BB=AE=C8=CE=CE=F1=CF=C2=B4=CE=B1=BB=D6=B4=D0=D0=
+=B5=C4=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>day</SPAN> <SPAN class=3Dtype>tinyint</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=C8=E7=B9=FB=B8=C3=D7=D6=B6=CE=D3=D0=D6=B5=A3=AC=D4=F2=BC=C6=
+=BB=AE=C8=CE=CE=F1=BD=AB=D4=DA=C3=BF=D4=C2=B5=C4=D5=E2=D2=BB=CC=EC=D6=B4=D0=
+=D0=B8=C3=BC=C6=BB=AE=C8=CB=CE=EF</SPAN>=20
+    <LI><SPAN class=3Dvalue>week</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C8=E7=B9=FB=B8=C3=D7=D6=B6=CE=D3=D0=D6=B5=A3=AC=D4=F2=BC=C6=
+=BB=AE=C8=CE=CE=F1=BD=AB=D4=DA=C3=BF=D6=DC=B5=C4=D5=E2=D2=BB=CC=EC=D6=B4=D0=
+=D0=B8=C3=BC=C6=BB=AE=C8=CB=CE=EF</SPAN>=20
+    <LI><SPAN class=3Dvalue>hour</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C8=E7=B9=FB=B8=C3=D7=D6=B6=CE=D3=D0=D6=B5=A3=AC=D4=F2=B8=C3=
+=BC=C6=BB=AE=C8=CE=CE=F1=BD=AB=D4=DA=C3=BF=CC=EC=B5=C4=D5=E2=B8=F6=D0=A1=CA=
+=B1=B6=CE=D6=B4=D0=D0=B8=C3=BC=C6=BB=AE=C8=CE=CE=F1</SPAN>=20
+    <LI><SPAN class=3Dvalue>minute</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C8=E7=B9=FB=B8=C3=D7=D6=B6=CE=D3=D0=D6=B5=A3=AC=D4=F2=B8=C3=
+=BC=C6=BB=AE=C8=CE=CE=F1=BD=AB=D4=DA=C3=BF=D0=A1=CA=B1=B5=C4=D5=E2=B8=F6=B7=
+=D6=D6=D3=B6=CE=D6=B4=D0=D0=B8=C3=BC=C6=BB=AE=C8=CE=CE=F1=A3=AC=B8=C3=D7=D6=
+=B6=CE=B5=C4=D6=B5=BF=C9=D2=D4=B6=E0=B8=F6=A3=AC=D3=C3=BF=D5=B8=F1=BC=E4=B8=
+=F4</SPAN>=20
+    <LI><SPAN class=3Dvalue>enable</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=BC=C6=BB=AE=C8=CE=CE=F1=CA=C7=B7=F1=BF=AA=C6=F4=A3=BB=
+0=A3=AC=B9=D8=B1=D5=A3=BB1=A3=AC=BF=AA=C6=F4</SPAN>=20
+    <LI><SPAN class=3Dvalue>run_once</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=D6=B4=D0=D0=BA=F3=CA=C7=B7=F1=B9=D8=B1=D5=A3=AC=D5=E2=B8=F6=
+=B9=D8=B1=D5=B5=C4=D2=E2=CB=BC=BB=B9=B5=C3=D4=D9=D1=D0=BE=BF=CF=C2</SPAN>=
+=20
+    <LI><SPAN class=3Dvalue>allow_ip</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=D4=CA=D0=ED=D4=CB=D0=D0=B8=C3=BC=C6=BB=AE=C8=CB=CE=EF=B5=C4=
+=B7=FE=CE=F1=C6=F7ip</SPAN>=20
+    <LI><SPAN class=3Dvalue>alow_files</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=D4=CB=D0=D0=B4=A5=B7=A2=B8=C3=BC=C6=BB=AE=C8=CB=CE=EF=B5=C4=
+=CE=C4=BC=FE=C1=D0=B1=ED=BF=C9=B6=E0=B8=F6=D6=B5=A3=AC=CE=AA=BF=D5=B4=FA=B1=
+=ED=CB=F9=D3=D0=D0=ED=BF=C9=B5=C4=CE=C4=BC=FE=B6=BC=BF=C9=D2=D4</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_email_list>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_email_list</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=D4=F6=BC=D3=B5=E7=D7=D3=D4=D3=D6=BE=B6=A9=D4=C4=B1=ED</SPAN=
+> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=D3=CA=BC=FE=B6=A9=D4=C4=B5=C4=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>email</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=CA=BC=FE=B6=A9=D4=C4=CB=F9=CC=EE=B5=C4=D3=CA=CF=E4=B5=D8=
+=D6=B7</SPAN>=20
+    <LI><SPAN class=3Dvalue>stat</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=C8=B7=C8=CF=A3=AC=BF=C9=D2=D4=D3=C3=BB=A7=C8=B7=
+=C8=CF=D2=B2=BF=C9=D2=D4=B9=DC=C0=ED=D4=B1=C8=B7=C8=CF=A3=BB0=A3=AC=CE=B4=
+=C8=B7=C8=CF=A3=BB1=A3=AC=D2=D1=C8=B7=C8=CF</SPAN>=20
+    <LI><SPAN class=3Dvalue>hash</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=CA=CF=E4=C8=B7=C8=CF=B5=C4=D1=E9=D6=A4=C2=EB=A3=AC=CF=B5=
+=CD=B3=C9=FA=B3=C9=BA=F3=B7=A2=CB=CD=B5=BD=D3=C3=BB=A7=D3=CA=CF=E4=A3=AC=D3=
+=C3=BB=A7=D1=E9=D6=A4=BC=A4=BB=EE=CA=B1=CD=A8=B9=FD=B8=C3=D6=B5=C5=D0=B6=CF=
+=CA=C7=B7=F1=BA=CF=B7=A8=A3=BB=D6=F7=D2=AA=D3=C3=C0=B4=B7=C0=D6=B9=B7=C7=B7=
+=A8=D1=E9=D6=A4=D3=CA=CF=E4</SPAN>=20
+  </LI></UL></DIV>
+  <LI id=3Decs_email_sendlist>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_email_sendlist</SPAN> =
+<SPAN=20
+  class=3Dnote>=D4=F6=BC=D3=B7=A2=CB=CD=B6=D3=C1=D0=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=CA=BC=FE=B7=A2=CB=CD=B6=D3=C1=D0=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>email</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=D3=CA=BC=FE=BD=AB=D2=AA=B7=A2=CB=CD=B5=BD=B5=C4=D3=CA=
+=CF=E4=B5=D8=D6=B7</SPAN>=20
+    <LI><SPAN class=3Dvalue>template_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=D3=CA=BC=FE=B5=C4=C4=A3=B0=E5id=A3=AC=C8=A1=D6=B5=D3=DA=
+ecs_mail_templates=B5=C4 template_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>email_content</SPAN> <SPAN =
+class=3Dtype>text</SPAN>=20
+    <SPAN class=3Dnote>=D3=CA=BC=FE=B7=A2=CB=CD=B5=C4=C4=DA=C8=DD</SPAN> =
+
+    <LI><SPAN class=3Dvalue>error</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B4=ED=CE=F3=B4=CE=CA=FD=A3=AC=B2=BB=D6=AA=B8=C9=CA=B2=C3=B4=
+=D3=C3=B5=C4=A3=AC=B2=C2=D3=A6=B8=C3=CA=C7=B7=A2=CB=CD=D3=CA=BC=FE=B5=C4=CA=
+=A7=B0=DC=BC=C7=C2=BC</SPAN>=20
+    <LI><SPAN class=3Dvalue>pri</SPAN> <SPAN class=3Dtype>tinyint</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=B8=C3=D3=CA=BC=FE=B7=A2=CB=CD=B5=C4=D3=C5=CF=C8=BC=B6=A3=BB=
+0=A3=AC=C6=D5=CD=A8=A3=BB1=A3=AC=B8=DF</SPAN>=20
+    <LI><SPAN class=3Dvalue>last_send</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=C9=CF=D2=BB=B4=CE=B7=A2=CB=CD=B5=C4=CA=B1=BC=E4</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_error_log>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_error_log</SPAN> <SPAN =
+
+  =
+class=3Dnote>=B8=C3=B1=ED=D3=C3=C0=B4=BC=C7=C2=BC=D2=B3=C3=E6=B4=A5=B7=A2=
+=BC=C6=BB=AE=C8=CE=CE=F1=CA=B1=CA=A7=B0=DC=CB=F9=B2=FA=C9=FA=B5=C4=B4=ED=CE=
+=F3=A3=AC=B4=D3=B3=CC=D0=F2=C0=B4=BF=B4</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>id</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=BC=C6=BB=AE=C8=CE=CE=F1=B4=ED=CE=F3=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>info</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B4=ED=CE=F3=CF=EA=CF=B8=D0=C5=CF=A2</SPAN>=20
+    <LI><SPAN class=3Dvalue>file</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B2=FA=C9=FA=B4=ED=CE=F3=B5=C4=D6=B4=D0=D0=CE=C4=BC=FE=B5=C4=
+=BE=F8=B6=D4=C2=B7=BE=B6</SPAN>=20
+    <LI><SPAN class=3Dvalue>time</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    class=3Dnote>=B4=ED=CE=F3=B7=A2=C9=FA=B5=C4=CA=B1=BC=E4</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_favourable_activity>
+  <DIV class=3Dtable_name><SPAN =
+class=3Dvalue>ecs_favourable_activity</SPAN> <SPAN=20
+  =
+class=3Dnote>=D3=C5=BB=DD=BB=EE=B6=AF=B5=C4=C5=E4=D6=C3=D0=C5=CF=A2=A3=AC=
+=D3=C5=BB=DD=BB=EE=B6=AF=B0=FC=C0=A8=CB=CD=C0=F1=A3=AC=BC=F5=C3=E2=A3=AC=B4=
+=F2=D5=DB</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>act_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=D3=C5=BB=DD=BB=EE=B6=AF=B5=C4=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>act_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=C5=BB=DD=BB=EE=B6=AF=B5=C4=BB=EE=B6=AF=C3=FB=B3=C6</SPAN=
+>=20
+    <LI><SPAN class=3Dvalue>start_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=BB=EE=B6=AF=B5=C4=BF=AA=CA=BC=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>end_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=BB=EE=B6=AF=B5=C4=BD=E1=CA=F8=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_rank</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=BF=C9=D2=D4=B2=CE=BC=D3=BB=EE=B6=AF=B5=C4=D3=C3=BB=A7=D0=C5=
+=CF=A2=A3=AC=C8=A1=D6=B5=D3=DAecs_user_rank=B5=C4=20
+    =
+rank_id=A3=BB=C6=E4=D6=D00=CA=C7=B7=C7=BB=E1=D4=B1=A3=AC=C6=E4=CB=FB=CA=C7=
+=CF=E0=D3=A6=B5=C4=BB=E1=D4=B1=B5=C8=BC=B6=A3=BB=B6=E0=B8=F6=D6=B5=D3=C3=B6=
+=BA=BA=C5=B7=D6=B8=F4</SPAN>=20
+    <LI><SPAN class=3Dvalue>act_range</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=C5=BB=DD=B7=B6=CE=A7=A3=BB0=A3=AC=C8=AB=B2=BF=C9=CC=C6=B7=
+=A3=BB1=A3=AC=B0=B4=B7=D6=C0=E0=A3=BB2=A3=AC=B0=B4=C6=B7=C5=C6=A3=BB3=A3=AC=
+=B0=B4=C9=CC=C6=B7</SPAN>=20
+    <LI><SPAN class=3Dvalue>act_range_ext</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN=20
+    =
+class=3Dnote>=B8=F9=BE=DD=D3=C5=BB=DD=BB=EE=B6=AF=B7=B6=CE=A7=B5=C4=B2=BB=
+=CD=AC=A3=AC=B8=C3=B4=A6=D2=E2=D2=E5=B2=BB=CD=AC=A3=BB=B5=AB=CA=C7=B6=BC=CA=
+=C7=D3=C5=BB=DD=B7=B6=CE=A7=B5=C4=D4=BC=CA=F8=A3=BB=C8=E7=A3=AC=C8=E7=B9=FB=
+=CA=C7=C9=CC=C6=B7=A3=AC=B8=C3=B4=A6=CA=C7=C9=CC=C6=B7=B5=C4id=A3=AC=C8=E7=
+=B9=FB=CA=C7=C6=B7=C5=C6=A3=AC=B8=C3=B4=A6=CA=C7=C6=B7=C5=C6=B5=C4id</SPA=
+N>=20
+
+    <LI><SPAN class=3Dvalue>min_amount</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=B6=A9=B5=A5=B4=EF=B5=BD=BD=F0=B6=EE=CF=C2=CF=DE=A3=AC=B2=C5=
+=B2=CE=BC=D3=BB=EE=B6=AF</SPAN>=20
+    <LI><SPAN class=3Dvalue>max_amount</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=B2=CE=BC=D3=BB=EE=B6=AF=B5=C4=B6=A9=B5=A5=BD=F0=B6=EE=CF=C2=
+=CF=DE=A3=AC0=A3=AC=B1=ED=CA=BE=C3=BB=D3=D0=C9=CF=CF=DE </SPAN>
+    <LI><SPAN class=3Dvalue>act_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B2=CE=BC=D3=BB=EE=B6=AF=B5=C4=D3=C5=BB=DD=B7=BD=CA=BD=A3=BB=
+0=A3=AC=CB=CD=D4=F9=C6=B7=BB=F2=D3=C5=BB=DD=B9=BA=C2=F2=A3=BB1=A3=AC=CF=D6=
+=BD=F0=BC=F5=C3=E2=A3=BB=BC=DB=B8=F1=B4=F2=D5=DB=D3=C5=BB=DD</SPAN>=20
+    <LI><SPAN class=3Dvalue>act_type_ext</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=C8=E7=B9=FB=CA=C7=CB=CD=D4=F9=C6=B7=A3=AC=B8=C3=B4=A6=CA=C7=
+=D4=CA=D0=ED=B5=C4=D7=EE=B4=F3=CA=FD=C1=BF=A3=AC0=20
+    =
+=A3=AC=CE=DE=CA=FD=C1=BF=CF=DE=D6=C6=A3=BB=CF=D6=BD=F1=BC=F5=C3=E2=A3=AC=D4=
+=F2=CA=C7=BC=F5=C3=E2=BD=F0=B6=EE=A3=AC=B5=A5=CE=BB=D4=AA=A3=BB=B4=F2=D5=DB=
+=A3=AC=CA=C7=D5=DB=BF=DB=D6=B5=A3=AC100=CB=E3=A3=AC8=D5=DB=BE=CD=CA=C780<=
+/SPAN>=20
+    <LI><SPAN class=3Dvalue>gift</SPAN> <SPAN class=3Dtype>text</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=C8=E7=B9=FB=D3=D0=CC=D8=BB=DD=C9=CC=C6=B7=A3=AC=D5=E2=C0=EF=
+=CA=C7=D0=F2=C1=D0=BB=AF=BA=F3=B5=C4=CC=D8=BB=DD=C9=CC=C6=B7=B5=C4id,name=
+,price=D0=C5=CF=A2;=C8=A1=D6=B5=D3=DAecs_goods=B5=C4goods_id=A3=ACgoods_n=
+ame=A3=AC=BC=DB=B8=F1=CA=C7=CC=ED=BC=D3=BB=EE=B6=AF=CA=B1=CC=EE=D0=B4=B5=C4=
+</SPAN>=20
+
+    <LI><SPAN class=3Dvalue>sort_order</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=BB=EE=B6=AF=D4=DA=D3=C5=BB=DD=BB=EE=B6=AF=D2=B3=C3=E6=CF=D4=
+=CA=BE=B5=C4=CF=C8=BA=F3=CB=B3=D0=F2=A3=AC=CA=FD=D7=D6=D4=BD=B4=F3=D4=BD=BF=
+=BF=BA=F3</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_feedback>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_feedback</SPAN> <SPAN=20
+  =
+class=3Dnote>=D3=C3=BB=A7=B7=B4=C0=A1=D0=C5=CF=A2=B1=ED=A3=AC=B0=FC=C0=A8=
+=C1=F4=D1=D4=A3=AC=CD=B6=CB=DF=A3=AC=D7=C9=D1=AF=B5=C8</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>msg_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=B7=B4=C0=A1=D0=C5=CF=A2=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>parent_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=B8=BD=DA=B5=E3=A3=AC=C8=A1=D7=D4=B8=C3=B1=EDmsg_id=A3=BB=
+=B7=B4=C0=A1=B8=C3=D6=B5=CE=AA0=A3=BB=BB=D8=B8=B4=B7=B4=C0=A1=CE=AA=BD=DA=
+=B5=E3id</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=B7=B4=C0=A1=B5=C4=D3=C3=BB=A7=B5=C4id</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B7=B4=C0=A1=B5=C4=D3=C3=BB=A7=B5=C4=D3=C3=BB=A7=C3=FB</SPAN=
+>=20
+    <LI><SPAN class=3Dvalue>user_email</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B7=B4=C0=A1=B5=C4=D3=C3=BB=A7=B5=C4=D3=CA=CF=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>msg_title</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B7=B4=C0=A1=B5=C4=B1=EA=CC=E2=A3=AC=BB=D8=B8=B4=CE=AAreply<=
+/SPAN>=20
+    <LI><SPAN class=3Dvalue>msg_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B7=B4=C0=A1=B5=C4=C0=E0=D0=CD=A3=AC0=A3=AC=C1=F4=D1=D4=A3=BB=
+1=A3=AC=CD=B6=CB=DF=A3=BB2 =
+=A3=AC=D1=AF=CE=CA=A3=BB3=A3=AC=CA=DB=BA=F3=A3=BB4=A3=AC=C7=F3=B9=BA</SPA=
+N>=20
+    <LI><SPAN class=3Dvalue>msg_content</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    class=3Dnote>=B7=B4=C0=A1=B5=C4=C4=DA=C8=DD</SPAN>=20
+    <LI><SPAN class=3Dvalue>msg_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B7=B4=C0=A1=B5=C4=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>message_img</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=D3=C3=BB=A7=C9=CF=B4=AB=B5=C4=CE=C4=BC=FE=B5=C4=B5=D8=D6=B7=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>order_id</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=B7=B4=C0=A1=B9=D8=C1=AA=B5=C4=B6=A9=B5=A5id=A3=AC=D3=C9=
+=D3=C3=BB=A7=CC=E1=BD=BB=A3=AC=C8=A1=D6=B5=D3=DA =
+ecs_order_info=B5=C4order_id=A3=BB0=A3=AC=CE=AA=CE=DE=C6=A5=C5=E4=A3=BB</=
+SPAN>=20
+  </LI></UL></DIV>
+  <LI id=3Decs_friend_link>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_friend_link</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=D3=D1=C7=E9=C1=B4=BD=D3=C5=E4=D6=C3=D0=C5=CF=A2=B1=ED</SPAN=
+> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>link_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=D3=D1=C7=E9=C1=B4=BD=D3=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>link_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=D1=C7=E9=C1=B4=BD=D3=B5=C4=C3=FB=B3=C6=A3=ACimg=B5=C4alt=
+=B5=C4=C4=DA=C8=DD;</SPAN>=20
+    <LI><SPAN class=3Dvalue>link_url</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=D1=C7=E9=C1=B4=BD=D3=CD=F8=D5=BE=B5=C4=C1=B4=BD=D3=B5=D8=
+=D6=B7</SPAN>=20
+    <LI><SPAN class=3Dvalue>link_logo</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=D3=D1=C7=E9=C1=B4=BD=D3=B5=C4logo</SPAN>=20
+    <LI><SPAN class=3Dvalue>show_order</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=D4=DA=D2=B3=C3=E6=B5=C4=CF=D4=CA=BE=CB=B3=D0=F2</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_goods>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_goods</SPAN> <SPAN=20
+  class=3Dnote>=C9=CC=C6=B7=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7=B5=C4=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>cat_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=C9=CC=C6=B7=CB=F9=CA=F4=C9=CC=C6=B7=B7=D6=C0=E0id=A3=AC=C8=A1=
+=D6=B5 ecs_category=B5=C4cat_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_sn</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=C9=CC=C6=B7=B5=C4=CE=A8=D2=BB=BB=F5=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7=B5=C4=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_name_style</SPAN> <SPAN=20
+    class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C9=CC=C6=B7=C3=FB=B3=C6=CF=D4=CA=BE=B5=C4=D1=F9=CA=BD=A3=BB=
+=B0=FC=C0=A8=D1=D5=C9=AB=BA=CD=D7=D6=CC=E5=D1=F9=CA=BD=A3=BB=B8=F1=CA=BD=C8=
+=E7#ff00ff+strong</SPAN>=20
+    <LI><SPAN class=3Dvalue>click_count</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=C9=CC=C6=B7=B5=E3=BB=F7=CA=FD</SPAN>=20
+    <LI><SPAN class=3Dvalue>brand_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=C6=B7=C5=C6id=A3=AC=C8=A1=D6=B5=D3=DAecs_brand =B5=C4 =
+brand_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>provider_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B9=A9=BB=F5=C8=CB=B5=C4=C3=FB=B3=C6=A3=AC=B3=CC=D0=F2=BB=B9=
+=C3=BB=CA=B5=CF=D6=B8=C3=B9=A6=C4=DC</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_number</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7=BF=E2=B4=E6=CA=FD=C1=BF</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_weight</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=D6=D8=C1=BF=A3=AC=D2=D4=C7=A7=BF=CB=CE=AA=
+=B5=A5=CE=BB</SPAN>=20
+    <LI><SPAN class=3Dvalue>market_price</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=CA=D0=B3=A1=CA=DB=BC=DB</SPAN>=20
+    <LI><SPAN class=3Dvalue>shop_price</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=B1=BE=B5=EA=CA=DB=BC=DB</SPAN>=20
+    <LI><SPAN class=3Dvalue>promote_price</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=B4=D9=CF=FA=BC=DB=B8=F1</SPAN>=20
+    <LI><SPAN class=3Dvalue>promote_start_date</SPAN> <SPAN =
+class=3Dtype>int</SPAN>=20
+    <SPAN =
+class=3Dnote>=B4=D9=CF=FA=BC=DB=B8=F1=BF=AA=CA=BC=C8=D5=C6=DA</SPAN>=20
+    <LI><SPAN class=3Dvalue>promote_end_date</SPAN> <SPAN =
+class=3Dtype>int</SPAN>=20
+    <SPAN class=3Dnote>=B4=D9=CF=FA=BC=DB=BD=E1=CA=F8=C8=D5=C6=DA</SPAN> =
+
+    <LI><SPAN class=3Dvalue>warn_number</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7=B1=A8=BE=AF=CA=FD=C1=BF</SPAN>=20
+    <LI><SPAN class=3Dvalue>keywords</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C9=CC=C6=B7=B9=D8=BC=FC=D7=D6=A3=AC=B7=C5=D4=DA=C9=CC=C6=B7=
+=D2=B3=B5=C4=B9=D8=BC=FC=D7=D6=D6=D0=A3=AC=CE=AA=CB=D1=CB=F7=D2=FD=C7=E6=CA=
+=D5=C2=BC=D3=C3</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_brief</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7=B5=C4=BC=F2=B6=CC=C3=E8=CA=F6</SPAN> =
+
+    <LI><SPAN class=3Dvalue>goods_desc</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    class=3Dnote>=C9=CC=C6=B7=B5=C4=CF=EA=CF=B8=C3=E8=CA=F6</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_thumb</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=D4=DA=C7=B0=CC=A8=CF=D4=CA=BE=B5=C4=CE=A2=CB=F5=
+=CD=BC=C6=AC=A3=AC=C8=E7=D4=DA=B7=D6=C0=E0=C9=B8=D1=A1=CA=B1=CF=D4=CA=BE=B5=
+=C4=D0=A1=CD=BC=C6=AC</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_img</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=CA=B5=BC=CA=B4=F3=D0=A1=CD=BC=C6=AC=A3=AC=
+=C8=E7=BD=F8=C8=EB=B8=C3=C9=CC=C6=B7=D2=B3=CA=B1=BD=E9=C9=DC=C9=CC=C6=B7=CA=
+=F4=D0=D4=CB=F9=CF=D4=CA=BE=B5=C4=B4=F3=CD=BC=C6=AC</SPAN>=20
+    <LI><SPAN class=3Dvalue>original_img</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=D3=A6=B8=C3=CA=C7=C9=CF=B4=AB=B5=C4=C9=CC=C6=B7=B5=C4=D4=AD=
+=CA=BC=CD=BC=C6=AC</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_real</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=CA=C7=CA=B5=CE=EF=A3=AC1=A3=AC=CA=C7=A3=BB0=A3=AC=
+=B7=F1=A3=BB=B1=C8=C8=E7=D0=E9=C4=E2=BF=A8=BE=CD=CE=AA0=A3=AC=B2=BB=CA=C7=
+=CA=B5=CE=EF</SPAN>=20
+    <LI><SPAN class=3Dvalue>extension_code</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=C0=A9=D5=B9=CA=F4=D0=D4=A3=AC=B1=C8=C8=E7=
+=CF=F1=D0=E9=C4=E2=BF=A8</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_on_sale</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=C9=CC=C6=B7=CA=C7=B7=F1=BF=AA=B7=C5=CF=FA=CA=DB=A3=AC=
+1=A3=AC=CA=C7=A3=BB0=A3=AC=B7=F1</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_alone_sale</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=C7=B7=F1=C4=DC=B5=A5=B6=C0=CF=FA=CA=DB=A3=AC1=A3=AC=CA=C7=
+=A3=BB0=A3=AC=B7=F1=A3=BB=C8=E7=B9=FB=B2=BB=C4=DC=B5=A5=B6=C0=CF=FA=CA=DB=
+=A3=AC=D4=F2=D6=BB=C4=DC=D7=F7=CE=AA=C4=B3=C9=CC=C6=B7=B5=C4=C5=E4=BC=FE=BB=
+=F2=D5=DF=D4=F9=C6=B7=CF=FA=CA=DB</SPAN>=20
+    <LI><SPAN class=3Dvalue>integral</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=BA=C2=F2=B8=C3=C9=CC=C6=B7=BF=C9=D2=D4=CA=B9=D3=C3=B5=C4=
+=BB=FD=B7=D6=CA=FD=C1=BF=A3=AC=B9=C0=BC=C6=D3=A6=B8=C3=CA=C7=D3=C3=BB=FD=B7=
+=D6=B4=FA=CC=E6=BD=F0=B6=EE=CF=FB=B7=D1=A3=BB=B5=AB=B3=CC=D0=F2=BA=C3=CF=F1=
+=BB=B9=C3=BB=D3=D0=CA=B5=CF=D6=B8=C3=B9=A6=C4=DC</SPAN>=20
+    <LI><SPAN class=3Dvalue>add_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=C9=CC=C6=B7=B5=C4=CC=ED=BC=D3=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>sort_order</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=D3=A6=B8=C3=CA=C7=C9=CC=C6=B7=B5=C4=CF=D4=CA=BE=CB=B3=D0=F2=
+=A3=AC=B2=BB=B9=FD=B8=C3=B0=E6=B3=CC=D0=F2=D6=D0=C3=BB=CA=B5=CF=D6=B8=C3=B9=
+=A6=C4=DC</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_delete</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=C9=CC=C6=B7=CA=C7=B7=F1=D2=D1=BE=AD=C9=BE=B3=FD=A3=AC0=A3=AC=
+=B7=F1=A3=BB1=A3=AC=D2=D1=C9=BE=B3=FD</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_best</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=CA=C7=BE=AB=C6=B7=A3=BB0=A3=AC=B7=F1=A3=BB1=A3=AC=
+=CA=C7</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_new</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=CA=C7=D0=C2=C6=B7=A3=BB0=A3=AC=B7=F1=A3=BB1=A3=AC=
+=CA=C7</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_hot</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=C8=C8=CF=FA=A3=AC0=A3=AC=B7=F1=A3=BB1=A3=AC=CA=C7=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_promote</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=C7=B7=F1=CC=D8=BC=DB=B4=D9=CF=FA=A3=BB0=A3=AC=B7=F1=A3=BB=
+1=A3=AC=CA=C7</SPAN>=20
+    <LI><SPAN class=3Dvalue>bonus_type_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B9=BA=C2=F2=B8=C3=C9=CC=C6=B7=CB=F9=C4=DC=C1=EC=B5=BD=B5=C4=
+=BA=EC=B0=FC=C0=E0=D0=CD</SPAN>=20
+    <LI><SPAN class=3Dvalue>last_update</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=D7=EE=BD=FC=D2=BB=B4=CE=B8=FC=D0=C2=C9=CC=C6=B7=C5=E4=D6=C3=
+=B5=C4=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_type</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=CB=F9=CA=F4=C0=E0=D0=CDid=A3=AC=C8=A1=D6=B5=B1=ED=
+ goods_type=B5=C4cat_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>seller_note</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=C9=CC=BC=D2=B1=B8=D7=A2=A3=AC=BD=F6=C9=CC=
+=BC=D2=BF=C9=BC=FB</SPAN>=20
+    <LI><SPAN class=3Dvalue>give_integral</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=BA=C2=F2=B8=C3=C9=CC=C6=B7=CA=B1=C3=BF=B1=CA=B3=C9=B9=A6=
+=BD=BB=D2=D7=D4=F9=CB=CD=B5=C4=BB=FD=B7=D6=CA=FD=C1=BF=A1=A3</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_goods_activity>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_goods_activity</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=C5=C4=C2=F4=BB=EE=B6=AF=BA=CD=B6=E1=B1=A6=C6=E6=B1=F8=BB=EE=
+=B6=AF=C5=E4=D6=C3=D0=C5=CF=A2=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>act_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>act_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B4=D9=CF=FA=BB=EE=B6=AF=B5=C4=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>act_desc</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    class=3Dnote>=B4=D9=CF=FA=BB=EE=B6=AF=B5=C4=C3=E8=CA=F6</SPAN>=20
+    <LI><SPAN class=3Dvalue>act_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B2=CE=BC=D3=BB=EE=B6=AF=B5=C4id=A3=AC=C8=A1=D6=B5=D3=DAecs_=
+goods=B5=C4goods_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=C3=FB=B3=C6=A3=AC=C8=A1=D6=B5=D3=DAecs_go=
+ods=B5=C4goods_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>start_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=BB=EE=B6=AF=BF=AA=CA=BC=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>end_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=BB=EE=B6=AF=BD=E1=CA=F8=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_finished</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=BB=EE=B6=AF=CA=C7=B7=F1=BD=E1=CA=F8=A3=AC0=A3=AC=BD=E1=CA=F8=
+=A3=BB1=A3=AC=CE=B4=BD=E1=CA=F8</SPAN>=20
+    <LI><SPAN class=3Dvalue>ext_info</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    =
+class=3Dnote>=D0=F2=C1=D0=BB=AF=BA=F3=B5=C4=B4=D9=CF=FA=BB=EE=B6=AF=B5=C4=
+=C5=E4=D6=C3=D0=C5=CF=A2=A3=AC=B0=FC=C0=A8=D7=EE=B5=CD=BC=DB=A3=AC=D7=EE=B8=
+=DF=BC=DB=A3=AC=B3=F6=BC=DB=B7=F9=B6=C8=A3=AC=B1=A3=D6=A4=BD=F0=B5=C8</SP=
+AN> </LI></UL></DIV>
+  <LI id=3Decs_goods_article>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_goods_article</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=CE=C4=D5=C2=B9=D8=C1=AA=B2=FA=C6=B7=B1=ED=A3=AC=BC=B4=CE=C4=
+=D5=C2=D6=D0=CC=E1=B5=BD=B5=C4=CF=E0=B9=D8=B2=FA=C6=B7</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7id=A3=AC=C8=A1=D7=D4ecs_goods=B5=C4 =
+goods_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>article_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=CE=C4=D5=C2id=A3=AC=C8=A1=D7=D4 ecs_article =
+=B5=C4 article_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>admin_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B2=C2=CF=EB=CA=C7=B9=DC=C0=ED=D4=B1=B5=C4id=A3=AC=B5=AB=CA=C7=
+=B3=CC=D0=F2=D6=D0=CB=C6=BA=F5=C3=BB=D3=D0=CC=E1=BC=B0=B5=BD</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_goods_attr>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_goods_attr</SPAN> =
+<SPAN=20
+  class=3Dnote>=BE=DF=CC=E5=C9=CC=C6=B7=B5=C4=CA=F4=D0=D4=B1=ED</SPAN> =
+</DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>goods_attr_id</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=BE=DF=CC=E5=CA=F4=D0=D4=CA=F4=D3=DA=B5=C4=C9=CC=C6=B7=
+=A3=AC=C8=A1=D6=B5=D3=DA ecs_goods=B5=C4goods_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>attr_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=BE=DF=CC=E5=CA=F4=D0=D4=CA=F4=D3=DA=B5=C4=CA=F4=D0=D4=
+=C0=E0=D0=CD=B5=C4id=A3=AC=C8=A1=D7=D4ecs_attribute =B5=C4attr_id</SPAN> =
+
+    <LI><SPAN class=3Dvalue>attr_value</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    class=3Dnote>=B8=C3=BE=DF=CC=E5=CA=F4=D0=D4=B5=C4=D6=B5</SPAN>=20
+    <LI><SPAN class=3Dvalue>attr_price</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=CA=F4=D0=D4=B6=D4=D3=A6=D4=DA=C9=CC=C6=B7=D4=AD=BC=DB=
+=B8=F1=C9=CF=D2=AA=BC=D3=B5=C4=BC=DB=B8=F1</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_goods_cat>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_goods_cat</SPAN> <SPAN =
+
+  class=3Dnote>=C9=CC=C6=B7=B5=C4=C0=A9=D5=B9=B7=D6=C0=E0</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7id</SPAN>=20
+    <LI><SPAN class=3Dvalue>cat_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=C9=CC=C6=B7=B7=D6=C0=E0id</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_goods_gallery>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_goods_gallery</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=C9=CC=C6=B7=CF=E0=B2=E1=B1=ED=A3=AC=D6=BB=B3=F6=CF=D6=D4=DA=
+=D2=B3=C3=E6=B5=C4=C9=CC=C6=B7=CF=E0=B2=E1=D6=D0</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>img_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=C9=CC=C6=B7=CF=E0=B2=E1=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CD=BC=C6=AC=CA=F4=D3=DA=C9=CC=C6=B7=B5=C4id</SPAN>=20
+    <LI><SPAN class=3Dvalue>img_url</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=CA=B5=BC=CA=CD=BC=C6=ACurl</SPAN>=20
+    <LI><SPAN class=3Dvalue>img_desc</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=CD=BC=C6=AC=CB=B5=C3=F7=D0=C5=CF=A2</SPAN>=20
+    <LI><SPAN class=3Dvalue>thumb_url</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=CE=A2=CB=F5=CD=BC=C6=ACurl</SPAN>=20
+    <LI><SPAN class=3Dvalue>img_original</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=F9=BE=DD=C3=FB=D7=D6=B2=C2=A3=AC=D3=A6=B8=C3=CA=C7=C9=CF=
+=B4=AB=B5=C4=CD=BC=C6=AC=CE=C4=BC=FE=B5=C4=D7=EE=D4=AD=CA=BC=B5=C4=CE=C4=BC=
+=FE=B5=C4url</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_goods_type>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_goods_type</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=C9=CC=C6=B7=C0=E0=D0=CD=B1=ED=A3=AC=B8=C3=B1=ED=C3=BF=CC=F5=
+=BC=C7=C2=BC=BE=CD=CA=C7=D2=BB=B8=F6=C9=CC=C6=B7=C0=E0=D0=CD</SPAN> =
+</DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>cat_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>cat_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=C9=CC=C6=B7=C0=E0=D0=CD=C3=FB</SPAN>=20
+    <LI><SPAN class=3Dvalue>enabled</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=C0=E0=D0=CD=D7=B4=CC=AC=A3=AC1=A3=AC=CE=AA=BF=C9=D3=C3=A3=BB=
+0=CE=AA=B2=BB=BF=C9=D3=C3=A3=BB=B2=BB=BF=C9=D3=C3=B5=C4=C0=E0=D0=CD=A3=AC=
+=D4=DA=CC=ED=BC=D3=C9=CC=C6=B7=B5=C4=CA=B1=BA=F2=D1=A1=D4=F1=C9=CC=C6=B7=CA=
+=F4=D0=D4=BD=AB=B2=BB=BF=C9=D1=A1</SPAN>=20
+    <LI><SPAN class=3Dvalue>attr_group</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN=20
+    =
+class=3Dnote>=C9=CC=C6=B7=CA=F4=D0=D4=B7=D6=D7=E9=A3=AC=BD=AB=D2=BB=B8=F6=
+=C9=CC=C6=B7=C0=E0=D0=CD=B5=C4=CA=F4=D0=D4=B7=D6=B3=C9=D7=E9=A3=AC=D4=DA=CF=
+=D4=CA=BE=B5=C4=CA=B1=BA=F2=D2=B2=CA=C7=B0=B4=D7=E9=CF=D4=CA=BE=A1=A3=B8=C3=
+=D7=D6=B6=CE=B5=C4=D6=B5=CF=D4=CA=BE=D4=DA=CA=F4=D0=D4=B5=C4=C7=B0=D2=BB=D0=
+=D0=A3=AC=CF=F1=B1=EA=CC=E2=B5=C4=D7=F7=D3=C3</SPAN>=20
+    </LI></UL></DIV>
+  <LI id=3Decs_group_goods>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_group_goods</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=B8=C3=B1=ED=D3=A6=B8=C3=CA=C7=C9=CC=C6=B7=C5=E4=BC=FE=C5=E4=
+=D6=C3=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>parent_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=B8=B8=C9=CC=C6=B7id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=C5=E4=BC=FE=C9=CC=C6=B7id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_price</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=C5=E4=BC=FE=C9=CC=C6=B7=B5=C4=BC=DB=B8=F1</SPAN> =
+
+    <LI><SPAN class=3Dvalue>admin_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CC=ED=BC=D3=B8=C3=C5=E4=BC=FE=B5=C4=B9=DC=C0=ED=D4=B1=B5=C4=
+id</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_keywords>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_keywords</SPAN> <SPAN=20
+  =
+class=3Dnote>=D2=B3=C3=E6=CB=D1=CB=F7=B9=D8=BC=FC=D7=D6=CB=D1=CB=F7=BC=C7=
+=C2=BC</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>date</SPAN> <SPAN class=3Dtype>date</SPAN> =
+<SPAN=20
+    class=3Dnote>=CB=D1=CB=F7=C8=D5=C6=DA</SPAN>=20
+    <LI><SPAN class=3Dvalue>searchengine</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=CB=D1=CB=F7=D2=FD=C7=E6=A3=AC=C4=AC=C8=CF=CA=C7ecshop</SPAN=
+>=20
+    <LI><SPAN class=3Dvalue>keyword</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=CB=D1=CB=F7=B9=D8=BC=FC=D7=D6=A3=AC=BC=B4=D3=C3=BB=A7=CC=EE=
+=D0=B4=B5=C4=CB=D1=CB=F7=C4=DA=C8=DD</SPAN>=20
+    <LI><SPAN class=3Dvalue>count</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CB=D1=CB=F7=B4=CE=CA=FD=A3=AC=B0=B4=CC=EC=C0=DB=BC=D3</SPAN=
+> </LI></UL></DIV>
+  <LI id=3Decs_link_goods>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_link_goods</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=B9=D8=C1=AA=C9=CC=C6=B7=D0=C5=CF=A2=B1=ED=A3=AC=B9=D8=C1=AA=
+=C9=CC=C6=B7=CA=C7=CA=B2=C3=B4=D2=E2=CB=BC=BB=B9=C3=BB=D1=D0=BE=BF=C3=F7=B0=
+=D7</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7id</SPAN>=20
+    <LI><SPAN class=3Dvalue>link_goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B1=BB=B9=D8=C1=AA=B5=C4=C9=CC=C6=B7=B5=C4id</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_double</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=CA=C7=CB=AB=CF=F2=B9=D8=C1=AA=A3=BB0=A3=AC=B7=F1=
+=A3=BB1=A3=AC=CA=C7</SPAN>=20
+    <LI><SPAN class=3Dvalue>admin_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CC=ED=BC=D3=B4=CB=B9=D8=C1=AA=C9=CC=C6=B7=D0=C5=CF=A2=B5=C4=
+=B9=DC=C0=ED=D4=B1id</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_mail_templates>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_mail_templates</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=B8=F7=D6=D6=D3=CA=BC=FE=B5=C4=C4=A3=B0=E5=C5=E4=D6=C3=C4=A3=
+=B0=E5=B0=FC=C0=A8=D4=D3=D6=BE=C4=A3=B0=E5</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>template_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN class=3Dnote>=D3=CA=BC=FE=C4=A3=B0=E5=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>template_code</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=C4=A3=B0=E5=D7=D6=B7=FB=B4=AE=C3=FB=B3=C6=A3=AC=D6=F7=D2=AA=
+=D3=C3=D3=DA=B2=E5=BC=FE=D1=D4=D3=EF=B0=FC=CA=B1=C6=A5=C5=E4=D3=EF=D1=D4=B0=
+=FC=CE=C4=BC=FE=B5=C8=D3=C3=CD=BE</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_html</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=CA=BC=FE=CA=C7=B7=F1=CA=C7html=B8=F1=CA=BD=A3=BB0=A3=AC=B7=
+=F1=A3=BB1=A3=AC=CA=C7</SPAN>=20
+    <LI><SPAN class=3Dvalue>template_subject</SPAN> <SPAN=20
+    class=3Dtype>varchar</SPAN> <SPAN =
+class=3Dnote>=B8=C3=D3=CA=BC=FE=C4=A3=B0=E5=B5=C4=D3=CA=BC=FE=D6=F7=CC=E2=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>template_content</SPAN> <SPAN =
+class=3Dtype>text</SPAN>=20
+    <SPAN class=3Dnote>=D3=CA=BC=FE=C4=A3=B0=E5=B5=C4=C4=DA=C8=DD</SPAN> =
+
+    <LI><SPAN class=3Dvalue>last_modify</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=D7=EE=BA=F3=D2=BB=B4=CE=D0=DE=B8=C4=C4=A3=B0=E5=B5=C4=CA=B1=
+=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>last_send</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=D7=EE=BD=FC=D2=BB=B4=CE=B7=A2=CB=CD=B5=C4=CA=B1=BC=E4=A3=AC=
+=BA=C3=CF=F1=BD=F6=D4=DA=D4=D3=D6=BE=B2=C5=BC=C7=C2=BC</SPAN>=20
+    <LI><SPAN class=3Dvalue>type</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=D3=CA=BC=FE=C4=A3=B0=E5=B5=C4=D3=CA=BC=FE=C0=E0=D0=CD=
+=A3=BB=B9=B22=B8=F6=C0=E0=D0=CD=A3=BBmagazine=A3=AC=D4=D3=D6=BE=B6=A9=D4=C4=
+=A3=BB template=A3=AC=B9=D8=D7=A2=B6=A9=D4=C4</SPAN>=20
+  </LI></UL></DIV>
+  <LI id=3Decs_member_price>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_member_price</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=C9=CC=C6=B7=B2=BB=B0=B4=D5=D5=BB=E1=D4=B1=B5=C4=D5=DB=BF=DB=
+=B6=A8=BC=DB=A3=AC=B6=F8=CA=C7=D4=D9=B5=A5=B6=C0=CE=AA=B2=BB=CD=AC=B5=C4=BB=
+=E1=D4=B1=B5=C8=BC=B6=B6=A8=B5=C4=BC=DB</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>price_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=D5=DB=BF=DB=BC=DB=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7=B5=C4id</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_rank</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote>=BB=E1=D4=B1=B5=C7=BC=C7id</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_price</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=D6=B8=B6=A8=C9=CC=C6=B7=B6=D4=D6=B8=B6=A8=BB=E1=D4=B1=B5=C8=
+=BC=B6=B5=C4=B9=CC=B6=A8=B6=A8=BC=DB=BC=DB=B8=F1=A3=AC=B5=A5=CE=BB=D4=AA<=
+/SPAN> </LI></UL></DIV>
+  <LI id=3Decs_nav>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_nav</SPAN> <SPAN=20
+  =
+class=3Dnote>=C9=CF=D6=D0=CF=C23=B8=F6=B5=BC=BA=BD=C0=B8=B5=C4=CF=D4=CA=BE=
+=C5=E4=D6=C3</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=B5=BC=BA=BD=C5=E4=D6=C3=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>ctype</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>cid</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B5=BC=BA=BD=CF=D4=CA=BE=B1=EA=CC=E2</SPAN>=20
+    <LI><SPAN class=3Dvalue>ifshow</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote>=CA=C7=B7=F1=CF=D4=CA=BE</SPAN>=20
+    <LI><SPAN class=3Dvalue>vieworder</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=D2=B3=C3=E6=CF=D4=CA=BE=CB=B3=D0=F2=A3=AC=CA=FD=D7=D6=D4=BD=
+=B4=F3=D4=BD=BF=BF=BA=F3</SPAN>=20
+    <LI><SPAN class=3Dvalue>opennew</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B5=BC=BA=BD=C1=B4=BD=D3=D2=B3=C3=E6=CA=C7=B7=F1=D4=DA=D0=C2=
+=B4=B0=BF=DA=B4=F2=BF=AA=A3=AC1=A3=AC=CA=C7=A3=BB=C6=E4=CB=FB=A3=AC=B7=F1=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>url</SPAN> <SPAN class=3Dtype>varchar</SPAN> =
+<SPAN=20
+    class=3Dnote>=C1=B4=BD=D3=B5=C4=D2=B3=C3=E6=B5=D8=D6=B7</SPAN>=20
+    <LI><SPAN class=3Dvalue>type</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B4=A6=D3=DA=B5=BC=BA=BD=C0=B8=B5=C4=CE=BB=D6=C3=A3=ACtop=CE=
+=AA=B6=A5=B2=BF=A3=BBmiddle=CE=AA=D6=D0=BC=E4=A3=BBbottom,=CE=AA=B5=D7=B2=
+=BF </SPAN></LI></UL></DIV>
+  <LI id=3Decs_order_action>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_order_action</SPAN> =
+<SPAN=20
+  class=3Dnote>=B6=D4=B6=A9=B5=A5=B2=D9=D7=F7=C8=D5=D6=BE=B1=ED</SPAN> =
+</DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>action_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=C1=F7=CB=AE=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>order_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=B1=BB=B2=D9=D7=F7=B5=C4=BD=BB=D2=D7=BA=C5</SPAN> =
+
+    <LI><SPAN class=3Dvalue>action_user</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=B2=D9=D7=F7=B8=C3=B4=CE=B5=C4=C8=CB=D4=B1</SPAN> =
+
+    <LI><SPAN class=3Dvalue>order_status</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=D7=F7=BA=CE=B2=D9=D7=F7.0=A3=AC=CE=B4=C8=B7=C8=CF=A3=BB1=A3=
+=AC=D2=D1=C8=B7=C8=CF=A3=BB2=A3=AC=D2=D1=C8=A1=CF=FB=A3=BB3=A3=AC=CE=DE=D0=
+=A7=A3=BB4=A3=AC=CD=CB=BB=F5=A3=BB</SPAN>=20
+    <LI><SPAN class=3Dvalue>shipping_status</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B7=A2=BB=F5=D7=B4=CC=AC=A1=A30=A3=AC=CE=B4=B7=A2=BB=F5=A3=BB=
+1=A3=AC=D2=D1=B7=A2=BB=F5=A3=BB2=A3=AC=D2=D1=CA=D5=BB=F5=A3=BB3=A3=AC=B1=B8=
+=BB=F5=D6=D0</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_status</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=D6=A7=B8=B6=D7=B4=CC=AC.0,=CE=B4=B8=B6=BF=EE;1,=B8=B6=BF=EE=
+=D6=D0;2, =D2=D1=B8=B6=BF=EE;</SPAN>=20
+    <LI><SPAN class=3Dvalue>action_note</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=B2=D9=D7=F7=B1=B8=D7=A2</SPAN>=20
+    <LI><SPAN class=3Dvalue>log_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B2=D9=D7=F7=CA=B1=BC=E4</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_order_goods>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_order_goods</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=B6=A9=B5=A5=B5=C4=C9=CC=C6=B7=D0=C5=CF=A2=A3=AC=D7=A2=A3=BA=
+=B6=A9=B5=A5=B5=C4=C9=CC=C6=B7=D0=C5=CF=A2=BB=F9=B1=BE=B6=BC=CA=C7=B4=D3=B9=
+=BA=CE=EF=B3=B5=CB=F9=B6=D4=D3=A6=B5=C4</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>rec_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B6=A9=B5=A5=C9=CC=C6=B7=D0=C5=CF=A2=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>order_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B6=A9=B5=A5=C9=CC=C6=B7=D0=C5=CF=A2=B6=D4=D3=A6=B5=C4=CF=EA=
+=CF=B8=D0=C5=CF=A2id=A3=AC=C8=A1=D6=B5order_info=B5=C4order_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=B5=C4id=A3=AC=C8=A1=D6=B5=B1=EDecs_goods =
+=B5=C4 goods_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=C3=FB=B3=C6=A3=AC=C8=A1=D6=B5=B1=EDecs_go=
+ods </SPAN>
+    <LI><SPAN class=3Dvalue>goods_sn</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=CE=A8=D2=BB=BB=F5=BA=C5=A3=AC=C8=A1=D6=B5=
+ecs_goods </SPAN>
+    <LI><SPAN class=3Dvalue>goods_number</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7=B5=C4=B9=BA=C2=F2=CA=FD=C1=BF</SPAN> =
+
+    <LI><SPAN class=3Dvalue>market_price</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=CA=D0=B3=A1=CA=DB=BC=DB=A3=AC=C8=A1=D6=B5=
+ecs_goods </SPAN>
+    <LI><SPAN class=3Dvalue>goods_price</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=B1=BE=B5=EA=CA=DB=BC=DB=A3=AC=C8=A1=D6=B5=
+ecs_goods </SPAN>
+    <LI><SPAN class=3Dvalue>goods_attr</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=BA=C2=F2=B8=C3=C9=CC=C6=B7=CA=B1=CB=F9=D1=A1=D4=F1=B5=C4=
+=CA=F4=D0=D4=A3=BB</SPAN>=20
+    <LI><SPAN class=3Dvalue>send_number</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B5=B1=B2=BB=CA=C7=CA=B5=CE=EF=CA=B1=A3=AC=CA=C7=B7=F1=D2=D1=
+=B7=A2=BB=F5=A3=AC0 =A3=AC=B7=F1=A3=BB1=A3=AC=CA=C7</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_real</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=CA=C7=CA=B5=CE=EF=A3=AC0=A3=AC=B7=F1=A3=BB1=A3=AC=
+=CA=C7=A3=BB=C8=A1=D6=B5 ecs_goods </SPAN>
+    <LI><SPAN class=3Dvalue>extension_code</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=B5=C4=C0=A9=D5=B9=CA=F4=D0=D4=A3=AC=B1=C8=C8=E7=
+=CF=F1=D0=E9=C4=E2=BF=A8=A1=A3=C8=A1=D6=B5ecs_goods </SPAN>
+    <LI><SPAN class=3Dvalue>parent_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=B8=C9=CC=C6=B7id=A3=AC=C8=A1=D6=B5=D3=DAecs_cart=B5=C4 =
+parent_id=A3=BB=C8=E7=B9=FB=D3=D0=B8=C3=D6=B5=D4=F2=CA=C7=D6=B5=B6=E0=B4=FA=
+=B1=ED=B5=C4=CE=EF=C6=B7=B5=C4=C5=E4=BC=FE</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_gift</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=B2=CE=BC=D3=D3=C5=BB=DD=BB=EE=B6=AF=A3=AC0=A3=AC=
+=B7=F1=A3=BB=C6=E4=CB=FB=A3=AC=C8=A1=D6=B5=D3=DAecs_cart =
+=B5=C4is_gift=A3=AC=B8=FA=C6=E4=D2=BB=D1=F9=A3=AC=CA=C7=B2=CE=BC=D3=B5=C4=
+=D3=C5=BB=DD=BB=EE=B6=AF=B5=C4id</SPAN>=20
+  </LI></UL></DIV>
+  <LI id=3Decs_order_info>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_order_info</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=B6=A9=B5=A5=B5=C4=C5=E4=CB=CD=A3=AC=BA=D8=BF=A8=B5=C8=CF=EA=
+=CF=B8=D0=C5=CF=A2 </SPAN></DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>order_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B6=A9=B5=A5=CF=EA=CF=B8=D0=C5=CF=A2=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>order_sn</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B6=A9=B5=A5=BA=C5=A3=AC=CE=A8=D2=BB</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=D3=C3=BB=A7id=A3=AC=CD=ACecs_users=B5=C4user_id</SPAN> =
+
+    <LI><SPAN class=3Dvalue>order_status</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B6=A9=B5=A5=D7=B4=CC=AC=A1=A30=A3=AC=CE=B4=C8=B7=C8=CF=A3=BB=
+1=A3=AC=D2=D1=C8=B7=C8=CF=A3=BB2=A3=AC=D2=D1=C8=A1=CF=FB=A3=BB3=A3=AC=CE=DE=
+=D0=A7=A3=BB4=A3=AC=CD=CB=BB=F5=A3=BB</SPAN>=20
+    <LI><SPAN class=3Dvalue>shipping_status</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=C9=CC=C6=B7=C5=E4=CB=CD=C7=E9=BF=F6=A3=AC0=A3=AC=CE=B4=B7=A2=
+=BB=F5=A3=BB =
+1=A3=AC=D2=D1=B7=A2=BB=F5=A3=BB2=A3=AC=D2=D1=CA=D5=BB=F5=A3=BB3=A3=AC=B1=B8=
+=BB=F5=D6=D0</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_status</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=D6=A7=B8=B6=D7=B4=CC=AC=A3=BB0=A3=AC=CE=B4=B8=B6=BF=EE=A3=BB=
+1=A3=AC=B8=B6=BF=EE=D6=D0=A3=BB2=A3=AC=D2=D1=B8=B6=BF=EE</SPAN>=20
+    <LI><SPAN class=3Dvalue>consignee</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=D0=D5=C3=FB=A3=AC=D3=C3=BB=A7=D2=B3=
+=C3=E6=CC=EE=D0=B4=A3=AC=C4=AC=C8=CF=C8=A1=D6=B5=D3=DA=B1=ED =
+user_address</SPAN>=20
+    <LI><SPAN class=3Dvalue>country</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=B9=FA=BC=D2=A3=AC=D3=C3=BB=A7=D2=B3=
+=C3=E6=CC=EE=D0=B4=A3=AC=C4=AC=C8=CF=C8=A1=D6=B5=D3=DA=B1=EDuser_address=A3=
+=AC=C6=E4id=B6=D4=D3=A6=B5=C4=D6=B5=D4=DAecs_region</SPAN>=20
+    <LI><SPAN class=3Dvalue>province</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=CA=A1=B7=DD=A3=AC=D3=C3=BB=A7=D2=B3=
+=C3=E6=CC=EE=D0=B4=A3=AC=C4=AC=C8=CF=C8=A1=D6=B5=D3=DA=B1=EDuser_address=A3=
+=AC=C6=E4id=B6=D4=D3=A6=B5=C4=D6=B5=D4=DAecs_region</SPAN>=20
+    <LI><SPAN class=3Dvalue>city</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=B3=C7=CA=D0=A3=AC=D3=C3=BB=A7=D2=B3=
+=C3=E6=CC=EE=D0=B4=A3=AC=C4=AC=C8=CF=C8=A1=D6=B5=D3=DA=B1=EDuser_address=A3=
+=AC=C6=E4id=B6=D4=D3=A6=B5=C4=D6=B5=D4=DAecs_region</SPAN>=20
+    <LI><SPAN class=3Dvalue>district</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=B5=D8=C7=F8=A3=AC=D3=C3=BB=A7=D2=B3=
+=C3=E6=CC=EE=D0=B4=A3=AC=C4=AC=C8=CF=C8=A1=D6=B5=D3=DA=B1=EDuser_address=A3=
+=AC=C6=E4id=B6=D4=D3=A6=B5=C4=D6=B5=D4=DAecs_region</SPAN>=20
+    <LI><SPAN class=3Dvalue>address</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=CF=EA=CF=B8=B5=D8=D6=B7=A3=AC=D3=C3=
+=BB=A7=D2=B3=C3=E6=CC=EE=D0=B4=A3=AC=C4=AC=C8=CF=C8=A1=D6=B5=D3=DA=B1=ED =
+user_address</SPAN>=20
+    <LI><SPAN class=3Dvalue>zipcode</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=D3=CA=B1=E0=A3=AC=D3=C3=BB=A7=D2=B3=
+=C3=E6=CC=EE=D0=B4=A3=AC=C4=AC=C8=CF=C8=A1=D6=B5=D3=DA=B1=ED =
+user_address</SPAN>=20
+    <LI><SPAN class=3Dvalue>tel</SPAN> <SPAN class=3Dtype>varchar</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=B5=E7=BB=B0=A3=AC=D3=C3=BB=A7=D2=B3=
+=C3=E6=CC=EE=D0=B4=A3=AC=C4=AC=C8=CF=C8=A1=D6=B5=D3=DA=B1=EDuser_address<=
+/SPAN>=20
+    <LI><SPAN class=3Dvalue>mobile</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=CA=D6=BB=FA=A3=AC=D3=C3=BB=A7=D2=B3=
+=C3=E6=CC=EE=D0=B4=A3=AC=C4=AC=C8=CF=C8=A1=D6=B5=D3=DA=B1=EDuser_address<=
+/SPAN>=20
+    <LI><SPAN class=3Dvalue>email</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=CA=D6=BB=FA=A3=AC=D3=C3=BB=A7=D2=B3=
+=C3=E6=CC=EE=D0=B4=A3=AC=C4=AC=C8=CF=C8=A1=D6=B5=D3=DA=B1=EDuser_address<=
+/SPAN>=20
+    <LI><SPAN class=3Dvalue>best_time</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=D7=EE=BC=D1=CB=CD=BB=F5=CA=B1=BC=E4=
+=A3=AC=D3=C3=BB=A7=D2=B3=C3=E6=CC=EE=D0=B4=A3=AC=C4=AC=C8=CF=C8=A1=D6=B5=D3=
+=DA=B1=ED user_address</SPAN>=20
+    <LI><SPAN class=3Dvalue>sign_building</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=B5=D8=D6=B7=B5=C4=B1=EA=D6=BE=D0=D4=
+=BD=A8=D6=FE=A3=AC=D3=C3=BB=A7=D2=B3=C3=E6=CC=EE=D0=B4=A3=AC=C4=AC=C8=CF=C8=
+=A1=D6=B5=D3=DA=B1=EDuser_address</SPAN>=20
+    <LI><SPAN class=3Dvalue>postscript</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B6=A9=B5=A5=B8=BD=D1=D4=A3=AC=D3=C9=D3=C3=BB=A7=CC=E1=BD=BB=
+=B6=A9=B5=A5=C7=B0=CC=EE=D0=B4</SPAN>=20
+    <LI><SPAN class=3Dvalue>shipping_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=D3=C3=BB=A7=D1=A1=D4=F1=B5=C4=C5=E4=CB=CD=B7=BD=CA=BDid=A3=AC=
+=C8=A1=D6=B5=B1=ED ecs_shipping</SPAN>=20
+    <LI><SPAN class=3Dvalue>shipping_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=D3=C3=BB=A7=D1=A1=D4=F1=B5=C4=C5=E4=CB=CD=B7=BD=CA=BD=B5=C4=
+=C3=FB=B3=C6=A3=AC=C8=A1=D6=B5=B1=EDecs_shipping</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=C3=BB=A7=D1=A1=D4=F1=B5=C4=D6=A7=B8=B6=B7=BD=CA=BD=B5=C4=
+id=A3=AC=C8=A1=D6=B5=B1=EDecs_payment</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=C3=BB=A7=D1=A1=D4=F1=B5=C4=D6=A7=B8=B6=B7=BD=CA=BD=B5=C4=
+=C3=FB=B3=C6=A3=AC=C8=A1=D6=B5=B1=EDecs_payment</SPAN>=20
+    <LI><SPAN class=3Dvalue>how_oos</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C8=B1=BB=F5=B4=A6=C0=ED=B7=BD=CA=BD=A3=AC=B5=C8=B4=FD=CB=F9=
+=D3=D0=C9=CC=C6=B7=B1=B8=C6=EB=BA=F3=D4=D9=B7=A2=A3=BB =
+=C8=A1=CF=FB=B6=A9=B5=A5=A3=BB=D3=EB=B5=EA=D6=F7=D0=AD=C9=CC</SPAN>=20
+    <LI><SPAN class=3Dvalue>how_surplus</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=F9=BE=DD=D7=D6=B6=CE=B2=C2=B2=E2=D3=A6=B8=C3=CA=C7=D3=E0=
+=B6=EE=B4=A6=C0=ED=B7=BD=CA=BD=A3=AC=B3=CC=D0=F2=CE=B4=D7=F7=D5=E2=B2=BF=B7=
+=D6=CA=B5=CF=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>pack_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B0=FC=D7=B0=C3=FB=B3=C6=A3=AC=C8=A1=D6=B5=B1=EDecs_pack</SP=
+AN>=20
+    <LI><SPAN class=3Dvalue>card_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=BA=D8=BF=A8=B5=C4=C3=FB=B3=C6=A3=AC=C8=A1=D6=B5ecs_card =
+</SPAN>
+    <LI><SPAN class=3Dvalue>card_message</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=BA=D8=BF=A8=C4=DA=C8=DD=A3=AC=D3=C9=D3=C3=BB=A7=CC=E1=BD=BB=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>inv_payee</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B7=A2=C6=B1=CC=A7=CD=B7=A3=AC=D3=C3=BB=A7=D2=B3=C3=E6=CC=EE=
+=D0=B4</SPAN>=20
+    <LI><SPAN class=3Dvalue>inv_content</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B7=A2=C6=B1=C4=DA=C8=DD=A3=AC=D3=C3=BB=A7=D2=B3=C3=E6=D1=A1=
+=D4=F1=A3=AC=C8=A1=D6=B5ecs_shop_config=B5=C4=20
+    code=D7=D6=B6=CE=B5=C4=D6=B5=CE=AAinvoice_content=B5=C4value</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_amount</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7=D7=DC=BD=F0=B6=EE</SPAN>=20
+    <LI><SPAN class=3Dvalue>shipping_fee</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=C5=E4=CB=CD=B7=D1=D3=C3</SPAN>=20
+    <LI><SPAN class=3Dvalue>insure_fee</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=B1=A3=BC=DB=B7=D1=D3=C3</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_fee</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN> <SPAN=20
+    =
+class=3Dnote>=D6=A7=B8=B6=B7=D1=D3=C3,=B8=FA=D6=A7=B8=B6=B7=BD=CA=BD=B5=C4=
+=C5=E4=D6=C3=CF=E0=B9=D8=A3=AC=C8=A1=D6=B5=B1=EDecs_payment</SPAN>=20
+    <LI><SPAN class=3Dvalue>pack_fee</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN> <SPAN=20
+    =
+class=3Dnote>=B0=FC=D7=B0=B7=D1=D3=C3=A3=AC=C8=A1=D6=B5=B1=ED=C8=A1=D6=B5=
+=B1=EDecs_pack</SPAN>=20
+    <LI><SPAN class=3Dvalue>card_fee</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN> <SPAN=20
+    class=3Dnote>=BA=D8=BF=A8=B7=D1=D3=C3=A3=AC=C8=A1=D6=B5ecs_card =
+</SPAN>
+    <LI><SPAN class=3Dvalue>money_paid</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=D2=D1=B8=B6=BF=EE=BD=F0=B6=EE</SPAN>=20
+    <LI><SPAN class=3Dvalue>surplus</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=B6=A9=B5=A5=CA=B9=D3=C3=D3=E0=B6=EE=B5=C4=CA=FD=C1=BF=
+=A3=AC=C8=A1=D3=C3=BB=A7=C9=E8=B6=A8=D3=E0=B6=EE=A3=AC=D3=C3=BB=A7=BF=C9=D3=
+=C3=D3=E0=B6=EE=A3=AC=B6=A9=B5=A5=BD=F0=B6=EE=D6=D0=D7=EE=D0=A1=D5=DF</SP=
+AN>=20
+    <LI><SPAN class=3Dvalue>integral</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=B9=D3=C3=B5=C4=BB=FD=B7=D6=B5=C4=CA=FD=C1=BF=A3=AC=C8=A1=
+=D3=C3=BB=A7=CA=B9=D3=C3=BB=FD=B7=D6=A3=AC=C9=CC=C6=B7=BF=C9=D3=C3=BB=FD=B7=
+=D6=A3=AC=D3=C3=BB=A7=D3=B5=D3=D0=BB=FD=B7=D6=D6=D0=D7=EE=D0=A1=D5=DF</SP=
+AN>=20
+    <LI><SPAN class=3Dvalue>integral_money</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=CA=B9=D3=C3=BB=FD=B7=D6=BD=F0=B6=EE</SPAN>=20
+    <LI><SPAN class=3Dvalue>bonus</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN> <SPAN=20
+    class=3Dnote>=CA=B9=D3=C3=BA=EC=B0=FC=BD=F0=B6=EE</SPAN>=20
+    <LI><SPAN class=3Dvalue>order_amount</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=D3=A6=B8=B6=BF=EE=BD=F0=B6=EE</SPAN>=20
+    <LI><SPAN class=3Dvalue>from_ad</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B6=A9=B5=A5=D3=C9=C4=B3=B9=E3=B8=E6=B4=F8=C0=B4=B5=C4=B9=E3=
+=B8=E6id=A3=AC=D3=A6=B8=C3=C8=A1=D6=B5=D3=DA ecs_ad</SPAN>=20
+    <LI><SPAN class=3Dvalue>referer</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B6=A9=B5=A5=B5=C4=C0=B4=D4=B4=D2=B3=C3=E6</SPAN>=20
+    <LI><SPAN class=3Dvalue>add_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B6=A9=B5=A5=C9=FA=B3=C9=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>confirm_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B6=A9=B5=A5=C8=B7=C8=CF=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B6=A9=B5=A5=D6=A7=B8=B6=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>shipping_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B6=A9=B5=A5=C5=E4=CB=CD=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>pack_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B0=FC=D7=B0id=A3=AC=C8=A1=D6=B5=C8=A1=D6=B5=B1=EDecs_pack</=
+SPAN>=20
+    <LI><SPAN class=3Dvalue>card_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=BA=D8=BF=A8id=A3=AC=D3=C3=BB=A7=D4=DA=D2=B3=C3=E6=D1=A1=D4=F1=
+=A3=AC=C8=A1=D6=B5=C8=A1=D6=B5 ecs_card </SPAN>
+    <LI><SPAN class=3Dvalue>bonus_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=BA=EC=B0=FC=B5=C4id=A3=ACecs_user_bonus=B5=C4 =
+bonus_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>invoice_no</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B7=A2=BB=F5=B5=A5=BA=C5=A3=AC=B7=A2=BB=F5=CA=B1=CC=EE=D0=B4=
+=A3=AC=BF=C9=D4=DA=B6=A9=B5=A5=B2=E9=D1=AF=B2=E9=BF=B4</SPAN>=20
+    <LI><SPAN class=3Dvalue>extension_code</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=CD=A8=B9=FD=BB=EE=B6=AF=B9=BA=C2=F2=B5=C4=C9=CC=C6=B7=B5=C4=
+=B4=FA=BA=C5=A3=BBGROUP_BUY=CA=C7=CD=C5=B9=BA=A3=BB=20
+    =
+AUCTION=A3=AC=CA=C7=C5=C4=C2=F4=A3=BBSNATCH=A3=AC=B6=E1=B1=A6=C6=E6=B1=F8=
+=A3=BB=D5=FD=B3=A3=C6=D5=CD=A8=B2=FA=C6=B7=B8=C3=B4=A6=CE=AA=BF=D5</SPAN>=
+=20
+    <LI><SPAN class=3Dvalue>extension_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CD=A8=B9=FD=BB=EE=B6=AF=B9=BA=C2=F2=B5=C4=CE=EF=C6=B7=B5=C4=
+id=A3=AC=C8=A1=D6=B5ecs_goods_activity=A3=BB=C8=E7=B9=FB=CA=C7=D5=FD=B3=A3=
+=C6=D5=CD=A8=C9=CC=C6=B7=A3=AC=B8=C3=B4=A6=CE=AA0</SPAN>=20
+    <LI><SPAN class=3Dvalue>to_buyer</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C9=CC=BC=D2=B8=F8=BF=CD=BB=A7=B5=C4=C1=F4=D1=D4,=B5=B1=B8=C3=
+=D7=D6=B6=CE=D3=D0=D6=B5=CA=B1=BF=C9=D2=D4=D4=DA=B6=A9=B5=A5=B2=E9=D1=AF=BF=
+=B4=B5=BD</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_note</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=B6=BF=EE=B1=B8=D7=A2=A3=AC=D4=DA=B6=A9=B5=A5=B9=DC=C0=ED=
+=C0=EF=B1=E0=BC=AD=D0=DE=B8=C4</SPAN>=20
+    <LI><SPAN class=3Dvalue>agency_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN=20
+    =
+class=3Dnote>=B8=C3=B1=CA=B6=A9=B5=A5=B1=BB=D6=B8=C5=C9=B8=F8=B5=C4=B0=EC=
+=CA=C2=B4=A6=B5=C4id=A3=AC=B8=F9=BE=DD=B6=A9=B5=A5=C4=DA=C8=DD=BA=CD=B0=EC=
+=CA=C2=B4=A6=B8=BA=D4=F0=B7=B6=CE=A7=D7=D4=B6=AF=BE=F6=B6=A8=A3=AC=D2=B2=BF=
+=C9=D2=D4=D3=D0=B9=DC=C0=ED=D4=B1=D0=DE=B8=C4=A3=AC=C8=A1=D6=B5=D3=DA=B1=ED=
+ecs_agency</SPAN>=20
+
+    <LI><SPAN class=3Dvalue>inv_type</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B7=A2=C6=B1=C0=E0=D0=CD=A3=AC=D3=C3=BB=A7=D2=B3=C3=E6=D1=A1=
+=D4=F1=A3=AC=C8=A1=D6=B5ecs_shop_config=B5=C4code=D7=D6=B6=CE=B5=C4=D6=B5=
+=CE=AAinvoice_type=B5=C4value</SPAN>=20
+    <LI><SPAN class=3Dvalue>tax</SPAN> <SPAN class=3Dtype>decimal</SPAN> =
+<SPAN=20
+    class=3Dnote>=B7=A2=C6=B1=CB=B0=B6=EE</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_separate</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>0=A3=AC=CE=B4=B7=D6=B3=C9=BB=F2=B5=C8=B4=FD=B7=D6=B3=C9=A3=BB=
+1=A3=AC=D2=D1=B7=D6=B3=C9=A3=BB2=A3=AC=C8=A1=CF=FB=B7=D6=B3=C9=A3=BB</SPA=
+N>=20
+    <LI><SPAN class=3Dvalue>parent_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=C4=DC=BB=F1=B5=C3=CD=C6=BC=F6=B7=D6=B3=C9=B5=C4=D3=C3=BB=A7=
+id=A3=ACid=C8=A1=D6=B5=D3=DA=B1=EDecs_users</SPAN>=20
+    <LI><SPAN class=3Dvalue>discount</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN> <SPAN=20
+    class=3Dnote>=D5=DB=BF=DB=BD=F0=B6=EE</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_pack>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_pack</SPAN> <SPAN=20
+  =
+class=3Dnote>=C9=CC=C6=B7=B0=FC=D7=B0=D0=C5=CF=A2=C5=E4=D6=C3=B1=ED</SPAN=
+> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>pack_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote>=B0=FC=D7=B0=C5=E4=D6=C3=B5=C4=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>pack_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B0=FC=D7=B0=B5=C4=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>pack_img</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B0=FC=D7=B0=CD=BC=D6=BD</SPAN>=20
+    <LI><SPAN class=3Dvalue>pack_fee</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=B0=FC=D7=B0=B5=C4=B7=D1=D3=C3</SPAN>=20
+    <LI><SPAN class=3Dvalue>free_money</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B6=A9=B5=A5=B4=EF=B5=BD=B4=CB=BD=F0=B6=EE=BF=C9=D2=D4=C3=E2=
+=B3=FD=B8=C3=B0=FC=D7=B0=B7=D1=D3=C3</SPAN>=20
+    <LI><SPAN class=3Dvalue>pack_desc</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B0=FC=D7=B0=C3=E8=CA=F6</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_pay_log>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_pay_log</SPAN> <SPAN=20
+  class=3Dnote>=CF=B5=CD=B3=D6=A7=B8=B6=BC=C7=C2=BC</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>log_id</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    class=3Dnote>=D6=A7=B8=B6=BC=C7=C2=BC=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>order_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B6=D4=D3=A6=B5=C4=BD=BB=D2=D7=BC=C7=C2=BC=B5=C4id=A3=AC=C8=A1=
+=D6=B5=B1=ED ecs_order_info </SPAN>
+    <LI><SPAN class=3Dvalue>order_amount</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=D6=A7=B8=B6=BD=F0=B6=EE</SPAN>=20
+    <LI><SPAN class=3Dvalue>order_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=D6=A7=B8=B6=C0=E0=D0=CD=A3=BB0=A3=AC=B6=A9=B5=A5=D6=A7=B8=B6=
+=A3=BB1=A3=AC=BB=E1=D4=B1=D4=A4=B8=B6=BF=EE=D6=A7=B8=B6</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_paid</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=D2=D1=D6=A7=B8=B6=A3=AC0=A3=AC=B7=F1=A3=BB1=A3=AC=
+=CA=C7</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_payment>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_payment</SPAN> <SPAN=20
+  =
+class=3Dnote>=B0=B2=D7=B0=B5=C4=D6=A7=B8=B6=B7=BD=CA=BD=C5=E4=D6=C3=D0=C5=
+=CF=A2</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>pay_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=D2=D1=B0=B2=D7=B0=B5=C4=D6=A7=B8=B6=B7=BD=CA=BD=D7=D4=D4=F6=
+id</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_code</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=D6=A7=B8=B6=B7=BD=CA=BD=B5=C4=D3=A2=CE=C4=CB=F5=D0=B4=A3=AC=
+=C6=E4=CA=B5=BE=CD=CA=C7=B8=C3=D6=A7=B8=B6=B7=BD=CA=BD=B4=A6=C0=ED=B2=E5=BC=
+=FE=B5=C4=B2=BB=B4=F8=BA=F3=D7=BA=B5=C4=CE=C4=BC=FE=C3=FB=B2=BF=B7=D6</SP=
+AN>=20
+    <LI><SPAN class=3Dvalue>pay_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=D6=A7=B8=B6=B7=BD=CA=BD=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_fee</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=D6=A7=B8=B6=B7=D1=D3=C3</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_desc</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    class=3Dnote>=D6=A7=B8=B6=B7=BD=CA=BD=C3=E8=CA=F6</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_order</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=D6=A7=B8=B6=B7=BD=CA=BD=D4=DA=D2=B3=C3=E6=B5=C4=CF=D4=CA=BE=
+=CB=B3=D0=F2</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_config</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    =
+class=3Dnote>=D6=A7=B8=B6=B7=BD=CA=BD=B5=C4=C5=E4=D6=C3=D0=C5=CF=A2=A3=AC=
+=B0=FC=C0=A8=C9=CC=BB=A7=BA=C5=BA=CD=C3=DC=D4=BF=CA=B2=C3=B4=B5=C4</SPAN>=
+=20
+    <LI><SPAN class=3Dvalue>enabled</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=BF=C9=D3=C3=A3=AC0=A3=AC=B7=F1=A3=BB1=A3=AC=CA=C7=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_cod</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=BB=F5=B5=BD=B8=B6=BF=EE=A3=AC0=A3=AC=B7=F1=A3=BB=
+1=A3=AC=CA=C7</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_online</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=D4=DA=CF=DF=D6=A7=B8=B6=A3=AC0=A3=AC=B7=F1=A3=BB=
+1=A3=AC=CA=C7</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_plugins>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_plugins</SPAN> <SPAN=20
+  class=3Dnote></SPAN></DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>code</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>version</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>library</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>assign</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>install_date</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote></SPAN></LI></UL></DIV>
+  <LI id=3Decs_region>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_region</SPAN> <SPAN=20
+  class=3Dnote>=B5=D8=C7=F8=C1=D0=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>region_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN class=3Dnote>=B1=ED=CA=BE=B8=C3=B5=D8=C7=F8=B5=C4id</SPAN>=20
+    <LI><SPAN class=3Dvalue>parent_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=B5=D8=C7=F8=B5=C4=C9=CF=D2=BB=B8=F6=BD=DA=B5=E3=B5=C4=
+=B5=D8=C7=F8id</SPAN>=20
+    <LI><SPAN class=3Dvalue>region_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=B5=D8=C7=F8=B5=C4=C3=FB=D7=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>region_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=B5=D8=C7=F8=B5=C4=CF=C2=D2=BB=B8=F6=BD=DA=B5=E3=B5=C4=
+=B5=D8=C7=F8id</SPAN>=20
+    <LI><SPAN class=3Dvalue>agency_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B0=EC=CA=C2=B4=A6=B5=C4id,=D5=E2=C0=EF=D3=D0=D2=BB=B8=F6bug=
+,=CD=AC=D2=BB=B8=F6=CA=A1=B2=BB=C4=DC=D3=D0=B6=E0=B8=F6=B0=EC=CA=C2=B4=A6=
+,=B8=C3=D7=D6=B6=CE=D6=BB=BC=C7=C2=BC=D7=EE=D0=C2=B5=C4=C4=C7=B8=F6=B0=EC=
+=CA=C2=B4=A6=B5=C4id</SPAN>=20
+  </LI></UL></DIV>
+  <LI id=3Decs_searchengine>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_searchengine</SPAN> =
+<SPAN=20
+  class=3Dnote>=CB=D1=CB=F7=D2=FD=C7=E6=B7=C3=CE=CA=BC=C7=C2=BC</SPAN> =
+</DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>date</SPAN> <SPAN class=3Dtype>date</SPAN> =
+<SPAN=20
+    class=3Dnote>=CB=D1=CB=F7=D2=FD=C7=E6=B7=C3=CE=CA=C8=D5=C6=DA</SPAN> =
+
+    <LI><SPAN class=3Dvalue>searchengine</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=CB=D1=CB=F7=D2=FD=C7=E6=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>count</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=B7=C3=CE=CA=B4=CE=CA=FD</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_sessions>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_sessions</SPAN> <SPAN=20
+  class=3Dnote>session=BC=C7=C2=BC=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>sesskey</SPAN> <SPAN =
+class=3Dtype>char</SPAN> <SPAN=20
+    class=3Dnote>sessionid,</SPAN>=20
+    <LI><SPAN class=3Dvalue>expiry</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    class=3Dnote>session=B4=B4=BD=A8=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>userid</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=C8=E7=B9=FB=B2=BB=CA=C7=B9=DC=C0=ED=D4=B1=A3=AC=BC=C7=C2=BC=
+=D3=C3=BB=A7id</SPAN>=20
+    <LI><SPAN class=3Dvalue>adminid</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=C8=E7=B9=FB=CA=C7=B9=DC=C0=ED=D4=B1=BC=C7=C2=BC=B9=DC=C0=ED=
+=D4=B1id</SPAN>=20
+    <LI><SPAN class=3Dvalue>ip</SPAN> <SPAN class=3Dtype>char</SPAN> =
+<SPAN=20
+    class=3Dnote>=BF=CD=BB=A7=B6=CBip</SPAN>=20
+    <LI><SPAN class=3Dvalue>data</SPAN> <SPAN class=3Dtype>char</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=D0=F2=C1=D0=BB=AF=BA=F3=B5=C4session=CA=FD=BE=DD=A3=AC=C8=E7=
+=B9=FBsession=CA=FD=BE=DD=B4=F3=D3=DA255=D4=F2=BD=AB=CA=FD=BE=DD=B4=E6=B5=
+=BD=B1=EDecs_sessions_data=A3=AC=B4=CB=B4=A6=CE=AA=BF=D5</SPAN>=20
+    </LI></UL></DIV>
+  <LI id=3Decs_sessions_data>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_sessions_data</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>session=CA=FD=BE=DD=B1=ED=A3=A8=B3=AC=B9=FD255=D7=D6=BD=DA=B5=
+=C4session=C4=DA=C8=DD=BB=E1=B1=A3=B4=E6=D4=DA=B8=C3=B1=ED=A3=A9</SPAN> =
+</DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>sesskey</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>sessionid</SPAN>=20
+    <LI><SPAN class=3Dvalue>expiry</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    class=3Dnote>session=B4=B4=BD=A8=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>data</SPAN> <SPAN =
+class=3Dtype>longtext</SPAN> <SPAN=20
+    =
+class=3Dnote>session=D0=F2=C1=D0=BB=AF=BA=F3=B5=C4=CA=FD=BE=DD</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_shipping>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_shipping</SPAN> <SPAN=20
+  =
+class=3Dnote>=C5=E4=CB=CD=B7=BD=CA=BD=C5=E4=D6=C3=D0=C5=CF=A2=B1=ED</SPAN=
+> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>shipping_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>shipping_code</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=C5=E4=CB=CD=B7=BD=CA=BD=B5=C4=D7=D6=B7=FB=B4=AE=B4=FA=BA=C5=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>shipping_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=C5=E4=CB=CD=B7=BD=CA=BD=B5=C4=C3=FB=B3=C6</SPAN> =
+
+    <LI><SPAN class=3Dvalue>shipping_desc</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=C5=E4=CB=CD=B7=BD=CA=BD=B5=C4=C3=E8=CA=F6</SPAN> =
+
+    <LI><SPAN class=3Dvalue>insure</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B1=A3=BC=DB=B7=D1=D3=C3=A3=AC=B5=A5=CE=BB=D4=AA=A3=AC=BB=F2=
+=D5=DF=CA=C7=B0=D9=B7=D6=CA=FD=A3=AC=B8=C3=D6=B5=D6=B1=BD=D3=CA=E4=B3=F6=CE=
+=AA=B1=A8=BC=DB=B7=D1=D3=C3</SPAN>=20
+    <LI><SPAN class=3Dvalue>support_cod</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=C7=B7=F1=D6=A7=B3=D6=BB=F5=B5=BD=B8=B6=BF=EE=A3=AC1=A3=AC=
+=D6=A7=B3=D6=A3=BB0 =A3=AC=B2=BB=D6=A7=B3=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>enabled</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=C5=E4=CB=CD=B7=BD=CA=BD=CA=C7=B7=F1=B1=BB=BD=FB=D3=C3=
+=A3=AC1=A3=AC=BF=C9=D3=C3=A3=BB0 =A3=AC=BD=FB=D3=C3</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_shipping_area>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_shipping_area</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=C5=E4=CB=CD=B7=BD=CA=BD=CB=F9=CA=F4=B5=C4=C5=E4=CB=CD=C7=F8=
+=D3=F2=BA=CD=C5=E4=CB=CD=B7=D1=D3=C3=D0=C5=CF=A2</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>shipping_area_id</SPAN> <SPAN=20
+    class=3Dtype>smallint</SPAN> <SPAN =
+class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>shipping_area_name</SPAN> <SPAN=20
+    class=3Dtype>varchar</SPAN> <SPAN =
+class=3Dnote>=C5=E4=CB=CD=B7=BD=CA=BD=D6=D0=B5=C4=C5=E4=CB=CD=C7=F8=D3=F2=
+=B5=C4=C3=FB=D7=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>shipping_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=C5=E4=CB=CD=C7=F8=D3=F2=CB=F9=CA=F4=B5=C4=C5=E4=CB=CD=
+=B7=BD=CA=BD=A3=AC=CD=AC ecs_shipping=B5=C4shipping_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>configure</SPAN> <SPAN =
+class=3Dtype>text</SPAN> <SPAN=20
+    =
+class=3Dnote>=D0=F2=C1=D0=BB=AF=B5=C4=B8=C3=C5=E4=CB=CD=C7=F8=D3=F2=B5=C4=
+=B7=D1=D3=C3=C5=E4=D6=C3=D0=C5=CF=A2</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_shop_config>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_shop_config</SPAN> =
+<SPAN=20
+  class=3Dnote>=C8=AB=D5=BE=C5=E4=D6=C3=D0=C5=CF=A2=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>id</SPAN> <SPAN class=3Dtype>smallint</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=C8=AB=D5=BE=C5=E4=D6=C3=D0=C5=CF=A2=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>parent_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=B8=BD=DA=B5=E3id=A3=AC=C8=A1=D6=B5=D3=DA=B8=C3=B1=EDid=D7=
+=D6=B6=CE=B5=C4=D6=B5 </SPAN>
+    <LI><SPAN class=3Dvalue>code</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=FA=B1=E4=C1=BF=C3=FB=B5=C4=D7=F7=D3=C3=B2=EE=B2=BB=B6=E0=
+=A3=AC=C6=E4=CA=B5=BE=CD=CA=C7=D3=EF=D1=D4=B0=FC=D6=D0=B5=C4=D7=D6=B7=FB=B4=
+=AE=CB=F7=D2=FD=A3=AC=C8=E7=20
+    $_LANG['cfg_range']['cart_confirm']</SPAN>=20
+    <LI><SPAN class=3Dvalue>type</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=C5=E4=D6=C3=B5=C4=C0=E0=D0=CD=A3=ACtext=A3=AC=CE=C4=B1=
+=BE=CA=E4=C8=EB=BF=F2=A3=BBpassword=A3=AC=C3=DC=C2=EB=CA=E4=C8=EB=BF=F2=A3=
+=BB=20
+    =
+textarea=A3=AC=CE=C4=B1=BE=C7=F8=D3=F2=A3=BBselect=A3=AC=B5=A5=D1=A1=A3=BB=
+options=A3=AC=D1=AD=BB=B7=C9=FA=B3=C9=B6=E0=D1=A1=A3=BBfile,=CE=C4=BC=FE=C9=
+=CF=B4=AB=A3=BBmanual=A3=AC=CA=D6=B6=AF=C9=FA=B3=C9=B6=E0=D1=A1=A3=BBgrou=
+p=A3=AC=CA=C7=B1=EA=CC=E2=B7=D6=D7=E9=A3=BBhidden=A3=AC=B2=BB=D4=DA=D2=B3=
+=C3=E6=CF=D4=CA=BE</SPAN>=20
+
+    <LI><SPAN class=3Dvalue>store_range</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B5=B1=D3=EF=D1=D4=B0=FC=D6=D0=B5=C4code=D7=D6=B6=CE=B6=D4=D3=
+=A6=B5=C4=CA=C7=D2=BB=B8=F6=CA=FD=D7=E9=CA=B1=A3=AC=C4=C7=B8=C3=B4=A6=BE=CD=
+=CA=C7=B8=C3=CA=FD=D7=E9=B5=C4=CB=F7=D2=FD=A3=AC=C8=E7$_LANG['cfg_range']=
+=20
+    =
+['cart_confirm'][1]=A3=BB=D6=BB=D3=D0type=D7=D6=B6=CE=CE=AAselect,options=
+ =CA=B1=B2=C5=D3=D0=D6=B5</SPAN>=20
+    <LI><SPAN class=3Dvalue>store_dir</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B5=B1type=CE=AAfile=CA=B1=B2=C5=D3=D0=D6=B5=A3=AC=CE=C4=BC=FE=
+=C9=CF=B4=AB=BA=F3=B5=C4=B1=A3=B4=E6=C4=BF=C2=BC</SPAN>=20
+    <LI><SPAN class=3Dvalue>value</SPAN> <SPAN class=3Dtype>text</SPAN> =
+<SPAN=20
+    class=3Dnote>=B8=C3=CF=EE=C5=E4=D6=C3=B5=C4=D6=B5</SPAN>=20
+    <LI><SPAN class=3Dvalue>sort_order</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CF=D4=CA=BE=CB=B3=D0=F2=A3=AC=CA=FD=D7=D6=D4=BD=B4=F3=D4=BD=
+=BF=BF=BA=F3</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_snatch_log>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_snatch_log</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=B6=E1=B1=A6=C6=E6=B1=F8=B3=F6=BC=DB=BC=C7=C2=BC=B1=ED</SPAN=
+> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>log_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>snatch_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B6=E1=B1=A6=C6=E6=B1=F8=BB=EE=B6=AF=BA=C5=A3=AC=C8=A1=D6=B5=
+=D3=DA ecs_goods_activity=B5=C4act_id=D7=D6=B6=CE</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B3=F6=BC=DB=B5=C4=D3=C3=BB=A7id=A3=AC=C8=A1=D6=B5=D3=DAecs_=
+users=B5=C4 user_id</SPAN>=20
+    <LI><SPAN class=3Dvalue>bid_price</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN> <SPAN=20
+    class=3Dnote>=B3=F6=BC=DB=B5=C4=BC=DB=B8=F1</SPAN>=20
+    <LI><SPAN class=3Dvalue>bid_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B3=F6=BC=DB=B5=C4=CA=B1=BC=E4</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_stats>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_stats</SPAN> <SPAN=20
+  class=3Dnote>=B7=C3=CE=CA=D0=C5=CF=A2=BC=C7=C2=BC=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>access_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B7=C3=CE=CA=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>ip_address</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=B7=C3=CE=CA=D5=DFip</SPAN>=20
+    <LI><SPAN class=3Dvalue>visit_times</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B7=C3=CE=CA=B4=CE=CA=FD=A3=AC=C8=E7=B9=FB=D6=AE=C7=B0=D3=D0=
+=B9=FD=B7=C3=CE=CA=B4=CE=CA=FD=A3=AC=D4=DA=D2=D4=C7=B0=B5=C4=BB=F9=B4=A1=C9=
+=CF=A3=AB1</SPAN>=20
+    <LI><SPAN class=3Dvalue>browser</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=E4=AF=C0=C0=C6=F7=BC=B0=B0=E6=B1=BE</SPAN>=20
+    <LI><SPAN class=3Dvalue>system</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B2=D9=D7=F7=CF=B5=CD=B3</SPAN>=20
+    <LI><SPAN class=3Dvalue>language</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=D3=EF=D1=D4</SPAN>=20
+    <LI><SPAN class=3Dvalue>area</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>ip=CB=F9=D4=DA=B5=D8=C7=F8</SPAN>=20
+    <LI><SPAN class=3Dvalue>referer_domain</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=D2=B3=C3=E6=B7=C3=CE=CA=C0=B4=D4=B4=D3=F2=C3=FB</SPAN>=20
+    <LI><SPAN class=3Dvalue>referer_path</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=D2=B3=C3=E6=B7=C3=CE=CA=C0=B4=D4=B4=B3=FD=D3=F2=C3=FB=CD=E2=
+=B5=C4=C2=B7=BE=B6=B2=BF=B7=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>access_url</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=B7=C3=CE=CA=D2=B3=C3=E6=CE=C4=BC=FE=C3=FB</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_tag>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_tag</SPAN> <SPAN=20
+  class=3Dnote>=C9=CC=C6=B7=B5=C4=B1=EA=BC=C7</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>tag_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=C9=CC=C6=B7=B1=EA=C7=A9=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=D3=C3=BB=A7=B5=C4id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7=B5=C4id</SPAN>=20
+    <LI><SPAN class=3Dvalue>tag_words</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B1=EA=C7=A9=C4=DA=C8=DD</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_template>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_template</SPAN> <SPAN=20
+  class=3Dnote>=C4=A3=B0=E5=C9=E8=D6=C3=CA=FD=BE=DD=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>filename</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=CC=F5=C4=A3=B0=E5=C5=E4=D6=C3=CA=F4=D3=DA=C4=C4=B8=F6=
+=C4=A3=B0=E5=D2=B3=C3=E6</SPAN>=20
+    <LI><SPAN class=3Dvalue>region</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=CC=F5=C4=A3=B0=E5=C5=E4=D6=C3=D4=DA=CB=FC=CB=F9=CA=F4=
+=B5=C4=C4=A3=B0=E5=CE=C4=BC=FE=D6=D0=B5=C4=CE=BB=D6=C3</SPAN>=20
+    <LI><SPAN class=3Dvalue>library</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=CC=F5=C4=A3=B0=E5=C5=E4=D6=C3=D4=DA=CB=FC=CB=F9=CA=F4=
+=B5=C4=C4=A3=B0=E5=CE=C4=BC=FE=D6=D0=B5=C4=CE=BB=D6=C3=B4=A6=D3=A6=B8=C3=D2=
+=FD=C8=EB=B5=C4lib =B5=C4=CF=E0=B6=D4=C4=BF=C2=BC=B5=D8=D6=B7</SPAN>=20
+    <LI><SPAN class=3Dvalue>sort_order</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=C4=A3=B0=E5=CE=C4=BC=FE=D6=D0=D5=E2=B8=F6=CE=BB=D6=C3=B5=C4=
+=D2=FD=C8=EBlib=CF=EE=B5=C4=D6=B5=B5=C4=CF=D4=CA=BE=CB=B3=D0=F2</SPAN>=20
+    <LI><SPAN class=3Dvalue>id</SPAN> <SPAN class=3Dtype>smallint</SPAN> =
+<SPAN=20
+    class=3Dnote>=D7=D6=B6=CE=D2=E2=D2=E5=B4=FD=B2=E9</SPAN>=20
+    <LI><SPAN class=3Dvalue>number</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote>=C3=BF=B4=CE=CF=D4=CA=BE=B6=E0=C9=D9=B8=F6=D6=B5</SPAN> =
+
+    <LI><SPAN class=3Dvalue>type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=F4=D3=DA=C4=C4=B8=F6=B6=AF=CC=AC=CF=EE=A3=AC0=A3=AC=B9=CC=
+=B6=A8=CF=EE=A3=BB1=A3=AC=B7=D6=C0=E0=CF=C2=B5=C4=C9=CC=C6=B7=A3=BB2=A3=AC=
+=C6=B7=C5=C6=CF=C2=B5=C4=C9=CC=C6=B7=A3=BB3=A3=AC=CE=C4=D5=C2=C1=D0=B1=ED=
+=A3=BB4=A3=AC=B9=E3=B8=E6=CE=BB </SPAN>
+    <LI><SPAN class=3Dvalue>theme</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=C4=A3=B0=E5=C5=E4=D6=C3=CF=EE=CA=F4=D3=DA=C4=C4=CC=D7=
+=C4=A3=B0=E5=B5=C4=C4=A3=B0=E5=C3=FB</SPAN>=20
+    <LI><SPAN class=3Dvalue>remarks</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=B1=B8=D7=A2=A3=AC=BF=C9=C4=DC=CA=C7=D4=A4=C1=F4=D7=D6=B6=CE=
+=A3=AC=C3=BB=D3=D0=D6=B5=CB=F9=D2=D4=C3=BB=C8=B7=B6=A8=D3=C3=CD=BE</SPAN>=
+ </LI></UL></DIV>
+  <LI id=3Decs_topic>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_topic</SPAN> <SPAN=20
+  class=3Dnote>=D7=A8=CC=E2=BB=EE=B6=AF=C5=E4=D6=C3=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>topic_id</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=D7=A8=CC=E2=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>title</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=D7=A8=CC=E2=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>intro</SPAN> <SPAN class=3Dtype>text</SPAN> =
+<SPAN=20
+    class=3Dnote>=D7=A8=CC=E2=BD=E9=C9=DC</SPAN>=20
+    <LI><SPAN class=3Dvalue>start_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=D7=A8=CC=E2=BF=AA=CA=BC=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>end_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=BD=E1=CA=F8=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>data</SPAN> <SPAN class=3Dtype>text</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=D7=A8=CC=E2=CA=FD=BE=DD=C4=DA=C8=DD=A3=AC=B0=FC=C0=A8=B7=D6=
+=C0=E0=A3=AC=C9=CC=C6=B7=B5=C8</SPAN>=20
+    <LI><SPAN class=3Dvalue>template</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=D7=A8=CC=E2=C4=A3=B0=E5=CE=C4=BC=FE</SPAN>=20
+    <LI><SPAN class=3Dvalue>css</SPAN> <SPAN class=3Dtype>text</SPAN> =
+<SPAN=20
+    class=3Dnote>=D7=A8=CC=E2=D1=F9=CA=BD=B4=FA=C2=EB</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_user_account>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_user_account</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=D3=C3=BB=A7=D7=CA=BD=F0=C1=F7=B6=AF=B1=ED=A3=AC=B0=FC=C0=A8=
+=CC=E1=CF=D6=BA=CD=B3=E4=D6=B5</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=D7=D4=D4=F6ID=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=D3=C3=BB=A7=B5=C7=C2=BC=BA=F3=B1=A3=B4=E6=D4=DAsession=D6=D0=
+=B5=C4id=BA=C5=A3=AC=B8=FAusers=B1=ED=D6=D0=B5=C4user_id=B6=D4=D3=A6</SPA=
+N>=20
+    <LI><SPAN class=3Dvalue>admin_user</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=B2=D9=D7=F7=B8=C3=B1=CA=BD=BB=D2=D7=B5=C4=B9=DC=C0=ED=D4=B1=
+=B5=C4=D3=C3=BB=A7=C3=FB</SPAN>=20
+    <LI><SPAN class=3Dvalue>amount</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN> <SPAN=20
+    =
+class=3Dnote>=D7=CA=BD=F0=B5=C4=CA=FD=C4=BF=A3=AC=D5=FD=CA=FD=CE=AA=D4=F6=
+=BC=D3=A3=AC=B8=BA=CA=FD=CE=AA=BC=F5=C9=D9</SPAN>=20
+    <LI><SPAN class=3Dvalue>add_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=BC=C7=C2=BC=B2=E5=C8=EB=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>paid_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=BC=C7=C2=BC=B8=FC=D0=C2=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>admin_note</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=B9=DC=C0=ED=D4=B1=B5=C4=B1=BB=D7=BC</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_note</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=D3=C3=BB=A7=B5=C4=B1=BB=D7=BC</SPAN>=20
+    <LI><SPAN class=3Dvalue>process_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B2=D9=D7=F7=C0=E0=D0=CD=A3=AC1=A3=AC=CD=CB=BF=EE=A3=BB0=A3=AC=
+=D4=A4=B8=B6=B7=D1=A3=AC=C6=E4=CA=B5=BE=CD=CA=C7=B3=E4=D6=B5</SPAN>=20
+    <LI><SPAN class=3Dvalue>payment</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=D6=A7=B8=B6=C7=FE=B5=C0=B5=C4=C3=FB=B3=C6=A3=AC=C8=A1=D7=D4=
+payment=B5=C4pay_name=D7=D6=B6=CE</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_paid</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=D2=D1=BE=AD=B8=B6=BF=EE=A3=AC=A3=B0=A3=AC=CE=B4=
+=B8=B6=A3=BB=A3=B1=A3=AC=D2=D1=B8=B6</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_user_address>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_user_address</SPAN> =
+<SPAN=20
+  class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=D0=C5=CF=A2=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>address_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>address_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=D3=C3=BB=A7=B1=ED=D6=D0=B5=C4=C1=F7=CB=AE=BA=C5</SPAN> =
+
+    <LI><SPAN class=3Dvalue>consignee</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=C3=FB=D7=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>email</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4email</SPAN>=20
+    <LI><SPAN class=3Dvalue>country</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=B9=FA=BC=D2</SPAN>=20
+    <LI><SPAN class=3Dvalue>province</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=CA=A1=B7=DD</SPAN>=20
+    <LI><SPAN class=3Dvalue>city</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=B3=C7=CA=D0</SPAN>=20
+    <LI><SPAN class=3Dvalue>district</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=B5=D8=C7=F8</SPAN>=20
+    <LI><SPAN class=3Dvalue>address</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=CF=EA=CF=B8=B5=D8=D6=B7</SPAN> =
+
+    <LI><SPAN class=3Dvalue>zipcode</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=D3=CA=B1=E0</SPAN>=20
+    <LI><SPAN class=3Dvalue>tel</SPAN> <SPAN class=3Dtype>varchar</SPAN> =
+<SPAN=20
+    class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=B5=E7=BB=B0</SPAN>=20
+    <LI><SPAN class=3Dvalue>mobile</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=CA=D6=BB=FA</SPAN>=20
+    <LI><SPAN class=3Dvalue>sign_building</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=D5=BB=F5=B5=D8=D6=B7=B5=C4=B1=EA=D6=BE=D0=D4=BD=A8=D6=FE=
+=C3=FB</SPAN>=20
+    <LI><SPAN class=3Dvalue>best_time</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=D5=BB=F5=C8=CB=B5=C4=D7=EE=BC=D1=CA=D5=BB=F5=CA=B1=BC=E4=
+</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_user_bonus>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_user_bonus</SPAN> =
+<SPAN=20
+  =
+class=3Dnote>=D2=D1=BE=AD=B7=A2=CB=CD=B5=C4=BA=EC=B0=FC=D0=C5=CF=A2=C1=D0=
+=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>bonus_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=BA=EC=B0=FC=B5=C4=C1=F7=CB=AE=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>bonus_type_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN=20
+    =
+class=3Dnote>=BA=EC=B0=FC=B7=A2=CB=CD=C0=E0=D0=CD.0,=B0=B4=D3=C3=BB=A7=C8=
+=E7=BB=E1=D4=B1=B5=C8=BC=B6,=BB=E1=D4=B1=C3=FB=B3=C6=B7=A2=B7=C5;1,=B0=B4=
+=C9=CC=C6=B7=C0=E0=B1=F0=B7=A2=CB=CD;2,=B0=B4=B6=A9=B5=A5=BD=F0=B6=EE=CB=F9=
+=B4=EF=B5=BD=B5=C4=B6=EE=B6=C8=B7=A2=CB=CD;3,=CF=DF=CF=C2=B7=A2=CB=CD</SP=
+AN>=20
+    <LI><SPAN class=3Dvalue>bonus_sn</SPAN> <SPAN =
+class=3Dtype>bigint</SPAN> <SPAN=20
+    =
+class=3Dnote>=BA=EC=B0=FC=BA=C5,=C8=E7=B9=FB=CE=AA0=BE=CD=CA=C7=C3=BB=D3=D0=
+=BA=EC=B0=FC=BA=C5.=C8=E7=B9=FB=B4=F3=D3=DA0,=BE=CD=D0=E8=D2=AA=CA=E4=C8=EB=
+=B8=C3=BA=EC=B0=FC=BA=C5=B2=C5=C4=DC=CA=B9=D3=C3=BA=EC=B0=FC</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=BA=EC=B0=FC=CA=F4=D3=DA=C4=B3=BB=E1=D4=B1=B5=C4id.=C8=
+=E7=B9=FB=CE=AA0,=BE=CD=CA=C7=B8=C3=BA=EC=B0=FC=B2=BB=CA=F4=D3=DA=C4=B3=BB=
+=E1=D4=B1</SPAN>=20
+    <LI><SPAN class=3Dvalue>used_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=BA=EC=B0=FC=CA=B9=D3=C3=B5=C4=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>order_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=B9=D3=C3=C1=CB=B8=C3=BA=EC=B0=FC=B5=C4=BD=BB=D2=D7=BA=C5=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>emailed</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B2=C2=B5=C4=A3=AC=D3=A6=B8=C3=CA=C7=CA=C7=B7=F1=D2=D1=BE=AD=
+=BD=AB=BA=EC=B0=FC=B7=A2=CB=CD=B5=BD=D3=C3=BB=A7=B5=C4=D3=CA=CF=E4=A3=BB1=
+=A3=AC=CA=C7=A3=BB0=A3=AC=B7=F1=A3=BB</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_user_feed>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_user_feed</SPAN> <SPAN =
+
+  class=3Dnote></SPAN></DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>feed_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>value_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>feed_type</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>is_feed</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote></SPAN></LI></UL></DIV>
+  <LI id=3Decs_user_rank>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_user_rank</SPAN> <SPAN =
+
+  class=3Dnote>=BB=E1=D4=B1=B5=C8=BC=B6=C5=E4=D6=C3=D0=C5=CF=A2</SPAN> =
+</DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>rank_id</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=BB=E1=D4=B1=B5=C8=BC=B6=B1=E0=BA=C5=A3=AC=C6=E4=D6=D00=CA=C7=
+=B7=C7=BB=E1=D4=B1</SPAN>=20
+    <LI><SPAN class=3Dvalue>rank_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=BB=E1=D4=B1=B5=C8=BC=B6=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>min_points</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B8=C3=B5=C8=BC=B6=B5=C4=D7=EE=B5=CD=BB=FD=B7=D6</SPAN> =
+
+    <LI><SPAN class=3Dvalue>max_points</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B8=C3=B5=C8=BC=B6=B5=C4=D7=EE=B8=DF=BB=FD=B7=D6</SPAN> =
+
+    <LI><SPAN class=3Dvalue>discount</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B8=C3=BB=E1=D4=B1=B5=C8=BC=B6=B5=C4=C9=CC=C6=B7=D5=DB=BF=DB=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>show_price</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=C7=B7=F1=D4=DA=B2=BB=CA=C7=B8=C3=B5=C8=BC=B6=BB=E1=D4=B1=
+=B9=BA=C2=F2=D2=B3=C3=E6=CF=D4=CA=BE=B8=C3=BB=E1=D4=B1=B5=C8=BC=B6=B5=C4=D5=
+=DB=BF=DB=BC=DB=B8=F1.1,=CF=D4=CA=BE;0,=B2=BB=CF=D4=CA=BE</SPAN>=20
+    <LI><SPAN class=3Dvalue>special_rank</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=C7=B7=F1=CA=C2=CC=D8=CA=E2=BB=E1=D4=B1=B5=C8=BC=B6=D7=E9=
+.0,=B2=BB=CA=C7;1,=CA=C7</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_users>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_users</SPAN> <SPAN=20
+  class=3Dnote></SPAN></DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>user_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=BB=E1=D4=B1=D7=CA=C1=CF=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>email</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=BB=E1=D4=B1=D3=CA=CF=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=D3=C3=BB=A7=C3=FB</SPAN>=20
+    <LI><SPAN class=3Dvalue>password</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=D3=C3=BB=A7=C3=DC=C2=EB</SPAN>=20
+    <LI><SPAN class=3Dvalue>question</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B0=B2=C8=AB=CE=CA=CC=E2=B4=F0=B0=B8</SPAN>=20
+    <LI><SPAN class=3Dvalue>answer</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=B0=B2=C8=AB=CE=CA=CC=E2</SPAN>=20
+    <LI><SPAN class=3Dvalue>sex</SPAN> <SPAN class=3Dtype>tinyint</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=D0=D4=B1=F0=A3=AC0=A3=AC=B1=A3=C3=DC=A3=BB1=A3=AC=C4=D0=A3=BB=
+2=A3=AC=C5=AE</SPAN>=20
+    <LI><SPAN class=3Dvalue>birthday</SPAN> <SPAN =
+class=3Dtype>date</SPAN> <SPAN=20
+    class=3Dnote>=C9=FA=C8=D5=C8=D5=C6=DA</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_money</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=D3=C3=BB=A7=CF=D6=D3=D0=D7=CA=BD=F0</SPAN>=20
+    <LI><SPAN class=3Dvalue>frozen_money</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN class=3Dnote>=D3=C3=BB=A7=B6=B3=BD=E1=D7=CA=BD=F0</SPAN>=20
+    <LI><SPAN class=3Dvalue>pay_points</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=CF=FB=B7=D1=BB=FD=B7=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>rank_points</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=BB=E1=D4=B1=B5=C8=BC=B6=BB=FD=B7=D6</SPAN>=20
+    <LI><SPAN class=3Dvalue>address_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=CA=D5=BB=F5=D0=C5=CF=A2id=A3=AC=C8=A1=D6=B5=B1=ED =
+ecs_user_address </SPAN>
+    <LI><SPAN class=3Dvalue>reg_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=D7=A2=B2=E1=CA=B1=BC=E4</SPAN>=20
+    <LI><SPAN class=3Dvalue>last_login</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=D7=EE=BA=F3=D2=BB=B4=CE=B5=C7=C2=BC=CA=B1=BC=E4</SPAN> =
+
+    <LI><SPAN class=3Dvalue>last_time</SPAN> <SPAN =
+class=3Dtype>datetime</SPAN>=20
+    <SPAN =
+class=3Dnote>=D3=A6=B8=C3=CA=C7=D7=EE=BA=F3=D2=BB=B4=CE=D0=DE=B8=C4=D0=C5=
+=CF=A2=CA=B1=BC=E4=A3=AC=B8=C3=B1=ED=D0=C5=CF=A2=B4=D3=C6=E4=CB=FB=B1=ED=CD=
+=AC=B2=BD=B9=FD=C0=B4=BF=BC=C2=C7</SPAN>=20
+    <LI><SPAN class=3Dvalue>last_ip</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=D7=EE=BA=F3=D2=BB=B4=CE=B5=C7=C2=BCip</SPAN>=20
+    <LI><SPAN class=3Dvalue>visit_count</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN class=3Dnote>=B5=C7=C2=BC=B4=CE=CA=FD</SPAN>=20
+    <LI><SPAN class=3Dvalue>user_rank</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=BB=E1=D4=B1=B5=C7=BC=C7id=A3=AC=C8=A1=D6=B5ecs_user_rank</S=
+PAN>=20
+    <LI><SPAN class=3Dvalue>is_special</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>salt</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>parent_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=CD=C6=BC=F6=C8=CB=BB=E1=D4=B1id=A3=AC</SPAN>=20
+    <LI><SPAN class=3Dvalue>flag</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>alias</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=EA=C7=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>msn</SPAN> <SPAN class=3Dtype>varchar</SPAN> =
+<SPAN=20
+    class=3Dnote>msn</SPAN>=20
+    <LI><SPAN class=3Dvalue>qq</SPAN> <SPAN class=3Dtype>varchar</SPAN> =
+<SPAN=20
+    class=3Dnote>qq=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>office_phone</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=B0=EC=B9=AB=B5=E7=BB=B0</SPAN>=20
+    <LI><SPAN class=3Dvalue>home_phone</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=BC=D2=CD=A5=B5=E7=BB=B0</SPAN>=20
+    <LI><SPAN class=3Dvalue>mobile_phone</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=CA=D6=BB=FA</SPAN>=20
+    <LI><SPAN class=3Dvalue>is_validated</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN>=20
+    <SPAN class=3Dnote></SPAN>
+    <LI><SPAN class=3Dvalue>credit_line</SPAN> <SPAN =
+class=3Dtype>decimal</SPAN>=20
+    <SPAN =
+class=3Dnote>=D0=C5=D3=C3=B6=EE=B6=C8=A3=AC=C4=BF=C7=B02.6.0=B0=E6=BA=C3=CF=
+=F1=C3=BB=D3=D0=D7=F7=CA=B5=CF=D6</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_virtual_card>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_virtual_card</SPAN> =
+<SPAN=20
+  class=3Dnote>=D0=E9=C4=E2=BF=A8=BF=A8=BA=C5=BF=E2</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>card_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=D0=E9=C4=E2=BF=A8=BF=A8=BA=C5=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN =
+class=3Dnote>=B8=C3=D0=E9=C4=E2=BF=A8=B6=D4=D3=A6=B5=C4=C9=CC=C6=B7id=A3=AC=
+=C8=A1=D6=B5=D3=DA=B1=ED ecs_goods</SPAN>=20
+    <LI><SPAN class=3Dvalue>card_sn</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=BC=D3=C3=DC=BA=F3=B5=C4=BF=A8=BA=C5</SPAN>=20
+    <LI><SPAN class=3Dvalue>card_password</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=BC=D3=C3=DC=BA=F3=B5=C4=C3=DC=C2=EB</SPAN>=20
+    <LI><SPAN class=3Dvalue>add_date</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=BF=A8=BA=C5=CC=ED=BC=D3=C8=D5=C6=DA</SPAN>=20
+    <LI><SPAN class=3Dvalue>end_date</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=BF=A8=BA=C5=BD=D8=D6=C1=CA=B9=D3=C3=C8=D5=C6=DA</SPAN> =
+
+    <LI><SPAN class=3Dvalue>is_saled</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=C7=B7=F1=C2=F4=B3=F6=A3=AC0=A3=AC=B7=F1=A3=BB1=A3=AC=CA=C7=
+</SPAN>=20
+    <LI><SPAN class=3Dvalue>order_sn</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=C2=F4=B3=F6=B8=C3=BF=A8=BA=C5=B5=C4=BD=BB=D2=D7=BA=C5=A3=AC=
+=C8=A1=D6=B5=B1=EDecs_order_info</SPAN>=20
+    <LI><SPAN class=3Dvalue>crc32</SPAN> <SPAN class=3Dtype>int</SPAN> =
+<SPAN=20
+    class=3Dnote>crc32=BA=F3=B5=C4key</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_vote>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_vote</SPAN> <SPAN=20
+  =
+class=3Dnote>=CD=F8=D5=BE=B5=F7=B2=E9=D0=C5=CF=A2=BC=C7=C2=BC=B1=ED</SPAN=
+> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>vote_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    class=3Dnote>=D4=DA=CF=DF=B5=F7=B2=E9=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>vote_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    class=3Dnote>=D4=DA=CF=DF=B5=F7=B2=E9=D6=F7=CC=E2</SPAN>=20
+    <LI><SPAN class=3Dvalue>start_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=D4=DA=CF=DF=B5=F7=B2=E9=BF=AA=CA=BC=CA=B1=BC=E4</SPAN> =
+
+    <LI><SPAN class=3Dvalue>end_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=D4=DA=CF=DF=B5=F7=B2=E9=BD=E1=CA=F8=CA=B1=BC=E4</SPAN> =
+
+    <LI><SPAN class=3Dvalue>can_multi</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    =
+class=3Dnote>=C4=DC=B7=F1=B6=E0=D1=A1=A3=AC0=A3=AC=BF=C9=D2=D4=A3=BB1=A3=AC=
+=B2=BB=BF=C9=D2=D4</SPAN>=20
+    <LI><SPAN class=3Dvalue>vote_count</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    =
+class=3Dnote>=CD=B6=C6=B1=C8=CB=CA=FD=D2=B2=BF=C9=D2=D4=CB=B5=CD=B6=C6=B1=
+=B4=CE=CA=FD</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_vote_log>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_vote_log</SPAN> <SPAN=20
+  class=3Dnote>=CD=B6=C6=B1=BC=C7=C2=BC=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>log_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=CD=B6=C6=B1=BC=C7=C2=BC=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>vote_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=D8=C1=AA=B5=C4=CD=B6=C6=B1=D6=F7=CC=E2id=A3=AC=C8=A1=D6=B5=
+=B1=ED ecs_vote</SPAN>=20
+    <LI><SPAN class=3Dvalue>ip_address</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=CD=B6=C6=B1=B5=C4ip=B5=D8=D6=B7</SPAN>=20
+    <LI><SPAN class=3Dvalue>vote_time</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=CD=B6=C6=B1=B5=C4=CA=B1=BC=E4</SPAN> </LI></UL></DIV>
+  <LI id=3Decs_vote_option>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_vote_option</SPAN> =
+<SPAN=20
+  class=3Dnote>=CD=B6=C6=B1=B5=C4=D1=A1=CF=EE=C4=DA=C8=DD=B1=ED</SPAN> =
+</DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>option_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN>=20
+    <SPAN class=3Dnote>=CD=B6=C6=B1=D1=A1=CF=EE=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>vote_id</SPAN> <SPAN =
+class=3Dtype>smallint</SPAN> <SPAN=20
+    =
+class=3Dnote>=B9=D8=C1=AA=B5=C4=CD=B6=C6=B1=D6=F7=CC=E2id=A3=AC=C8=A1=D6=B5=
+=B1=ED ecs_vote</SPAN>=20
+    <LI><SPAN class=3Dvalue>option_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=CD=B6=C6=B1=D1=A1=CF=EE=B5=C4=D6=B5</SPAN>=20
+    <LI><SPAN class=3Dvalue>option_count</SPAN> <SPAN =
+class=3Dtype>int</SPAN> <SPAN=20
+    class=3Dnote>=B8=C3=D1=A1=CF=EE=B5=C4=C6=B1=CA=FD</SPAN> =
+</LI></UL></DIV>
+  <LI id=3Decs_wholesale>
+  <DIV class=3Dtable_name><SPAN class=3Dvalue>ecs_wholesale</SPAN> <SPAN =
+
+  class=3Dnote>=C5=FA=B7=A2=B7=BD=B0=B8=B1=ED</SPAN> </DIV>
+  <DIV class=3Ddetail><!--  =D7=D6=B6=CE=C1=D0=B1=ED, =
+=D6=BB=BF=B4=B5=DA=D2=BB=B8=F6li=BE=CDOK, =D1=AD=BB=B7=B5=C4 -->
+  <UL class=3Dfield_list>
+    <LI><SPAN class=3Dvalue>act_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN> <SPAN=20
+    class=3Dnote>=C5=FA=B7=A2=B7=BD=B0=B8=D7=D4=D4=F6id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_id</SPAN> <SPAN =
+class=3Dtype>mediumint</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7id</SPAN>=20
+    <LI><SPAN class=3Dvalue>goods_name</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN>=20
+    <SPAN class=3Dnote>=C9=CC=C6=B7=C3=FB=B3=C6</SPAN>=20
+    <LI><SPAN class=3Dvalue>rank_ids</SPAN> <SPAN =
+class=3Dtype>varchar</SPAN> <SPAN=20
+    =
+class=3Dnote>=CA=CA=D3=C3=BB=E1=D4=B1=B5=C7=BC=C7=A3=AC=B6=E0=B8=F6=D6=B5=
+=D6=AE=BC=E4=D3=C3=B6=BA=BA=C5=B7=D6=B8=F4=A3=AC=C8=A1=D6=B5=D3=DA =
+ecs_user_rank</SPAN>=20
+    <LI><SPAN class=3Dvalue>prices</SPAN> <SPAN class=3Dtype>text</SPAN> =
+<SPAN=20
+    =
+class=3Dnote>=D0=F2=C1=D0=BB=AF=BA=F3=B5=C4=C9=CC=C6=B7=CA=F4=D0=D4=A3=AC=
+=CA=FD=C1=BF=A3=AC=BC=DB=B8=F1</SPAN>=20
+    <LI><SPAN class=3Dvalue>enabled</SPAN> <SPAN =
+class=3Dtype>tinyint</SPAN> <SPAN=20
+    class=3Dnote>=C5=FA=B7=A2=B7=BD=B0=B8=CA=C7=B7=F1=BF=C9=D3=C3</SPAN> =
+</LI></UL></DIV></LI></UL></BODY></HTML>

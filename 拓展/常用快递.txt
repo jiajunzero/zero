@@ -1,0 +1,14 @@
+zhongtong		中通
+shentong		申通
+shunfeng		顺丰
+yuantong		圆通
+baishiwuliu		百世汇通
+guotongkuaidi	国通
+yunda			韵达
+tiantian		天天
+youshuwuliu		优速
+kuaijiesudi		快捷
+quanfengkuaidi	全峰
+jd				京东
+zhaijisong		宅急送
+ems				EMS
