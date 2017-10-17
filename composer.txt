@@ -1,0 +1,21 @@
+安装验证码：  composer require mews/captcha
+
+创建中间件：  php artisan make:middleware CheckAdminLogin
+ 
+数据迁移(建表)：  php artisan make:migration create_member_table
+执行数据迁移  ：  php artisan migrate
+
+数据填充种子: php artisan make:seeder MemberTableSeeder
+执行数据填充： php  artisan db:seed --calss=MemberTableSeeder
+
+curl封装工具安装： composer require guzzlehttp/guzzle
+
+
+
+
+git ：
+关联远程仓库：  git remote add origin 仓库地址
+合并分支： git pull --rebase origin master
+推送到远程仓库  git push -u origin master  
+
+git push origin master 
